@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="12"/>
+    <BuildModes Active="Debug"/>
+    <Units>
+      <Unit>
+        <Filename Value="GTA.ppr"/>
+        <FRMtype Value="0"/>
+        <IsPartOfProject Value="True"/>
+        <TopLine Value="15"/>
+        <CursorPos X="28" Y="27"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/GTA.Main.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="12" Y="9"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/GTA.Utils.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="3" Y="15"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter02-Graph-Basics/GTA.AdjList.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="118"/>
+        <CursorPos X="16" Y="139"/>
+        <UsageCount Value="76"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter02-Graph-Basics/GTA.AdjMatrix.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="39" Y="13"/>
+        <UsageCount Value="76"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter02-Graph-Basics/GTA.AdjSet.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="17"/>
+        <CursorPos X="47" Y="33"/>
+        <UsageCount Value="75"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter02-Graph-Basics/GTA.Graph.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="169"/>
+        <CursorPos X="40" Y="183"/>
+        <UsageCount Value="73"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter03-Graph-DFS/GTA.GraphDFS.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="67"/>
+        <CursorPos X="5" Y="101"/>
+        <UsageCount Value="72"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter03-Graph-DFS/GTA.AdjMatrixDFS.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="28"/>
+        <CursorPos X="35" Y="31"/>
+        <UsageCount Value="49"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter02-Graph-Basics/GTA.Interfaces.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="43" Y="22"/>
+        <UsageCount Value="47"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter03-Graph-DFS/GTA.GraphDFSnr.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="40"/>
+        <CursorPos X="49" Y="75"/>
+        <UsageCount Value="47"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter04-Graph-DFS-Applications/GTA.CC.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="7"/>
+        <CursorPos X="55" Y="23"/>
+        <UsageCount Value="46"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter04-Graph-DFS-Applications/GTA.SingleSourcePath.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="22"/>
+        <CursorPos X="96" Y="40"/>
+        <UsageCount Value="41"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter04-Graph-DFS-Applications/GTA.Path.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="28"/>
+        <CursorPos X="122" Y="33"/>
+        <UsageCount Value="35"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/02-Graph-Basics/GTA.AdjMatrix.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="37"/>
+        <CursorPos X="30" Y="67"/>
+        <UsageCount Value="166"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/02-Graph-Basics/GTA.AdjList.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="131"/>
+        <CursorPos X="44" Y="153"/>
+        <UsageCount Value="66"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/GTA.Main.ppr"/>
+        <UnitName Value="Unit1"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="2"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/02-Graph-Basics/03-Adjacency-Matrix/g.txt"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="21" Y="10"/>
+        <SyntaxHighlighter Value="PO"/>
+        <UsageCount Value="2"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="/usr/local/codetyphon/fpcsrc/rtl/unix/sysutils.pp"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="34"/>
+        <CursorPos X="10" Y="59"/>
+        <UsageCount Value="4"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/DSA/Linear/DeepStar.DSA.Linear.LinkedList.pas"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="38"/>
+        <CursorPos X="31" Y="240"/>
+        <UsageCount Value="4"/>
+      </Unit>
+      <Unit>
+        <Filename Value="/usr/local/codetyphon/fpcsrc/rtl/objpas/sysutils/sysutilh.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="313"/>
+        <CursorPos X="13" Y="330"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="/usr/local/codetyphon/fpcsrc/rtl/unix/sysunixh.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="10"/>
+        <CursorPos X="2" Y="34"/>
+        <UsageCount Value="6"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/DSA/Tree/DeepStar.DSA.Tree.TreeMap.pas"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="35" Y="4"/>
+        <UsageCount Value="6"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/DSA/Tree/DeepStar.DSA.Tree.TreeSet.pas"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="93"/>
+        <CursorPos X="3" Y="105"/>
+        <UsageCount Value="6"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/Utils/DeepStar.Utils.pas"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="102"/>
+        <CursorPos X="56" Y="138"/>
+        <UsageCount Value="18"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/Utils/DeepStar.UString.pas"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="54"/>
+        <CursorPos X="20" Y="67"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/DSA/DeepStar.DSA.Interfaces.pas"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="18"/>
+        <CursorPos X="45" Y="22"/>
+        <UsageCount Value="8"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter03-Graph-DFS/g.txt"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="35" Y="7"/>
+        <SyntaxHighlighter Value="C++"/>
+        <UsageCount Value="8"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/DSA/Linear/DeepStar.DSA.Linear.ArrayList.pas"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="285"/>
+        <CursorPos Y="292"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="/usr/local/codetyphon/fpcsrc/rtl/objpas/sysutils/sysutils.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="142"/>
+        <CursorPos Y="158"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter04-Graph-DFS-Applications/GTA.CycleDetection.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="19"/>
+        <CursorPos X="81" Y="32"/>
+        <UsageCount Value="23"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="Source/Chapter04-Graph-DFS-Applications/GTA.SingleSourcePath.pas"/>
+        <Caret Line="21" Column="15" TopLine="4"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter04-Graph-DFS-Applications/GTA.SingleSourcePath.pas"/>
+        <Caret Line="28" Column="41" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter04-Graph-DFS-Applications/GTA.SingleSourcePath.pas"/>
+        <Caret Line="94" Column="63" TopLine="77"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter04-Graph-DFS-Applications/GTA.SingleSourcePath.pas"/>
+        <Caret Line="93" Column="10" TopLine="75"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter04-Graph-DFS-Applications/GTA.SingleSourcePath.pas"/>
+        <Caret Line="44" Column="36" TopLine="27"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter04-Graph-DFS-Applications/GTA.SingleSourcePath.pas"/>
+        <Caret Line="102" Column="14" TopLine="78"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter04-Graph-DFS-Applications/GTA.SingleSourcePath.pas"/>
+        <Caret Line="99" Column="24" TopLine="92"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter04-Graph-DFS-Applications/GTA.SingleSourcePath.pas"/>
+        <Caret Line="15" Column="22"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter04-Graph-DFS-Applications/GTA.Path.pas"/>
+        <Caret Line="25" Column="32"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter04-Graph-DFS-Applications/GTA.Path.pas"/>
+        <Caret Line="120" Column="26" TopLine="100"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter04-Graph-DFS-Applications/GTA.Path.pas"/>
+        <Caret Line="22" Column="46" TopLine="8"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter04-Graph-DFS-Applications/GTA.Path.pas"/>
+        <Caret Line="14" Column="8"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter04-Graph-DFS-Applications/GTA.Path.pas"/>
+        <Caret Line="41" Column="64" TopLine="19"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter04-Graph-DFS-Applications/GTA.Path.pas"/>
+        <Caret Line="42" Column="28" TopLine="22"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter04-Graph-DFS-Applications/GTA.Path.pas"/>
+        <Caret Line="75" Column="16" TopLine="58"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter04-Graph-DFS-Applications/GTA.Path.pas"/>
+        <Caret Line="77" Column="23" TopLine="60"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter04-Graph-DFS-Applications/GTA.Path.pas"/>
+        <Caret Line="80" Column="20" TopLine="63"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter04-Graph-DFS-Applications/GTA.Path.pas"/>
+        <Caret Line="45" Column="31" TopLine="28"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter04-Graph-DFS-Applications/GTA.Path.pas"/>
+        <Caret Line="48" Column="31" TopLine="31"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/GTA.Main.pas"/>
+        <Caret Line="22" TopLine="12"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/GTA.Main.pas"/>
+        <Caret Line="23" TopLine="12"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/GTA.Main.pas"/>
+        <Caret Line="24" Column="18" TopLine="12"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/GTA.Main.pas"/>
+        <Caret Line="22" TopLine="12"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/GTA.Main.pas"/>
+        <Caret Line="23" TopLine="12"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/GTA.Main.pas"/>
+        <Caret Line="24" TopLine="12"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/GTA.Main.pas"/>
+        <Caret Line="23" Column="9" TopLine="12"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/GTA.Main.pas"/>
+        <Caret Line="22" Column="5" TopLine="12"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/GTA.Main.pas"/>
+        <Caret Line="23" TopLine="12"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter03-Graph-DFS/GTA.GraphDFS.pas"/>
+        <Caret Line="94" Column="35" TopLine="19"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter04-Graph-DFS-Applications/GTA.CycleDetection.pas"/>
+        <Caret Line="14" Column="18"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

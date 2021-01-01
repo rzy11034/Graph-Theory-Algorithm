@@ -1,0 +1,33 @@
+﻿program GTA;
+
+{$mode objfpc}{$H+}
+
+uses
+ {$IFDEF UNIX}
+  cthreads,
+ {$ENDIF}
+  Classes,
+  SysUtils,
+  DeepStar.Utils,
+  GTA.Main,
+  GTA.Utils,
+  GTA.Interfaces,
+  GTA.AdjMatrix,
+  GTA.AdjList,
+  GTA.AdjSet,
+  GTA.Graph,
+  GTA.GraphDFS,
+  GTA.AdjMatrixDFS,
+  GTA.GraphDFSnr, GTA.CC, GTA.SingleSourcePath, GTA.Path, GTA.CycleDetection;
+
+begin
+  try
+    Run;
+    DrawLineProgramEnd;
+    Writeln(END_OF_PROGRAM_EN);
+    Readln;
+  except
+    on E: Exception do
+      Writeln(E.ClassName, ': ', E.Message);
+  end;
+end.
