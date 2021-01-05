@@ -6,19 +6,11 @@ uses
  {$IFDEF UNIX}
   cthreads,
  {$ENDIF}
-  Classes,
-  SysUtils,
-  DeepStar.Utils,
-  GTA.Main,
-  GTA.Utils,
-  GTA.Interfaces,
-  GTA.AdjMatrix,
-  GTA.AdjList,
-  GTA.AdjSet,
-  GTA.Graph,
-  GTA.GraphDFS,
-  GTA.AdjMatrixDFS,
-  GTA.GraphDFSnr, GTA.CC, GTA.SingleSourcePath, GTA.Path, GTA.CycleDetection;
+  Classes, SysUtils, DeepStar.Utils, GTA.Main, GTA.Utils, GTA.Interfaces,
+  GTA.AdjMatrix, GTA.AdjList, GTA.AdjSet, GTA.Graph, GTA.GraphDFS,
+  GTA.AdjMatrixDFS, GTA.GraphDFSnr, GTA.CC, GTA.SingleSourcePath, GTA.Path,
+  GTA.CycleDetection, GTA.BipartitionDetection, GTA.GraphBFS,
+GTA.SingleSourcePath_BFS;
 
 begin
   try

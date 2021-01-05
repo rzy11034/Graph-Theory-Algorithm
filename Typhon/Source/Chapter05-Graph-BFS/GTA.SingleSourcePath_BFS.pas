@@ -1,4 +1,4 @@
-﻿unit GTA.SingleSourcePath;
+﻿unit GTA.SingleSourcePath_BFS;
 
 {$mode objfpc}{$H+}
 
@@ -14,18 +14,18 @@ type
   TSingleSourcePath = class(TObject)
   private
     _g: IGraph;
-    _src: integer;
     _visited: TArr_bool;
     _pre: TArr_int;
+    _src: integer;
 
-    procedure __dfs(v, parent: integer);
+    procedure __bfs(v: integer);
 
   public
-    constructor Create(g: IGraph; src: integer);
+    constructor Create(g: IGraph; s: integer);
     destructor Destroy; override;
 
-    function IsConnectedTo(t: integer): boolean;
     function Path(t: integer): TArr_int;
+    function IsConnectedTo(t: integer): boolean;
   end;
 
 procedure Main;
@@ -37,32 +37,25 @@ var
   g: IGraph;
   ssPath: TSingleSourcePath;
 begin
-  g := TGraph.Create(FileName('Chapter04-Graph-DFS-Applications', 'g.txt'));
+  g := TGraph.Create(FileName('Chapter05-Graph-BFS', 'g.txt'));
   ssPath := TSingleSourcePath.Create(g, 0);
-
   Write('0 -> 6 : ');
   TArrayUtils_int.Print(ssPath.Path(6));
-
-  Write('0 -> 5 : ');
-  TArrayUtils_int.Print(ssPath.Path(5));
-
   ssPath.Free;
 end;
 
 { TSingleSourcePath }
 
-constructor TSingleSourcePath.Create(g: IGraph; src: integer);
+constructor TSingleSourcePath.Create(g: IGraph; s: integer);
 begin
-  g.ValidateVertex(src);
-
   _g := g;
-  _src := src;
-
+  _src := s;
   SetLength(_visited, g.V);
-  SetLength(_pre, _g.V);
+  SetLength(_pre, g.V);
   TArrayUtils_int.FillArray(_pre, -1);
 
-  __dfs(_src, src);
+  ///////////////////////////////
+  __bfs(s);
 end;
 
 destructor TSingleSourcePath.Destroy;
@@ -103,17 +96,33 @@ begin
   end;
 end;
 
-procedure TSingleSourcePath.__dfs(v, parent: integer);
+procedure TSingleSourcePath.__bfs(v: integer);
 var
-  w: integer;
+  queue: TQueue_int;
+  cur, w: integer;
 begin
-  _visited[v] := true;
-  _pre[v] := parent;
+  queue := TQueue_int.Create;
+  try
+    queue.EnQueue(v);
+    _visited[v] := true;
+    _pre[v] := v;
 
-  for w in _g.Adj(v) do
-  begin
-    if _visited[w] <> true then
-      __dfs(w, v);
+    while not queue.IsEmpty do
+    begin
+      cur := queue.DeQueue;
+
+      for w in _g.Adj(cur) do
+      begin
+        if not _visited[w] then
+        begin
+          queue.EnQueue(w);
+          _visited[w] := true;
+          _pre[w] := cur;
+        end;
+      end;
+    end;
+  finally
+    queue.Free;
   end;
 end;
 

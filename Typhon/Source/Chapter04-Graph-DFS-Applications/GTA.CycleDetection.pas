@@ -15,36 +15,36 @@ type
   private
     _g: IGraph;
     _visited: TArr_bool;
-    _preOrder: TList_int;
-    _postOrder: TList_int;
+    _hasCycle: boolean;
 
-    procedure __dfs(v: integer);
+    // 从顶点 v 开始，判断图中是否有环
+    function __dfs(v, parent: integer): boolean;
 
   public
     constructor Create(g: IGraph);
     destructor Destroy; override;
 
-    function PreOrder: TArr_int;
-    function PostOrder: TArr_int;
+    property HasCycle: boolean read _HasCycle write _HasCycle;
   end;
 
-procedure Main;          
-  g := TGraph.Create(FileName('Chapter03-Graph-DFS', 'g.txt'));
+procedure Main;
 
 implementation
 
 procedure Main;
 var
   g: IGraph;
-  graphDFS: TCycleDetection;
+  cd: TCycleDetection;
 begin
-  g := TGraph.Create(FileName('Chapter03-Graph-DFS', 'g.txt'));
-  graphDFS := TCycleDetection.Create(g);
+  g := TGraph.Create(FileName('Chapter04-Graph-DFS-Applications', 'g.txt'));
+  cd := TCycleDetection.Create(g);
+  WriteLn(cd._hasCycle);
+  cd.Free;
 
-  TArrayUtils_int.Print(graphDFS.PreOrder);
-  TArrayUtils_int.Print(graphDFS.PostOrder);
-
-  graphDFS.Free;
+  g := TGraph.Create(FileName('Chapter04-Graph-DFS-Applications', 'g2.txt'));
+  cd := TCycleDetection.Create(g);
+  WriteLn(cd._hasCycle);
+  cd.Free;
 end;
 
 { TCycleDetection }
@@ -54,49 +54,43 @@ var
   v: integer;
 begin
   _g := g;
+  _hasCycle := false;
   SetLength(_visited, g.V);
-  _preOrder := TList_int.Create;
-  _postOrder := TList_int.Create;
 
   for v := 0 to g.V - 1 do
   begin
     if not _visited[v] then
-      __dfs(v);
+      if __dfs(v, v) then
+      begin
+        _hasCycle := true;
+        Break;
+      end;
   end;
-
 end;
 
 destructor TCycleDetection.Destroy;
 begin
-  _preOrder.Free;
-  _postOrder.Free;
   inherited Destroy;
 end;
 
-function TCycleDetection.PostOrder: TArr_int;
-begin
-  Result := _postOrder.ToArray;
-end;
-
-function TCycleDetection.PreOrder: TArr_int;
-begin
-  Result := _preOrder.ToArray;
-end;
-
-procedure TCycleDetection.__dfs(v: integer);
+function TCycleDetection.__dfs(v, parent: integer): boolean;
 var
-  temp: integer;
+  w: integer;
 begin
   _visited[v] := true;
-  _preOrder.AddLast(v);
 
-  for temp in _g.Adj(v) do
+  for w in _g.Adj(v) do
   begin
-    if _visited[temp] <> true then
-      __dfs(temp);
+    if _visited[w] <> true then
+    begin
+      if __dfs(w, v) then
+        Exit(true);
+    end
+    else if w <> parent then
+      Exit(true);
   end;
 
-  _postOrder.AddLast(v);
+  Result := false;
 end;
 
 end.

@@ -13,7 +13,7 @@ procedure Run;
 implementation
 
 uses
-  GTA.Path;
+  GTA.SingleSourcePath_BFS;
 
 procedure Run;
 begin

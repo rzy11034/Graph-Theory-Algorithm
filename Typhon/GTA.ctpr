@@ -23,7 +23,7 @@
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
-            <OtherUnitFiles Value="Source;Source/Chapter02-Graph-Basics;Source/Chapter03-Graph-DFS;Source/Chapter04-Graph-DFS-Applications"/>
+            <OtherUnitFiles Value="Source;Source/Chapter02-Graph-Basics;Source/Chapter03-Graph-DFS;Source/Chapter04-Graph-DFS-Applications;Source/Chapter05-Graph-BFS"/>
             <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
           <Parsing>
@@ -42,7 +42,7 @@
           </CodeGeneration>
           <Linking>
             <Debugging>
-              <DebugInfoType Value="dsDwarf2Set"/>
+              <DebugInfoType Value="dsDwarf3"/>
               <UseHeaptrc Value="True"/>
               <TrashVariables Value="True"/>
             </Debugging>
@@ -62,7 +62,7 @@
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
-            <OtherUnitFiles Value="Source;Source/Chapter02-Graph-Basics;Source/Chapter03-Graph-DFS;Source/Chapter04-Graph-DFS-Applications"/>
+            <OtherUnitFiles Value="Source;Source/Chapter02-Graph-Basics;Source/Chapter03-Graph-DFS;Source/Chapter04-Graph-DFS-Applications;Source/Chapter05-Graph-BFS"/>
             <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
           <CodeGeneration>
@@ -154,6 +154,18 @@
         <Filename Value="Source/Chapter04-Graph-DFS-Applications/GTA.CycleDetection.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter04-Graph-DFS-Applications/GTA.BipartitionDetection.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter05-Graph-BFS/GTA.GraphBFS.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter05-Graph-BFS/GTA.SingleSourcePath_BFS.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -163,7 +175,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="Source;Source/Chapter02-Graph-Basics;Source/Chapter03-Graph-DFS;Source/Chapter04-Graph-DFS-Applications"/>
+      <OtherUnitFiles Value="Source;Source/Chapter02-Graph-Basics;Source/Chapter03-Graph-DFS;Source/Chapter04-Graph-DFS-Applications;Source/Chapter05-Graph-BFS"/>
       <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
   </CompilerOptions>

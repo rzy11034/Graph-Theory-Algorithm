@@ -84,15 +84,15 @@ end;
 
 procedure TGraphDFS.__dfs(v: integer);
 var
-  temp: integer;
+  w: integer;
 begin
   _visited[v] := true;
   _preOrder.AddLast(v);
 
-  for temp in _g.Adj(v) do
+  for w in _g.Adj(v) do
   begin
-    if _visited[temp] <> true then
-      __dfs(temp);
+    if _visited[w] <> true then
+      __dfs(w);
   end;
 
   _postOrder.AddLast(v);
