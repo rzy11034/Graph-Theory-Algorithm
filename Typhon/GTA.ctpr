@@ -23,7 +23,7 @@
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
-            <OtherUnitFiles Value="Source;Source/Chapter02-Graph-Basics;Source/Chapter03-Graph-DFS;Source/Chapter04-Graph-DFS-Applications;Source/Chapter05-Graph-BFS"/>
+            <OtherUnitFiles Value="Source;Source/Chapter02-Graph-Basics;Source/Chapter03-Graph-DFS;Source/Chapter04-Graph-DFS-Applications;Source/Chapter05-Graph-BFS;Source/Chapter06-Graph-Modelling-and-Floodfill"/>
             <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
           <Parsing>
@@ -42,7 +42,7 @@
           </CodeGeneration>
           <Linking>
             <Debugging>
-              <DebugInfoType Value="dsDwarf3"/>
+              <DebugInfoType Value="dsDwarf2Set"/>
               <UseHeaptrc Value="True"/>
               <TrashVariables Value="True"/>
             </Debugging>
@@ -62,7 +62,7 @@
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
-            <OtherUnitFiles Value="Source;Source/Chapter02-Graph-Basics;Source/Chapter03-Graph-DFS;Source/Chapter04-Graph-DFS-Applications;Source/Chapter05-Graph-BFS"/>
+            <OtherUnitFiles Value="Source;Source/Chapter02-Graph-Basics;Source/Chapter03-Graph-DFS;Source/Chapter04-Graph-DFS-Applications;Source/Chapter05-Graph-BFS;Source/Chapter06-Graph-Modelling-and-Floodfill"/>
             <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
           <CodeGeneration>
@@ -166,6 +166,22 @@
         <Filename Value="Source/Chapter05-Graph-BFS/GTA.SingleSourcePath_BFS.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter05-Graph-BFS/GTA.UnweightedSingleSourceShortestPath.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter06-Graph-Modelling-and-Floodfill/GTA.Leetcode_785.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter06-Graph-Modelling-and-Floodfill/GTA.Leetcode_695.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter06-Graph-Modelling-and-Floodfill/GTA.Leetcode_1091.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -175,7 +191,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="Source;Source/Chapter02-Graph-Basics;Source/Chapter03-Graph-DFS;Source/Chapter04-Graph-DFS-Applications;Source/Chapter05-Graph-BFS"/>
+      <OtherUnitFiles Value="Source;Source/Chapter02-Graph-Basics;Source/Chapter03-Graph-DFS;Source/Chapter04-Graph-DFS-Applications;Source/Chapter05-Graph-BFS;Source/Chapter06-Graph-Modelling-and-Floodfill"/>
       <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
   </CompilerOptions>

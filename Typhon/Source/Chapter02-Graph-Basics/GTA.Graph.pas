@@ -72,7 +72,7 @@ begin
 
     _v := Lines[0];
     if _v < 0 then
-      raise Exception.Create('V must be non-negative');
+      raise Exception.Create('V Must Be non-Negative');
 
     _e := Lines[1];
     if _e < 0 then
