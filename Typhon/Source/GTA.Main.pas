@@ -6,7 +6,8 @@ interface
 
 uses
   Classes,
-  SysUtils, DeepStar.Utils;
+  SysUtils,
+  Character;
 
 procedure Run;
 
@@ -16,14 +17,7 @@ uses
   GTA.Leetcode_752;
 
 procedure Run;
-var
-  s: string;
-  c: Char;
-  n: integer;
 begin
-  s := '0';
-  n:= ord(s.Chars[0]);
-  TryStrToInt(s.Chars[0],n);
   Main;
 end;
 
