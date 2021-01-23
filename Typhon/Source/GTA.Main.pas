@@ -6,15 +6,14 @@ interface
 
 uses
   Classes,
-  SysUtils,
-  Character;
+  SysUtils;
 
 procedure Run;
 
 implementation
 
 uses
-  GTA.Leetcode_752;
+  GTA.WaterPuzzle;
 
 procedure Run;
 begin
