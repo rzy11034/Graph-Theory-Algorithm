@@ -54,7 +54,7 @@ var
   nextS: IList_str;
   arrCur: TArr_chr;
 begin
-  deadSet := TSet_str.Create(n);
+  deadSet := THashSet_str.Create(n);
   for temp in deadends do
     deadSet.Add(temp);
 
@@ -64,7 +64,7 @@ begin
 
   // BFS
   queue := TQueue_str.Create;
-  visited := TMap_str_int.Create(n);
+  visited := THashMap_str_int.Create(n);
 
   temp := '0000';
   queue.EnQueue(temp);
@@ -117,4 +117,3 @@ begin
 end;
 
 end.
-

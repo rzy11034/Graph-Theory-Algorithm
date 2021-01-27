@@ -191,7 +191,7 @@
         <IsPartOfProject Value="True"/>
       </Unit>
       <Unit>
-        <Filename Value="Source/Chapter07-AI-Search-and-BFS/FarmerCrossedRiver.pas"/>
+        <Filename Value="Source/Chapter07-AI-Search-and-BFS/GTA.FarmerCrossedRiver.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
     </Units>

@@ -13,7 +13,7 @@ procedure Run;
 implementation
 
 uses
-  GTA.WaterPuzzle;
+  GTA.FarmerCrossedRiver;
 
 procedure Run;
 begin
