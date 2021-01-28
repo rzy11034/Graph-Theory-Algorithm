@@ -6,7 +6,9 @@ interface
 
 uses
   Classes,
-  SysUtils;
+  SysUtils,
+  {%H-}DeepStar.UString,
+  {%H-}DeepStar.Utils;
 
 procedure Run;
 

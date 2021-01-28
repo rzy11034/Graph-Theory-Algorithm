@@ -11,7 +11,8 @@ uses
   GTA.AdjMatrixDFS, GTA.GraphDFSnr, GTA.CC, GTA.SingleSourcePath, GTA.Path,
   GTA.CycleDetection, GTA.BipartitionDetection, GTA.GraphBFS,
 GTA.SingleSourcePath_BFS, GTA.UnweightedSingleSourceShortestPath,
-GTA.Leetcode_785, GTA.Leetcode_695, GTA.Leetcode_1091, GTA.Leetcode_752, GTA.WaterPuzzle, GTA.FarmerCrossedRiver;
+GTA.Leetcode_785, GTA.Leetcode_695, GTA.Leetcode_1091, GTA.Leetcode_752, GTA.WaterPuzzle, GTA.FarmerCrossedRiver, 
+GTA.SlidingPuzzle;
 
 begin
   try
