@@ -15,7 +15,7 @@ procedure Run;
 implementation
 
 uses
-  GTA.FarmerCrossedRiver;
+  GTA.FindBridges;
 
 procedure Run;
 begin

@@ -61,7 +61,7 @@ begin
     // max a = 5, max b = 3
 
     ////////////////////////////////
-    nextS := TList_int.Create();
+    nextS := TArrayList_int.Create();
     nextS.AddLast(5 * 10 + b);
     nextS.AddLast(a * 10 + 3);
     nextS.AddLast(a * 10 + 0);
@@ -105,7 +105,7 @@ var
 begin
   if _end = -1 then Exit(nil);
 
-  list := TList_int.Create();
+  list := TArrayList_int.Create;
   cur := _end;
   while cur <> 0 do
   begin

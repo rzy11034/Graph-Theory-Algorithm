@@ -27,7 +27,7 @@ type
     constructor Create(fileName: UString);
     destructor Destroy; override;
 
-    function Adj(v: integer): TList_int;
+    function Adj(v: integer): IList_int;
     function Degree(v: integer): integer;
     function HasEdge(v, w: integer): boolean;
     function ToString: UString; reintroduce;
@@ -99,13 +99,13 @@ begin
   end;
 end;
 
-function TAdjList.Adj(v: integer): TList_int;
+function TAdjList.Adj(v: integer): IList_int;
 var
-  res: TList_int;
+  res: IList_int;
   i: integer;
 begin
   __validateVertex(v);
-  res := TList_int.Create;
+  res := TArrayList_int.Create;
 
   for i := 0 to _adj[v].Count - 1 do
     res.AddLast(_adj[v][i]);

@@ -73,7 +73,7 @@ begin
   while not queue.IsEmpty do
   begin
     curS := queue.DeQueue;
-    nextS := TList_str.Create;
+    nextS := TArrayList_str.Create;
 
     arrCur := curS.ToCharArray;
     for i := 0 to High(arrCur) do

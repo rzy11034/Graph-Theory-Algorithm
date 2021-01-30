@@ -87,12 +87,12 @@ end;
 function TPath.Path: TArr_int;
 var
   res: TArr_int;
-  list: TList_int;
+  list: TArrayList_int;
   cur, i, n: integer;
 begin
   if not IsConnected then Exit(nil);
 
-  list := TList_int.Create;
+  list := TArrayList_int.Create;
   try
     cur := _t;
     while cur <> _src do

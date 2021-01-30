@@ -72,12 +72,12 @@ end;
 function TSingleSourcePath.Path(t: integer): TArr_int;
 var
   res: TArr_int;
-  list: TList_int;
+  list: TArrayList_int;
   cur: integer;
 begin
   if not IsConnectedTo(t) then Exit(nil);
 
-  list := TList_int.Create;
+  list := TArrayList_int.Create;
   try
     cur := t;
     while cur <> _src do

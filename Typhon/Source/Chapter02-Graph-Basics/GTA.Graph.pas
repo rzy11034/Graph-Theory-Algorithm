@@ -171,11 +171,11 @@ const
   CHARS: TSysCharSet = ['0' .. '9', '.', '+', '-'];
 var
   sb: TStringBuilder;
-  list: TList_int;
+  list: TArrayList_int;
   i: integer;
 begin
   sb := TStringBuilder.Create;
-  list := TList_int.Create;
+  list := TArrayList_int.Create;
   try
     for i := 0 to s.Length - 1 do
     begin

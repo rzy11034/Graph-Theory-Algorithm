@@ -17,16 +17,15 @@
         <Filename Value="Source/GTA.Main.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="4"/>
-        <CursorPos Y="22"/>
+        <CursorPos X="18" Y="18"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source/GTA.Utils.pas"/>
         <IsPartOfProject Value="True"/>
-        <TopLine Value="7"/>
-        <CursorPos X="14" Y="10"/>
+        <TopLine Value="10"/>
+        <CursorPos X="6" Y="14"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
       </Unit>
@@ -34,83 +33,88 @@
         <Filename Value="Source/Chapter02-Graph-Basics/GTA.AdjList.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="118"/>
-        <CursorPos X="16" Y="139"/>
-        <UsageCount Value="193"/>
+        <TopLine Value="85"/>
+        <CursorPos X="20" Y="108"/>
+        <UsageCount Value="200"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter02-Graph-Basics/GTA.AdjMatrix.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <CursorPos X="39" Y="13"/>
-        <UsageCount Value="193"/>
+        <TopLine Value="154"/>
+        <CursorPos X="21" Y="175"/>
+        <UsageCount Value="200"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter02-Graph-Basics/GTA.AdjSet.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="17"/>
-        <CursorPos X="47" Y="33"/>
-        <UsageCount Value="192"/>
+        <TopLine Value="159"/>
+        <CursorPos X="21" Y="175"/>
+        <UsageCount Value="200"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter02-Graph-Basics/GTA.Graph.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="186"/>
-        <CursorPos X="29" Y="91"/>
-        <UsageCount Value="190"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="82"/>
+        <CursorPos X="25" Y="108"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter03-Graph-DFS/GTA.GraphDFS.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="79"/>
-        <CursorPos X="73" Y="101"/>
-        <UsageCount Value="189"/>
+        <TopLine Value="67"/>
+        <CursorPos X="35" Y="82"/>
+        <UsageCount Value="200"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter03-Graph-DFS/GTA.AdjMatrixDFS.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="28"/>
-        <CursorPos X="35" Y="31"/>
-        <UsageCount Value="166"/>
+        <TopLine Value="40"/>
+        <CursorPos X="27" Y="60"/>
+        <UsageCount Value="199"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter02-Graph-Basics/GTA.Interfaces.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="164"/>
+        <UsageCount Value="197"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter03-Graph-DFS/GTA.GraphDFSnr.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="40"/>
-        <CursorPos X="49" Y="75"/>
-        <UsageCount Value="164"/>
+        <TopLine Value="37"/>
+        <CursorPos X="26" Y="54"/>
+        <UsageCount Value="197"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter04-Graph-DFS-Applications/GTA.CC.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <CursorPos X="55" Y="23"/>
-        <UsageCount Value="163"/>
+        <TopLine Value="76"/>
+        <CursorPos X="25" Y="93"/>
+        <UsageCount Value="196"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter04-Graph-DFS-Applications/GTA.SingleSourcePath.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <CursorPos X="41" Y="44"/>
-        <UsageCount Value="158"/>
+        <TopLine Value="64"/>
+        <CursorPos X="21" Y="87"/>
+        <UsageCount Value="191"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter04-Graph-DFS-Applications/GTA.Path.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <CursorPos X="33" Y="49"/>
-        <UsageCount Value="152"/>
+        <TopLine Value="72"/>
+        <CursorPos X="21" Y="95"/>
+        <UsageCount Value="185"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter04-Graph-DFS-Applications/GTA.CycleDetection.pas"/>
@@ -118,7 +122,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="28"/>
         <CursorPos X="19" Y="37"/>
-        <UsageCount Value="140"/>
+        <UsageCount Value="173"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter04-Graph-DFS-Applications/GTA.BipartitionDetection.pas"/>
@@ -126,43 +130,45 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="17"/>
         <CursorPos X="24" Y="106"/>
-        <UsageCount Value="135"/>
+        <UsageCount Value="168"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter05-Graph-BFS/GTA.GraphBFS.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="72"/>
-        <CursorPos X="28" Y="93"/>
-        <UsageCount Value="129"/>
+        <TopLine Value="36"/>
+        <CursorPos X="23" Y="53"/>
+        <UsageCount Value="162"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter05-Graph-BFS/GTA.SingleSourcePath_BFS.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <CursorPos X="5" Y="129"/>
-        <UsageCount Value="124"/>
+        <TopLine Value="69"/>
+        <CursorPos X="21" Y="80"/>
+        <UsageCount Value="157"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter05-Graph-BFS/GTA.UnweightedSingleSourceShortestPath.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <CursorPos X="30" Y="61"/>
-        <UsageCount Value="117"/>
+        <TopLine Value="81"/>
+        <CursorPos X="21" Y="92"/>
+        <UsageCount Value="150"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter06-Graph-Modelling-and-Floodfill/GTA.Leetcode_785.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos Y="12"/>
-        <UsageCount Value="116"/>
+        <UsageCount Value="149"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter06-Graph-Modelling-and-Floodfill/GTA.Leetcode_695.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="59" Y="17"/>
-        <UsageCount Value="109"/>
+        <UsageCount Value="142"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter07-AI-Search-and-BFS/GTA.Leetcode_1091.pas"/>
@@ -170,74 +176,79 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="25"/>
         <CursorPos X="36" Y="38"/>
-        <UsageCount Value="69"/>
+        <UsageCount Value="102"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter07-AI-Search-and-BFS/GTA.Leetcode_752.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="4"/>
-        <CursorPos X="35" Y="72"/>
-        <UsageCount Value="60"/>
+        <TopLine Value="59"/>
+        <CursorPos X="24" Y="76"/>
+        <UsageCount Value="93"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter07-AI-Search-and-BFS/GTA.WaterPuzzle.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <CursorPos X="44" Y="105"/>
-        <UsageCount Value="48"/>
+        <TopLine Value="91"/>
+        <CursorPos X="32" Y="108"/>
+        <UsageCount Value="81"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter07-AI-Search-and-BFS/GTA.FarmerCrossedRiver.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="68"/>
-        <CursorPos X="39" Y="131"/>
-        <UsageCount Value="44"/>
+        <TopLine Value="65"/>
+        <CursorPos X="95" Y="75"/>
+        <UsageCount Value="77"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter07-AI-Search-and-BFS/GTA.SlidingPuzzle.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="136"/>
+        <CursorPos X="106" Y="151"/>
+        <UsageCount Value="60"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.FindBridges.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="74"/>
+        <CursorPos Y="89"/>
+        <UsageCount Value="28"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.Edge.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="10"/>
+        <CursorPos X="28" Y="34"/>
+        <UsageCount Value="27"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source/02-Graph-Basics/GTA.AdjMatrix.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="37"/>
         <CursorPos X="30" Y="67"/>
-        <UsageCount Value="155"/>
+        <UsageCount Value="152"/>
       </Unit>
       <Unit>
         <Filename Value="Source/02-Graph-Basics/GTA.AdjList.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="131"/>
         <CursorPos X="44" Y="153"/>
-        <UsageCount Value="55"/>
-      </Unit>
-      <Unit>
-        <Filename Value="Source/GTA.Main.ppr"/>
-        <UnitName Value="Unit1"/>
-        <EditorIndex Value="-1"/>
-        <UsageCount Value="1"/>
-      </Unit>
-      <Unit>
-        <Filename Value="Source/02-Graph-Basics/03-Adjacency-Matrix/g.txt"/>
-        <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="21" Y="10"/>
-        <SyntaxHighlighter Value="PO"/>
-        <UsageCount Value="1"/>
-        <DefaultSyntaxHighlighter Value="None"/>
-      </Unit>
-      <Unit>
-        <Filename Value="/usr/local/codetyphon/fpcsrc/rtl/unix/sysutils.pp"/>
-        <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="88"/>
-        <UsageCount Value="2"/>
+        <UsageCount Value="52"/>
       </Unit>
       <Unit>
         <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/DSA/Linear/DeepStar.DSA.Linear.LinkedList.pas"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="38"/>
-        <CursorPos X="31" Y="240"/>
-        <UsageCount Value="3"/>
+        <CursorPos X="22" Y="15"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="/usr/local/codetyphon/fpcsrc/rtl/objpas/sysutils/sysutilh.inc"/>
@@ -245,30 +256,30 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="341"/>
         <CursorPos X="3" Y="280"/>
-        <UsageCount Value="3"/>
+        <UsageCount Value="0"/>
       </Unit>
       <Unit>
         <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/Utils/DeepStar.Utils.pas"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="100"/>
-        <CursorPos X="52" Y="111"/>
-        <UsageCount Value="42"/>
+        <TopLine Value="387"/>
+        <CursorPos X="36" Y="283"/>
+        <UsageCount Value="49"/>
       </Unit>
       <Unit>
         <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/Utils/DeepStar.UString.pas"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="21" Y="14"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="5"/>
       </Unit>
       <Unit>
         <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/DSA/DeepStar.DSA.Interfaces.pas"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="19"/>
-        <CursorPos X="3" Y="25"/>
-        <UsageCount Value="9"/>
+        <TopLine Value="76"/>
+        <CursorPos X="67" Y="105"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter03-Graph-DFS/g.txt"/>
@@ -276,16 +287,17 @@
         <EditorIndex Value="-1"/>
         <CursorPos X="35" Y="7"/>
         <SyntaxHighlighter Value="C++"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="4"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
       <Unit>
         <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/DSA/Linear/DeepStar.DSA.Linear.ArrayList.pas"/>
         <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="285"/>
-        <CursorPos Y="292"/>
-        <UsageCount Value="9"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="129"/>
+        <CursorPos X="3" Y="150"/>
+        <UsageCount Value="15"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="/usr/local/codetyphon/fpcsrc/rtl/objpas/sysutils/sysutils.inc"/>
@@ -293,14 +305,14 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="142"/>
         <CursorPos Y="158"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
         <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/DSA/Linear/DeepStar.DSA.Linear.Stack.pas"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="11" Y="14"/>
-        <UsageCount Value="0"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/DSA/Linear/DeepStar.DSA.Linear.Queue.pas"/>
@@ -308,14 +320,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="4"/>
         <CursorPos X="11" Y="14"/>
-        <UsageCount Value="6"/>
-      </Unit>
-      <Unit>
-        <Filename Value="../../DeepStar-Lib/Typhon/Package/DeepStar_Lib.pas"/>
-        <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="50" Y="7"/>
-        <UsageCount Value="2"/>
+        <UsageCount Value="3"/>
       </Unit>
       <Unit>
         <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/DSA/Hash/DeepStar.DSA.Hash.HashSet.pas"/>
@@ -323,31 +328,32 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="28"/>
         <CursorPos X="59" Y="31"/>
-        <UsageCount Value="4"/>
+        <UsageCount Value="1"/>
       </Unit>
       <Unit>
         <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/DSA/Hash/DeepStar.DSA.Hash.HashMap.pas"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="13"/>
-        <CursorPos X="50" Y="21"/>
-        <UsageCount Value="7"/>
+        <TopLine Value="51"/>
+        <CursorPos X="67" Y="67"/>
+        <UsageCount Value="8"/>
       </Unit>
       <Unit>
         <Filename Value="/usr/local/codetyphon/fpcsrc/rtl/inc/objpash.inc"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="191"/>
-        <CursorPos X="23" Y="208"/>
-        <UsageCount Value="3"/>
+        <TopLine Value="200"/>
+        <CursorPos X="21" Y="217"/>
+        <UsageCount Value="10"/>
       </Unit>
       <Unit>
         <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/DSA/Linear/DeepStar.DSA.Linear.DoubleLinkedList.pas"/>
         <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="157"/>
-        <CursorPos X="3" Y="170"/>
-        <UsageCount Value="10"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="151"/>
+        <CursorPos X="21" Y="172"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="/codetyphon/fpcsrc/rtl/inc/systemh.inc"/>
@@ -355,14 +361,14 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="248"/>
         <CursorPos X="3" Y="634"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="4"/>
       </Unit>
       <Unit>
         <Filename Value="/codetyphon/fpcsrc/rtl/objpas/sysutils/syshelph.inc"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="19"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="4"/>
       </Unit>
       <Unit>
         <Filename Value="/codetyphon/fpcsrc/rtl/inc/compproc.inc"/>
@@ -370,7 +376,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="608"/>
         <CursorPos X="10" Y="622"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="4"/>
       </Unit>
       <Unit>
         <Filename Value="/codetyphon/fpcsrc/rtl/inc/ustrings.inc"/>
@@ -378,7 +384,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="662"/>
         <CursorPos X="3" Y="671"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="4"/>
       </Unit>
       <Unit>
         <Filename Value="Source/compproc.inc"/>
@@ -386,7 +392,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="378"/>
         <CursorPos X="10" Y="392"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="4"/>
       </Unit>
       <Unit>
         <Filename Value="/codetyphon/fpcsrc/rtl/inc/dos.inc"/>
@@ -394,7 +400,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="49"/>
         <CursorPos X="66" Y="15"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="4"/>
       </Unit>
       <Unit>
         <Filename Value="/codetyphon/fpcsrc/rtl/objpas/sysutils/sysutilh.inc"/>
@@ -402,7 +408,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="255"/>
         <CursorPos X="18" Y="269"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="4"/>
       </Unit>
       <Unit>
         <Filename Value="/codetyphon/fpcsrc/rtl/objpas/character.pas"/>
@@ -411,21 +417,21 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="46"/>
         <CursorPos X="3" Y="33"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="4"/>
       </Unit>
       <Unit>
         <Filename Value="/codetyphon/fpcsrc/rtl/inc/uuchar.pp"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="31"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="4"/>
       </Unit>
       <Unit>
         <Filename Value="/codetyphon/fpcsrc/rtl/inc/charset.pp"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="133"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="4"/>
       </Unit>
       <Unit>
         <Filename Value="/codetyphon/fpcsrc/rtl/win/sysutils.pp"/>
@@ -434,7 +440,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="25"/>
         <CursorPos X="30" Y="23"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="4"/>
       </Unit>
       <Unit>
         <Filename Value="/codetyphon/fpcsrc/rtl/objpas/sysutils/sysstrh.inc"/>
@@ -442,7 +448,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="314"/>
         <CursorPos X="26" Y="328"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="4"/>
       </Unit>
       <Unit>
         <Filename Value="/usr/local/codetyphon/fpcsrc/packages/rtl-generics/src/generics.collections.pas"/>
@@ -451,17 +457,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="64"/>
         <CursorPos X="21" Y="80"/>
-        <UsageCount Value="8"/>
-      </Unit>
-      <Unit>
-        <Filename Value="Source/Chapter07-AI-Search-and-BFS/GTA.SlidingPuzzle.pas"/>
-        <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="2"/>
-        <TopLine Value="79"/>
-        <CursorPos X="35" Y="97"/>
-        <UsageCount Value="27"/>
-        <Loaded Value="True"/>
+        <UsageCount Value="5"/>
       </Unit>
       <Unit>
         <Filename Value="/usr/local/codetyphon/fpcsrc/rtl/objpas/character.pas"/>
@@ -470,125 +466,163 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="69"/>
         <CursorPos X="28" Y="78"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="7"/>
+      </Unit>
+      <Unit>
+        <Filename Value="/usr/local/codetyphon/fpcsrc/packages/rtl-objpas/src/inc/rtti.pp"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="Rtti"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1878"/>
+        <CursorPos X="3" Y="1895"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="/usr/local/codetyphon/fpcsrc/rtl/objpas/typinfo.pp"/>
+        <FRMtype Value="0"/>
+        <UnitName Value="TypInfo"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="31"/>
+        <CursorPos X="8" Y="48"/>
+        <UsageCount Value="9"/>
+      </Unit>
+      <Unit>
+        <Filename Value="/usr/local/codetyphon/fpcsrc/rtl/inc/rttih.inc"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="16" Y="22"/>
+        <UsageCount Value="7"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/DSA/Tree/DeepStar.DSA.Tree.TreeMap.pas"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="684"/>
+        <CursorPos Y="691"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="28">
+    <JumpHistory HistoryIndex="29">
       <Position>
-        <Filename Value="Source/GTA.Main.pas"/>
-        <Caret Line="28" TopLine="16"/>
+        <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.FindBridges.pas"/>
+        <Caret Line="51" TopLine="37"/>
       </Position>
       <Position>
-        <Filename Value="Source/GTA.Main.pas"/>
-        <Caret Line="29" TopLine="16"/>
+        <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.FindBridges.pas"/>
+        <Caret Line="52" TopLine="37"/>
       </Position>
       <Position>
-        <Filename Value="Source/GTA.Main.pas"/>
-        <Caret Line="28" TopLine="16"/>
+        <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.FindBridges.pas"/>
+        <Caret Line="53" TopLine="37"/>
       </Position>
       <Position>
-        <Filename Value="Source/GTA.Main.pas"/>
-        <Caret Line="29" TopLine="16"/>
+        <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.FindBridges.pas"/>
+        <Caret Line="33" Column="27" TopLine="17"/>
       </Position>
       <Position>
-        <Filename Value="Source/GTA.Main.pas"/>
-        <Caret Line="28" TopLine="16"/>
+        <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.FindBridges.pas"/>
+        <Caret Line="80" TopLine="64"/>
       </Position>
       <Position>
-        <Filename Value="Source/GTA.Main.pas"/>
-        <Caret Line="29" TopLine="16"/>
+        <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.FindBridges.pas"/>
+        <Caret Line="82" TopLine="66"/>
       </Position>
       <Position>
-        <Filename Value="Source/GTA.Main.pas"/>
-        <Caret Line="28" TopLine="16"/>
+        <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.FindBridges.pas"/>
+        <Caret Line="83" TopLine="67"/>
       </Position>
       <Position>
-        <Filename Value="Source/GTA.Main.pas"/>
-        <Caret Line="29" TopLine="16"/>
+        <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.FindBridges.pas"/>
+        <Caret Line="84" TopLine="68"/>
       </Position>
       <Position>
-        <Filename Value="Source/GTA.Main.pas"/>
-        <Caret Line="28" TopLine="16"/>
+        <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.FindBridges.pas"/>
+        <Caret Line="80" TopLine="71"/>
       </Position>
       <Position>
-        <Filename Value="Source/GTA.Main.pas"/>
-        <Caret Line="29" TopLine="16"/>
+        <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.FindBridges.pas"/>
+        <Caret Line="82" TopLine="71"/>
       </Position>
       <Position>
-        <Filename Value="Source/Chapter07-AI-Search-and-BFS/GTA.SlidingPuzzle.pas"/>
-        <Caret Line="40" Column="47" TopLine="28"/>
+        <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.FindBridges.pas"/>
+        <Caret Line="83" TopLine="71"/>
       </Position>
       <Position>
-        <Filename Value="Source/Chapter07-AI-Search-and-BFS/GTA.SlidingPuzzle.pas"/>
-        <Caret Line="21" TopLine="4"/>
+        <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.FindBridges.pas"/>
+        <Caret Line="84" TopLine="71"/>
       </Position>
       <Position>
-        <Filename Value="Source/Chapter07-AI-Search-and-BFS/GTA.SlidingPuzzle.pas"/>
-        <Caret Line="5"/>
+        <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.FindBridges.pas"/>
+        <Caret Line="85" TopLine="71"/>
       </Position>
       <Position>
-        <Filename Value="Source/Chapter07-AI-Search-and-BFS/GTA.SlidingPuzzle.pas"/>
-        <Caret Line="17" Column="35"/>
+        <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.FindBridges.pas"/>
+        <Caret Line="86" TopLine="71"/>
       </Position>
       <Position>
-        <Filename Value="Source/Chapter07-AI-Search-and-BFS/GTA.SlidingPuzzle.pas"/>
-        <Caret Line="20" Column="56" TopLine="4"/>
+        <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.FindBridges.pas"/>
+        <Caret Line="88" TopLine="72"/>
       </Position>
       <Position>
-        <Filename Value="Source/Chapter07-AI-Search-and-BFS/GTA.SlidingPuzzle.pas"/>
-        <Caret Line="54" Column="5" TopLine="41"/>
+        <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.FindBridges.pas"/>
+        <Caret Line="89" TopLine="73"/>
       </Position>
       <Position>
-        <Filename Value="Source/Chapter07-AI-Search-and-BFS/GTA.SlidingPuzzle.pas"/>
-        <Caret Line="128" Column="60" TopLine="109"/>
+        <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.FindBridges.pas"/>
+        <Caret Line="90" TopLine="74"/>
       </Position>
       <Position>
-        <Filename Value="Source/Chapter07-AI-Search-and-BFS/GTA.SlidingPuzzle.pas"/>
-        <Caret Line="71" Column="19" TopLine="46"/>
+        <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.FindBridges.pas"/>
+        <Caret Line="88" TopLine="74"/>
       </Position>
       <Position>
-        <Filename Value="Source/Chapter07-AI-Search-and-BFS/GTA.SlidingPuzzle.pas"/>
-        <Caret Line="130" Column="7" TopLine="99"/>
+        <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.FindBridges.pas"/>
+        <Caret Line="80" TopLine="74"/>
       </Position>
       <Position>
-        <Filename Value="Source/Chapter07-AI-Search-and-BFS/GTA.SlidingPuzzle.pas"/>
-        <Caret Line="75" Column="3" TopLine="64"/>
+        <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.FindBridges.pas"/>
+        <Caret Line="82" TopLine="74"/>
       </Position>
       <Position>
-        <Filename Value="Source/Chapter07-AI-Search-and-BFS/GTA.SlidingPuzzle.pas"/>
-        <Caret Line="49" Column="63" TopLine="68"/>
+        <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.FindBridges.pas"/>
+        <Caret Line="83" TopLine="74"/>
       </Position>
       <Position>
-        <Filename Value="Source/Chapter07-AI-Search-and-BFS/GTA.SlidingPuzzle.pas"/>
-        <Caret Line="73" Column="10" TopLine="68"/>
+        <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.FindBridges.pas"/>
+        <Caret Line="84" TopLine="74"/>
       </Position>
       <Position>
-        <Filename Value="Source/Chapter07-AI-Search-and-BFS/GTA.SlidingPuzzle.pas"/>
-        <Caret Line="90" Column="10" TopLine="68"/>
+        <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.FindBridges.pas"/>
+        <Caret Line="85" TopLine="74"/>
       </Position>
       <Position>
-        <Filename Value="Source/Chapter07-AI-Search-and-BFS/GTA.SlidingPuzzle.pas"/>
-        <Caret Line="100" Column="10" TopLine="68"/>
+        <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.FindBridges.pas"/>
+        <Caret Line="86" TopLine="74"/>
       </Position>
       <Position>
-        <Filename Value="Source/Chapter07-AI-Search-and-BFS/GTA.SlidingPuzzle.pas"/>
-        <Caret Line="92" Column="22" TopLine="83"/>
+        <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.FindBridges.pas"/>
+        <Caret Line="88" TopLine="74"/>
       </Position>
       <Position>
-        <Filename Value="Source/Chapter07-AI-Search-and-BFS/GTA.SlidingPuzzle.pas"/>
-        <Caret Line="95" Column="10" TopLine="83"/>
+        <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.FindBridges.pas"/>
+        <Caret Line="89" TopLine="74"/>
       </Position>
       <Position>
-        <Filename Value="Source/Chapter07-AI-Search-and-BFS/GTA.SlidingPuzzle.pas"/>
-        <Caret Line="73" Column="10" TopLine="56"/>
+        <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.FindBridges.pas"/>
+        <Caret Line="90" TopLine="74"/>
       </Position>
       <Position>
-        <Filename Value="Source/Chapter07-AI-Search-and-BFS/GTA.SlidingPuzzle.pas"/>
-        <Caret Line="100" Column="10" TopLine="83"/>
+        <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.FindBridges.pas"/>
+        <Caret Line="88" TopLine="74"/>
       </Position>
       <Position>
-        <Filename Value="Source/Chapter07-AI-Search-and-BFS/GTA.SlidingPuzzle.pas"/>
-        <Caret Line="99" Column="8" TopLine="79"/>
+        <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.FindBridges.pas"/>
+        <Caret Line="89" TopLine="74"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.FindBridges.pas"/>
+        <Caret Line="88" TopLine="74"/>
       </Position>
     </JumpHistory>
     <RunParams>
@@ -596,4 +630,20 @@
       <Modes ActiveMode=""/>
     </RunParams>
   </ProjectSession>
+  <Debugging>
+    <BreakPoints>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.FindBridges.pas"/>
+        <Line Value="80"/>
+      </Item>
+    </BreakPoints>
+    <Watches>
+      <Item>
+        <Expression Value="self"/>
+      </Item>
+    </Watches>
+  </Debugging>
 </CONFIG>

@@ -16,8 +16,8 @@ type
   private
     _g: IGraph;
     _visited: TArr_bool;
-    _preOrder: TList_int;
-    _postOrder: TList_int;
+    _preOrder: TArrayList_int;
+    _postOrder: TArrayList_int;
 
     procedure __dfs(v: integer);
 
@@ -56,8 +56,8 @@ var
 begin
   _g := g;
   SetLength(_visited, g.V);
-  _preOrder := TList_int.Create;
-  _postOrder := TList_int.Create;
+  _preOrder := TArrayList_int.Create;
+  _postOrder := TArrayList_int.Create;
 
   for v := 0 to g.V - 1 do
   begin

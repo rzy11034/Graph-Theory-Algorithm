@@ -13,7 +13,7 @@ uses
 type
   TCC = class(TObject)
   public type
-    TArr_TList_int = array of TList_int;
+    TArr_TList_int = array of TArrayList_int;
 
   private
     _g: IGraph;
@@ -90,7 +90,7 @@ begin
   SetLength(res, _cccount);
 
   for i := 0 to _cccount - 1 do
-    res[i] := TList_int.Create;
+    res[i] := TArrayList_int.Create;
 
   for v := 0 to _g.V - 1 do
     res[_visited[v]].AddLast(v);

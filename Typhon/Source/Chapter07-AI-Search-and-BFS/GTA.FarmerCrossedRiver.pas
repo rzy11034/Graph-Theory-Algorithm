@@ -52,10 +52,10 @@ var
   list: IList_str;
   i: integer;
 begin
-  _order := TList_str.Create;
+  _order := TArrayList_str.Create;
   queue := TQueue_str.Create;
   visited := THashSet_str.Create;
-  list := TList_str.Create;
+  list := TArrayList_str.Create;
 
   deadSet := THashSet_str.Create;
   for i := 0 to High(DEAD_ARR) do
@@ -74,10 +74,7 @@ begin
     cur := queue.DeQueue;
     arr_Cur := cur.ToCharArray;
 
-    if arr_Cur[0] = '0' then
-      arr_Cur[0] := '1'
-    else
-      arr_Cur[0] := '0';
+    arr_Cur[0] := IfThen(arr_Cur[0] = '0', '1', '0');
 
     temp := UString.Create(arr_Cur);
     list.AddLast(temp);

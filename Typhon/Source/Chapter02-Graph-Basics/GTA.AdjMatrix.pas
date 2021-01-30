@@ -92,11 +92,11 @@ end;
 
 function TAdjMatrix.Adj(v: integer): TArr_int;
 var
-  res: TList_int;
+  res: TArrayList_int;
   i: integer;
 begin
   ValidateVertex(v);
-  res := TList_int.Create;
+  res := TArrayList_int.Create;
   try
     for i := 0 to _v - 1 do
     begin
@@ -168,11 +168,11 @@ const
   CHARS: TSysCharSet = ['0' .. '9', '.', '+', '-'];
 var
   sb: TStringBuilder;
-  list: TList_int;
+  list: TArrayList_int;
   i: integer;
 begin
   sb := TStringBuilder.Create;
-  list := TList_int.Create;
+  list := TArrayList_int.Create;
   try
     for i := 0 to s.Length - 1 do
     begin

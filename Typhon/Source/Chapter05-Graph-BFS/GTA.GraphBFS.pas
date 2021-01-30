@@ -15,7 +15,7 @@ type
   private
     _g: IGraph;
     _visited: TArr_bool;
-    _order: TList_int;
+    _order: TArrayList_int;
 
     procedure __bfs(v: integer);
 
@@ -50,7 +50,7 @@ var
 begin
   _g := g;
   SetLength(_visited, g.V);
-  _order := TList_int.Create;
+  _order := TArrayList_int.Create;
 
   for v := 0 to g.V - 1 do
   begin
