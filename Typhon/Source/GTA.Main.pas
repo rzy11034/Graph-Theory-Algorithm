@@ -15,7 +15,7 @@ procedure Run;
 implementation
 
 uses
-  GTA.FindBridges;
+  GTA.FindCutPoints;
 
 procedure Run;
 begin

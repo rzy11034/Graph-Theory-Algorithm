@@ -31,7 +31,7 @@ end;
 
 function TEdge.ToString: UString;
 begin
-  Result := UnicodeFormat('%d-%d ', [_v, _w]);
+  Result := UnicodeFormat('%d-%d', [_v, _w]);
 end;
 
 end.

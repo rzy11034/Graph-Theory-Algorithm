@@ -1,4 +1,4 @@
-﻿unit GTA.FindBridges;
+﻿unit GTA.FindCutPoints;
 
 {$mode objfpc}{$H+}
 
@@ -10,22 +10,17 @@ uses
   Math,
   DeepStar.Utils,
   DeepStar.UString,
-  DeepStar.DSA.Linear.ArrayList,
-  GTA.Edge,
   GTA.Utils;
 
 type
-  TFindBridges = class(TObject)
-  private type
-    TArrayList_Edge = specialize TArrayList<TEdge>;
-
+  TFindCutPoints = class(TObject)
   private
     _G: IGraph;
 
     _Visited: TArr_bool;
     _Ord, _Low: TArr_int;
     _Cnt: integer;
-    _Ret: TArrayList_Edge;
+    _Ret: ISet_int;
 
     procedure __Dfs(v: integer; parent: integer);
 
@@ -42,44 +37,44 @@ implementation
 
 procedure Main;
 var
-  g: TGraph;
+  g: IGraph;
   chapter: UString = 'Chapter08-Bridges-and-Cut-Points';
-  fb: TFindBridges;
+  fb: TFindCutPoints;
 begin
   g := TGraph.Create(FileName(chapter, 'g.txt'));
-  fb := TFindBridges.Create(g);
+  fb := TFindCutPoints.Create(g);
   Write('Bridges in g : ');
   TArrayUtils_str.Print(fb.Return);
   fb.Free;
 
   g := TGraph.Create(FileName(chapter, 'g2.txt'));
-  fb := TFindBridges.Create(g);
+  fb := TFindCutPoints.Create(g);
   Write('Bridges in g2 : ');
   TArrayUtils_str.Print(fb.Return);
   fb.Free;
 
   g := TGraph.Create(FileName(chapter, 'g3.txt'));
-  fb := TFindBridges.Create(g);
+  fb := TFindCutPoints.Create(g);
   Write('Bridges in g3 : ');
   TArrayUtils_str.Print(fb.Return);
   fb.Free;
 
   g := TGraph.Create(FileName(chapter, 'tree.txt'));
-  fb := TFindBridges.Create(g);
+  fb := TFindCutPoints.Create(g);
   Write('Bridges in tree : ');
   TArrayUtils_str.Print(fb.Return);
   fb.Free;
 end;
 
-{ TFindBridges }
+{ TFindCutPoints }
 
-constructor TFindBridges.Create(g: IGraph);
+constructor TFindCutPoints.Create(g: IGraph);
 var
   v: integer;
 begin
   _G := g;
 
-  _Ret := TArrayList_Edge.Create;
+  _Ret := THashSet_int.Create;
   SetLength(_Visited, _G.V);
   SetLength(_Ord, _G.V);
   SetLength(_Low, _G.V);
@@ -90,39 +85,33 @@ begin
       __Dfs(v, v);
 end;
 
-destructor TFindBridges.Destroy;
-var
-  i: integer;
+destructor TFindCutPoints.Destroy;
 begin
-  for i := 0 to _Ret.Count - 1 do
-    _Ret[i].Free;
-
-  _Ret.Free;
-
   inherited Destroy;
 end;
 
-function TFindBridges.Return: TArr_str;
+function TFindCutPoints.Return: TArr_str;
 var
-  res: TArr_str;
-  i: integer;
+  res: IList_str;
+  e: integer;
 begin
-  SetLength(res, _Ret.Count);
+  res := TArrayList_str.Create;
 
-  for i := 0 to _Ret.Count - 1 do
-    res[i] := _Ret[i].ToString;
+  for e in _Ret.ToArray do
+    res.AddLast(e.ToString);
 
-  Result := res;
+  Result := res.ToArray;
 end;
 
-procedure TFindBridges.__Dfs(v: integer; parent: integer);
+procedure TFindCutPoints.__Dfs(v: integer; parent: integer);
 var
-  w: integer;
+  w, child: integer;
 begin
   _Visited[v] := true;
   _Ord[v] := _Cnt;
   _Low[v] := _Ord[v];
   _Cnt += 1;
+  child := 0;
 
   for w in _G.Adj(v) do
   begin
@@ -131,8 +120,12 @@ begin
       __Dfs(w, v);
       _Low[v] := Min(_Low[v], _Low[w]);
 
-      if _Low[w] > _Ord[v] then
-        _Ret.AddLast(TEdge.Create(v, w));
+      if (v <> parent) and (_Low[w] >= _Ord[v]) then
+        _Ret.Add(v);
+
+      child += 1;
+      if (v = parent) and (child > 1) then
+        _Ret.Add(v);
     end
     else if w <> parent then
       _Low[v] := Min(_Low[v], _Low[w]);
