@@ -12,8 +12,8 @@ uses
   DeepStar.UString;
 
 type
-  TLinkedLList_int = specialize TLinkedList<integer>;
-  TArr_TLinkedList_int = array of TLinkedLList_int;
+  TLinkedList_int = specialize TLinkedList<integer>;
+  TArr_TLinkedList_int = array of TLinkedList_int;
 
   TAdjList = class(TObject)
   private
@@ -77,7 +77,7 @@ begin
 
     SetLength(_adj, _v);
     for i := 0 to High(_adj) do
-      _adj[i] := TLinkedLList_int.Create;
+      _adj[i] := TLinkedList_int.Create;
 
     for i := 1 to _e do
     begin
@@ -181,11 +181,11 @@ const
   CHARS: TSysCharSet = ['0' .. '9', '.', '+', '-'];
 var
   sb: TStringBuilder;
-  list: TLinkedLList_int;
+  list: TLinkedList_int;
   i: integer;
 begin
   sb := TStringBuilder.Create;
-  list := TLinkedLList_int.Create;
+  list := TLinkedList_int.Create;
   try
     for i := 0 to s.Length - 1 do
     begin

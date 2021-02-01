@@ -15,7 +15,7 @@ procedure Run;
 implementation
 
 uses
-  GTA.FindCutPoints;
+  GTA.Leetcode_1192;
 
 procedure Run;
 begin
