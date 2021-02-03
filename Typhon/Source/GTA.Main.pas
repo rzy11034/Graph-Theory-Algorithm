@@ -15,7 +15,7 @@ procedure Run;
 implementation
 
 uses
-  GTA.Leetcode_1192;
+  GTA.HamiltonLoop_Optimization;
 
 procedure Run;
 begin

@@ -12,7 +12,8 @@ uses
   GTA.CycleDetection, GTA.BipartitionDetection, GTA.GraphBFS,
 GTA.SingleSourcePath_BFS, GTA.UnweightedSingleSourceShortestPath,
 GTA.Leetcode_785, GTA.Leetcode_695, GTA.Leetcode_1091, GTA.Leetcode_752, GTA.WaterPuzzle, GTA.FarmerCrossedRiver, 
-GTA.SlidingPuzzle, GTA.FindBridges, GTA.Edge, GTA.FindCutPoints, GTA.Leetcode_1192;
+GTA.SlidingPuzzle, GTA.FindBridges, GTA.Edge, GTA.FindCutPoints, GTA.Leetcode_1192, GTA.HamiltonLoop, 
+GTA.HamiltonLoop_Optimization;
 
 begin
   try

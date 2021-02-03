@@ -50,12 +50,17 @@ implementation
 
 procedure Main;
 var
+  connections: TArr2D_int;
   res: TArr2D_int;
+  n: integer;
 begin
+  n := 4;
+  connections := [[0, 1], [1, 2], [2, 0], [1, 3]];
+
   with TSolution.Create do
   begin
-    res := CriticalConnections(4, [[0, 1], [1, 2], [2, 0], [1, 3]]);
-    TArrayUtils_int.Print2D(res);
+    res := CriticalConnections(n, connections);
+    TArrayUtils_int.Print2D(res, false);
     Free;
   end;
 end;
@@ -71,7 +76,7 @@ begin
 
   SetLength(_AdjList, n);
   for i := 0 to n - 1 do
-    _AdjList[i] := TArrayList_int.Create;
+    _AdjList[i] := TLinkedList_int.Create;
 
   for i := 0 to High(connections) do
   begin
@@ -111,14 +116,8 @@ end;
 function TSolution.CriticalConnections(n: integer; connections: TArr2D_int): TArr2D_int;
 var
   res: TArr2D_int;
-  i: Integer;
 begin
   _Graph := TGraph.Create(n, connections);
-
-  //{$ Debug}
-  for i := 0 to _Graph.Vertex-1 do
-    TArrayUtils_int.Print(_Graph.Adj(i));
-  //{$EndIf Debug}
 
   try
     SetLength(_Visited, n);
@@ -140,14 +139,12 @@ procedure TSolution.__Dfs(v: integer; parent: integer);
 var
   w: integer;
   temp: IList_int;
-  adj: TArr_int;
 begin
   _Visited[v] := true;
   _Ord[v] := _Cnt;
   _Low[v] := _Ord[v];
   _Cnt += 1;
 
-  adj := _Graph.Adj(v);
   for w in _Graph.Adj(v) do
   begin
     if not _Visited[w] then
@@ -161,10 +158,10 @@ begin
         temp.AddLast(v);
         temp.AddLast(w);
         _Ret.AddLast(temp.ToArray);
-      end
-      else if w <> parent then
-        _Low[v] := Min(_Low[v], _Low[w]);
-    end;
+      end;
+    end
+    else if w <> parent then
+      _Low[v] := Min(_Low[v], _Low[w]);
   end;
 end;
 
