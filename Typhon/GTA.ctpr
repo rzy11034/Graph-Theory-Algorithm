@@ -222,6 +222,14 @@
         <Filename Value="Source/Chapter09-Hamilton-Loop-and-Path/GTA.HamiltonLoop_Optimization.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter09-Hamilton-Loop-and-Path/GTA.HamiltonPath.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter09-Hamilton-Loop-and-Path/GTA.UniquePathsIII.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

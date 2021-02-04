@@ -8,14 +8,15 @@ uses
   Classes,
   SysUtils,
   {%H-}DeepStar.UString,
-  {%H-}DeepStar.Utils;
+  {%H-}DeepStar.Utils,
+  {%H-}GTA.Utils;
 
 procedure Run;
 
 implementation
 
 uses
-  GTA.HamiltonLoop_Optimization;
+  GTA.UniquePathsIII;
 
 procedure Run;
 begin

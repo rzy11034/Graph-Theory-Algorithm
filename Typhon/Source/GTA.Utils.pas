@@ -9,11 +9,16 @@ uses
   SysUtils,
   GTA.Interfaces,
   GTA.Graph,
-  DeepStar.UString;
+  DeepStar.UString,
+  DeepStar.Utils;
 
 type
   IGraph = GTA.interfaces.IGraph;
   TGraph = GTA.Graph.TGraph;
+
+const
+  XY_DIRS_4: TArr2D_int = ((-1, 0), (0, 1), (1, 0), (0, -1));
+  XY_DIRS_8: TArr2D_int = ((-1, 0), (-1, 1), (0, 1), (1, 1), (1, 0), (1, -1), (0, -1), (-1, -1));
 
 function FileName(chapter, file_: UString): UString;
 
