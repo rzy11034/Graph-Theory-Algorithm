@@ -7,7 +7,8 @@ interface
 uses
   Classes,
   SysUtils,
-  DeepStar.Utils, DeepStar.DSA.Linear.ArrayList,
+  DeepStar.Utils,
+  DeepStar.DSA.Linear.ArrayList,
   GTA.Utils;
 
 type
@@ -27,14 +28,17 @@ type
     _Start: integer;
     _End: integer;
     _Visited: TArr2D_bool;
+    _Pre: TArr2D_int;
     _Left: integer;
     _List: TList_TPoint;
-
+    _Ret: IList_TArr_int;
 
     function __Dfs(v, parent, left: integer): integer;
+    function __InArea(x, y: integer): boolean;
 
   public
     function UniquePathsIII(gird: TArr2D_int): integer;
+    procedure AllPath;
   end;
 
 procedure Main;
@@ -42,6 +46,8 @@ procedure Main;
 implementation
 
 procedure Main;
+var
+  a: integer;
 begin
   //示例 1：
   //输入：[[1,0,0,0],[0,0,0,0],[0,0,2,-1]]
@@ -51,7 +57,8 @@ begin
   //2. (0,0),(1,0),(2,0),(2,1),(1,1),(0,1),(0,2),(0,3),(1,3),(1,2),(2,2)
   with TSolution.Create do
   begin
-    UniquePathsIII([[1, 0, 0, 0], [0, 0, 0, 0], [0, 0, 2, -1]]);
+    a := UniquePathsIII([[1, 0, 0, 0], [0, 0, 0, 0], [0, 0, 2, -1]]);
+    WriteLn(a);
 
     Free;
   end;
@@ -77,6 +84,44 @@ end;
 
 { TSolution }
 
+procedure TSolution.AllPath;
+  procedure __GetXY__(const temp: integer; var curX, curY: integer);
+  begin
+    curX := temp div _C;
+    curY := temp mod _C;
+  end;
+
+var
+  curX, curY, temp, i: integer;
+  list: IList_int;
+begin
+  temp := _End;
+  list := TArrayList_int.Create;
+  __GetXY__(temp, curX, curY);
+
+  while _Pre[curX, curY] <> _Start do
+  begin
+    list.AddLast(temp);
+    curX := temp div _C;
+    curY := temp mod _C;
+    temp := _Pre[curX, curY];
+  end;
+  list.AddLast(_Start);
+
+  list.Reverse;
+
+  TArrayUtils_int.Print(list.ToArray);
+
+  __GetXY__(list[0], curX, curY);
+  Write('(', curX, ',', curY, ')');
+  for i := 1 to list.Count - 1 do
+  begin
+    __GetXY__(list[i], curX, curY);
+    Write(', (', curX, ',', curY, ')');
+  end;
+  WriteLn;
+end;
+
 function TSolution.UniquePathsIII(gird: TArr2D_int): integer;
 var
   j, i: integer;
@@ -86,7 +131,10 @@ begin
   _C := Length(gird[0]);
   _Left := _R * _C;
   SetLength(_Visited, _R, _C);
-  _Left := TList_TPoint.Create;
+  SetLength(_Pre, _R, _C);
+  for i := 0 to High(_Pre) do
+    TArrayUtils_int.FillArray(_Pre[i], -1);
+  _List := TList_TPoint.Create;
 
   for i := 0 to _R - 1 do
     for j := 0 to _C - 1 do
@@ -106,14 +154,52 @@ begin
         end;
       end;
 
-  Result := __Dfs
+  Result := __Dfs(_Start, _Start, _Left);
 
   _List.Free;
 end;
 
 function TSolution.__Dfs(v, parent, left: integer): integer;
+var
+  curX, curY, nextX, nextY, Next, i: integer;
 begin
+  curX := v div _C;
+  curY := v mod _C;
 
+  _Visited[curX, curY] := true;
+  _Pre[curX, curY] := parent;
+  left -= 1;
+
+  if (left = 0) then
+  begin
+    Result := 1;
+    AllPath;
+    Exit;
+  end;
+
+  for i := 0 to High(XY_DIRS_4) do
+  begin
+    nextX := curX + XY_DIRS_4[i, 0];
+    nextY := curY + XY_DIRS_4[i, 1];
+
+    if __InArea(nextX, nextY)
+      and (not _Visited[nextX, nextY])
+      and (_G[nextX, nextY] <> -1) then
+    begin
+      Next := nextX * _C + nextY;
+      Result := __Dfs(Next, v, left) + 1;
+      Exit;
+    end;
+  end;
+
+  _Visited[curX, curY] := false;
+  //_Pre[curX, curY] := -1;
+  Result := 0;
+end;
+
+function TSolution.__InArea(x, y: integer): boolean;
+begin
+  Result := (x in [0.._R - 1]) and (y in [0.._C - 1]);
 end;
 
 end.
