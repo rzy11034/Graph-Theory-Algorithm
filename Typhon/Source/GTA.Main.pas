@@ -16,7 +16,7 @@ procedure Run;
 implementation
 
 uses
-  GTA.UniquePathsIII;
+  GTA.UniquePathsIII_State_Compression;
 
 procedure Test;
 begin
@@ -25,6 +25,7 @@ end;
 
 procedure Run;
 begin
+  Test;
   Main;
 end;
 

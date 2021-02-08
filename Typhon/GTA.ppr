@@ -6,14 +6,13 @@ uses
  {$IFDEF UNIX}
   cthreads,
  {$ENDIF}
-  Classes, SysUtils, DeepStar.Utils, GTA.Main, GTA.Utils, GTA.Interfaces,
-  GTA.AdjMatrix, GTA.AdjList, GTA.AdjSet, GTA.Graph, GTA.GraphDFS,
-  GTA.AdjMatrixDFS, GTA.GraphDFSnr, GTA.CC, GTA.SingleSourcePath, GTA.Path,
-  GTA.CycleDetection, GTA.BipartitionDetection, GTA.GraphBFS,
-GTA.SingleSourcePath_BFS, GTA.UnweightedSingleSourceShortestPath,
-GTA.Leetcode_785, GTA.Leetcode_695, GTA.Leetcode_1091, GTA.Leetcode_752, GTA.WaterPuzzle, GTA.FarmerCrossedRiver, 
-GTA.SlidingPuzzle, GTA.FindBridges, GTA.Edge, GTA.FindCutPoints, GTA.Leetcode_1192, GTA.HamiltonLoop, 
-GTA.HamiltonLoop_Optimization, GTA.HamiltonPath, GTA.UniquePathsIII_State_Compression;
+  Classes, SysUtils, DeepStar.Utils, GTA.Main, GTA.Utils, GTA.Interfaces, GTA.AdjMatrix, GTA.AdjList, GTA.AdjSet,
+  GTA.Graph, GTA.GraphDFS, GTA.AdjMatrixDFS, GTA.GraphDFSnr, GTA.CC, GTA.SingleSourcePath, GTA.Path, GTA.CycleDetection,
+  GTA.BipartitionDetection, GTA.GraphBFS, GTA.SingleSourcePath_BFS, GTA.UnweightedSingleSourceShortestPath,
+  GTA.Leetcode_785, GTA.Leetcode_695, GTA.Leetcode_1091, GTA.Leetcode_752, GTA.WaterPuzzle, GTA.FarmerCrossedRiver,
+  GTA.SlidingPuzzle, GTA.FindBridges, GTA.Edge, GTA.FindCutPoints, GTA.Leetcode_1192, GTA.HamiltonLoop,
+  GTA.HamiltonLoop_Optimization, GTA.HamiltonPath, GTA.UniquePathsIII_State_Compression,
+  GTA.UniquePathsIII_Memory_Search, GTA.EulerLoop;
 
 begin
   try

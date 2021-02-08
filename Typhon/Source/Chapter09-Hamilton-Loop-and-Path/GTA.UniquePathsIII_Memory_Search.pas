@@ -1,4 +1,4 @@
-﻿unit GTA.UniquePathsIII_State_Compression;
+﻿unit GTA.UniquePathsIII_Memory_Search;
 
 {$mode objfpc}{$H+}
 
@@ -25,6 +25,7 @@ type
     _End: integer;
     _Pre: TArr2D_int;
     _Left: integer;
+    _Memo: TArr2D_int;
 
     function __Dfs(visited, v, parent, left: integer): integer;
     function __InArea(x, y: integer): boolean;
@@ -102,6 +103,10 @@ begin
   for i := 0 to High(_Pre) do
     TArrayUtils_int.FillArray(_Pre[i], -1);
 
+  SetLength(_Memo, 1 shl (_R * _C), _R * _C);
+  for i := 0 to High(_Memo) do
+    TArrayUtils_int.FillArray(_Memo[i], -1);
+
   for i := 0 to _R - 1 do
     for j := 0 to _C - 1 do
       case gird[i, j] of
@@ -155,6 +160,9 @@ function TSolution.__Dfs(visited, v, parent, left: integer): integer;
 var
   curX, curY, nextX, nextY, Next, i: integer;
 begin
+  if _Memo[visited, v] <> -1 then
+    Exit(_Memo[visited, v]);
+
   curX := v div _C;
   curY := v mod _C;
 
@@ -165,6 +173,7 @@ begin
   if (left = 0) and (v = _End) then
   begin
     visited -= 1 shl v;
+    _Memo[visited, v] := 1;
     __AllPath;
     Exit(1);
   end;
@@ -185,6 +194,7 @@ begin
   end;
 
   visited -= 1 shl v;
+  _Memo[visited, v] := Result;
 end;
 
 function TSolution.__InArea(x, y: integer): boolean;

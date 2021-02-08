@@ -16,11 +16,11 @@ type
     TArr_TList_int = array of TArrayList_int;
 
   private
-    _g: IGraph;
-    _visited: TArr_int;
-    _cccount: integer;
+    _G: IGraph;
+    _Visited: TArr_int;
+    _CCount: integer;
 
-    procedure __dfs(v, ccid: integer);
+    procedure __Dfs(v, ccid: integer);
 
   public
     constructor Create(g: IGraph);
@@ -66,17 +66,17 @@ constructor TCC.Create(g: IGraph);
 var
   v: integer;
 begin
-  _g := g;
-  SetLength(_visited, g.V);
-  TArrayUtils_int.FillArray(_visited, -1);
-  _cccount := 0;
+  _G := g;
+  SetLength(_Visited, g.V);
+  TArrayUtils_int.FillArray(_Visited, -1);
+  _CCount := 0;
 
   for v := 0 to g.V - 1 do
   begin
-    if _visited[v] = -1 then
+    if _Visited[v] = -1 then
     begin
-      __dfs(v, _cccount);
-      _cccount += 1;
+      __Dfs(v, _CCount);
+      _CCount += 1;
     end;
   end;
 
@@ -87,21 +87,21 @@ var
   res: TArr_TList_int;
   i, v: integer;
 begin
-  SetLength(res, _cccount);
+  SetLength(res, _CCount);
 
-  for i := 0 to _cccount - 1 do
+  for i := 0 to _CCount - 1 do
     res[i] := TArrayList_int.Create;
 
-  for v := 0 to _g.V - 1 do
-    res[_visited[v]].AddLast(v);
+  for v := 0 to _G.V - 1 do
+    res[_Visited[v]].AddLast(v);
 
   Result := res;
 end;
 
 function TCC.Count: integer;
 begin
-  //TArrayUtils_int.Print(_visited);
-  Result := _cccount;
+  //TArrayUtils_int.Print(_Visited);
+  Result := _CCount;
 end;
 
 destructor TCC.Destroy;
@@ -111,22 +111,22 @@ end;
 
 function TCC.IsConnected(v, w: integer): boolean;
 begin
-  _g.ValidateVertex(v);
-  _g.ValidateVertex(w);
+  _G.ValidateVertex(v);
+  _G.ValidateVertex(w);
 
-  Result := _visited[v] = _visited[w];
+  Result := _Visited[v] = _Visited[w];
 end;
 
-procedure TCC.__dfs(v, ccid: integer);
+procedure TCC.__Dfs(v, ccid: integer);
 var
   temp: integer;
 begin
-  _visited[v] := ccid;
+  _Visited[v] := ccid;
 
-  for temp in _g.Adj(v) do
+  for temp in _G.Adj(v) do
   begin
-    if _visited[temp] = -1 then
-      __dfs(temp, ccid);
+    if _Visited[temp] = -1 then
+      __Dfs(temp, ccid);
   end;
 end;
 
