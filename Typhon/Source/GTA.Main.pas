@@ -18,6 +18,11 @@ implementation
 uses
   GTA.UniquePathsIII;
 
+procedure Test;
+begin
+
+end;
+
 procedure Run;
 begin
   Main;

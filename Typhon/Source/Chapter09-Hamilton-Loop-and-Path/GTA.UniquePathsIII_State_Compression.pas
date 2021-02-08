@@ -1,4 +1,4 @@
-﻿unit GTA.UniquePathsIII;
+﻿unit GTA.UniquePathsIII_State_Compression;
 
 {$mode objfpc}{$H+}
 
@@ -23,7 +23,7 @@ type
     _C: integer;
     _Start: integer;
     _End: integer;
-    _Visited: TArr2D_bool;
+    _Visited: integer;
     _Pre: TArr2D_int;
     _Left: integer;
 
@@ -98,7 +98,7 @@ begin
   _C := Length(gird[0]);
   _Left := _R * _C;
 
-  SetLength(_Visited, _R, _C);
+  _Visited := 0;
   SetLength(_Pre, _R, _C);
   for i := 0 to High(_Pre) do
     TArrayUtils_int.FillArray(_Pre[i], -1);
@@ -159,7 +159,7 @@ begin
   curX := v div _C;
   curY := v mod _C;
 
-  _Visited[curX, curY] := true;
+  _Visited += 1 shl;
   _Pre[curX, curY] := parent;
   left -= 1;
 
