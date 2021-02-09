@@ -54,8 +54,8 @@ constructor TUnweightedSingleSourceShortestPath.Create(g: IGraph; s: integer);
 begin
   _g := g;
   _src := s;
-  SetLength(_visited, g.V);
-  SetLength(_pre, g.V);
+  SetLength(_visited, g.Vertex);
+  SetLength(_pre, g.Vertex);
   TArrayUtils_int.FillArray(_pre, -1);
   _dis := TArrayUtils_int.CopyArray(_pre);
 

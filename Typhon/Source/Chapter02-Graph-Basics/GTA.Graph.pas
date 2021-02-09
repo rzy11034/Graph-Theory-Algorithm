@@ -20,10 +20,10 @@ type
     TArr_TTreeSet_int = array of TTreeSet_int;
 
   private
-    _adj: TArr_TTreeSet_int;
-    _e: integer;
-    _v: integer;
-    function __getIntArray(s: UString): TArr_int;
+    _Adj: TArr_TTreeSet_int;
+    _Edge: integer;
+    _Vertex: integer;
+    function __GetIntArray(s: UString): TArr_int;
 
   public
     constructor Create(fileName: UString);
@@ -35,8 +35,8 @@ type
     function ToString: UString; reintroduce;
     procedure ValidateVertex(v: integer);
 
-    function V: integer;
-    function E: integer;
+    function Vertex: integer;
+    function Edge: integer;
   end;
 
 procedure Main;
@@ -68,23 +68,23 @@ begin
 
   try
     strList.LoadFromFile(fileName);
-    Lines := __getIntArray(strList[0]);
+    Lines := __GetIntArray(strList[0]);
 
-    _v := Lines[0];
-    if _v < 0 then
+    _Vertex := Lines[0];
+    if _Vertex < 0 then
       raise Exception.Create('V Must Be non-Negative');
 
-    _e := Lines[1];
-    if _e < 0 then
+    _Edge := Lines[1];
+    if _Edge < 0 then
       raise Exception.Create('E must be non-negative');
 
-    SetLength(_adj, _v);
-    for i := 0 to High(_adj) do
-      _adj[i] := TTreeSet_int.Create;
+    SetLength(_Adj, _Vertex);
+    for i := 0 to High(_Adj) do
+      _Adj[i] := TTreeSet_int.Create;
 
-    for i := 1 to _e do
+    for i := 1 to _Edge do
     begin
-      Lines := __getIntArray(strList[i]);
+      Lines := __GetIntArray(strList[i]);
 
       a := Lines[0];
       ValidateVertex(a);
@@ -92,10 +92,10 @@ begin
       ValidateVertex(b);
 
       if a = b then raise Exception.Create('Self Loop is Detected!');
-      if _adj[a].Contains(b) then raise Exception.Create('Parallel Edges are Detected!');
+      if _Adj[a].Contains(b) then raise Exception.Create('Parallel Edges are Detected!');
 
-      _adj[a].Add(b);
-      _adj[b].Add(a);
+      _Adj[a].Add(b);
+      _Adj[b].Add(a);
     end;
   finally
     strList.Free;
@@ -105,7 +105,7 @@ end;
 function TGraph.Adj(v: integer): TArr_int;
 begin
   ValidateVertex(v);
-  Result := _adj[v].ToArray;
+  Result := _Adj[v].ToArray;
 end;
 
 function TGraph.Degree(v: integer): integer;
@@ -118,22 +118,22 @@ destructor TGraph.Destroy;
 var
   i: integer;
 begin
-  for i := 0 to High(_adj) do
-    _adj[i].Free;
+  for i := 0 to High(_Adj) do
+    _Adj[i].Free;
 
   inherited Destroy;
 end;
 
-function TGraph.E: integer;
+function TGraph.Edge: integer;
 begin
-  Result := _e;
+  Result := _Edge;
 end;
 
 function TGraph.HasEdge(v, w: integer): boolean;
 begin
   ValidateVertex(v);
   ValidateVertex(w);
-  Result := _adj[v].Contains(w);
+  Result := _Adj[v].Contains(w);
 end;
 
 function TGraph.ToString: UString;
@@ -143,13 +143,13 @@ var
 begin
   sb := TStringBuilder.Create;
   try
-    sb.AppendFormat('V = %d, E = %d'#13, [_v, _e]);
+    sb.AppendFormat('V = %d, E = %d'#13, [_Vertex, _Edge]);
 
-    for i := 0 to High(_adj) do
+    for i := 0 to High(_Adj) do
     begin
       sb.Append(Format('%d : ', [i]));
 
-      for temp in _adj[i].ToArray do
+      for temp in _Adj[i].ToArray do
         sb.Append(temp).Append(' ');
 
       sb.AppendLine;
@@ -161,12 +161,12 @@ begin
   end;
 end;
 
-function TGraph.V: integer;
+function TGraph.Vertex: integer;
 begin
-  Result := _v;
+  Result := _Vertex;
 end;
 
-function TGraph.__getIntArray(s: UString): TArr_int;
+function TGraph.__GetIntArray(s: UString): TArr_int;
 const
   CHARS: TSysCharSet = ['0' .. '9', '.', '+', '-'];
 var
@@ -202,7 +202,7 @@ end;
 
 procedure TGraph.ValidateVertex(v: integer);
 begin
-  if (v < 0) or (v >= _v) then
+  if (v < 0) or (v >= _Vertex) then
     raise Exception.Create('vertex ' + v.ToString + 'is invalid');
 end;
 

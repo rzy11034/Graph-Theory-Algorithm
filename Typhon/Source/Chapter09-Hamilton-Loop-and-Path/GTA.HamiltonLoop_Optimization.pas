@@ -54,11 +54,11 @@ end;
 constructor THamiltonLoop.Create(g: IGraph);
 begin
   _Graph := g;
-  SetLength(_Visited, g.V);
-  SetLength(_Pre, g.V);
+  SetLength(_Visited, g.Vertex);
+  SetLength(_Pre, g.Vertex);
   _End := -1;
 
-  __Dfs(0, 0, g.V);
+  __Dfs(0, 0, g.Vertex);
 end;
 
 destructor THamiltonLoop.Destroy;

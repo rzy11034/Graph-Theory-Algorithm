@@ -39,6 +39,7 @@ end;
 function TEulerLoop.HasEulerLoop: boolean;
 var
   cc: TCC;
+  v: Integer;
 begin
   cc := TCC.Create(_Graph);
   if cc.Count > 1 then
@@ -47,7 +48,7 @@ begin
     Exit(false);
   end;
 
-  for v := 0 to _Graph.V - 1 do
+  for v := 0 to _Graph.Vertex - 1 do
   begin
     if Odd(_Graph.Degree(v)) then
       Exit(false);

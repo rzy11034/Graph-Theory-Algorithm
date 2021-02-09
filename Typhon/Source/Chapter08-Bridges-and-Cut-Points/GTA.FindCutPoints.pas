@@ -75,12 +75,12 @@ begin
   _G := g;
 
   _Ret := THashSet_int.Create;
-  SetLength(_Visited, _G.V);
-  SetLength(_Ord, _G.V);
-  SetLength(_Low, _G.V);
+  SetLength(_Visited, _G.Vertex);
+  SetLength(_Ord, _G.Vertex);
+  SetLength(_Low, _G.Vertex);
   _Cnt := 0;
 
-  for v := 0 to _G.V - 1 do
+  for v := 0 to _G.Vertex - 1 do
     if not _Visited[v] then
       __Dfs(v, v);
 end;

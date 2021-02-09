@@ -58,12 +58,12 @@ end;
 constructor THamiltonPath.Create(g: IGraph; s: integer);
 begin
   _Graph := g;
-  SetLength(_Visited, g.V);
-  SetLength(_Pre, g.V);
+  SetLength(_Visited, g.Vertex);
+  SetLength(_Pre, g.Vertex);
   _S := s;
   _End := -1;
 
-  __Dfs(s, s, g.V);
+  __Dfs(s, s, g.Vertex);
 end;
 
 destructor THamiltonPath.Destroy;

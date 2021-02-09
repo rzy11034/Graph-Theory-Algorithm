@@ -17,23 +17,23 @@ type
 
   TAdjList = class(TObject)
   private
-    _adj: TArr_TLinkedList_int;
-    _e: integer;
-    _v: integer;
-    function __getIntArray(s: UString): TArr_int;
-    procedure __validateVertex(v: integer);
+    _Adj: TArr_TLinkedList_int;
+    _Edge: integer;
+    _Vertex: integer;
+    function __GetIntArray(s: UString): TArr_int;
+    procedure __ValidateVertex(vertex: integer);
 
   public
     constructor Create(fileName: UString);
     destructor Destroy; override;
 
-    function Adj(v: integer): IList_int;
-    function Degree(v: integer): integer;
-    function HasEdge(v, w: integer): boolean;
+    function Adj(vertex: integer): IList_int;
+    function Degree(vertex: integer): integer;
+    function HasEdge(vertex, w: integer): boolean;
     function ToString: UString; reintroduce;
 
-    function V: integer;
-    function E: integer;
+    function Vertex: integer;
+    function Edge: integer;
   end;
 
 procedure Main;
@@ -65,59 +65,59 @@ begin
 
   try
     strList.LoadFromFile(fileName);
-    Lines := __getIntArray(strList[0]);
+    Lines := __GetIntArray(strList[0]);
 
-    _v := Lines[0];
-    if _v < 0 then
-      raise Exception.Create('V must be non-negative');
+    _Vertex := Lines[0];
+    if _Vertex < 0 then
+      raise Exception.Create('Vertex must be non-negative');
 
-    _e := Lines[1];
-    if _e < 0 then
-      raise Exception.Create('E must be non-negative');
+    _Edge := Lines[1];
+    if _Edge < 0 then
+      raise Exception.Create('Edge must be non-negative');
 
-    SetLength(_adj, _v);
-    for i := 0 to High(_adj) do
-      _adj[i] := TLinkedList_int.Create;
+    SetLength(_Adj, _Vertex);
+    for i := 0 to High(_Adj) do
+      _Adj[i] := TLinkedList_int.Create;
 
-    for i := 1 to _e do
+    for i := 1 to _Edge do
     begin
-      Lines := __getIntArray(strList[i]);
+      Lines := __GetIntArray(strList[i]);
 
       a := Lines[0];
-      __validateVertex(a);
+      __ValidateVertex(a);
       b := Lines[1];
-      __validateVertex(b);
+      __ValidateVertex(b);
 
       if a = b then raise Exception.Create('Self Loop is Detected!');
-      if _adj[a].Contains(b) then raise Exception.Create('Parallel Edges are Detected!');
+      if _Adj[a].Contains(b) then raise Exception.Create('Parallel Edges are Detected!');
 
-      _adj[a].AddLast(b);
-      _adj[b].AddLast(a);
+      _Adj[a].AddLast(b);
+      _Adj[b].AddLast(a);
     end;
   finally
     strList.Free;
   end;
 end;
 
-function TAdjList.Adj(v: integer): IList_int;
+function TAdjList.Adj(vertex: integer): IList_int;
 var
   res: IList_int;
   i: integer;
 begin
-  __validateVertex(v);
+  __ValidateVertex(vertex);
   res := TArrayList_int.Create;
 
-  for i := 0 to _adj[v].Count - 1 do
-    res.AddLast(_adj[v][i]);
+  for i := 0 to _Adj[vertex].Count - 1 do
+    res.AddLast(_Adj[vertex][i]);
 
   Result := res;
 end;
 
-function TAdjList.Degree(v: integer): integer;
+function TAdjList.Degree(vertex: integer): integer;
 begin
-  __validateVertex(v);
+  __ValidateVertex(vertex);
 
-  with Adj(v) do
+  with Adj(vertex) do
   begin
     Result := Count;
     Free;
@@ -128,22 +128,22 @@ destructor TAdjList.Destroy;
 var
   i: integer;
 begin
-  for i := 0 to High(_adj) do
-    _adj[i].Free;
+  for i := 0 to High(_Adj) do
+    _Adj[i].Free;
 
   inherited Destroy;
 end;
 
-function TAdjList.E: integer;
+function TAdjList.Edge: integer;
 begin
-  Result := _e;
+  Result := _Edge;
 end;
 
-function TAdjList.HasEdge(v, w: integer): boolean;
+function TAdjList.HasEdge(vertex, w: integer): boolean;
 begin
-  __validateVertex(v);
-  __validateVertex(w);
-  Result := _adj[v].Contains(w);
+  __ValidateVertex(vertex);
+  __ValidateVertex(w);
+  Result := _Adj[vertex].Contains(w);
 end;
 
 function TAdjList.ToString: UString;
@@ -153,14 +153,14 @@ var
 begin
   sb := TStringBuilder.Create;
   try
-    sb.AppendFormat('V = %d, E = %d'#13, [_v, _e]);
+    sb.AppendFormat('Vertex = %d, Edge = %d'#13, [_Vertex, _Edge]);
 
-    for i := 0 to High(_adj) do
+    for i := 0 to High(_Adj) do
     begin
       sb.Append(Format('%d : ', [i]));
 
-      for j := 0 to _adj[i].Count - 1 do
-        sb.Append(_adj[i][j]).Append(' ');
+      for j := 0 to _Adj[i].Count - 1 do
+        sb.Append(_Adj[i][j]).Append(' ');
 
       sb.AppendLine;
     end;
@@ -171,12 +171,12 @@ begin
   end;
 end;
 
-function TAdjList.V: integer;
+function TAdjList.Vertex: integer;
 begin
-  Result := _v;
+  Result := _Vertex;
 end;
 
-function TAdjList.__getIntArray(s: UString): TArr_int;
+function TAdjList.__GetIntArray(s: UString): TArr_int;
 const
   CHARS: TSysCharSet = ['0' .. '9', '.', '+', '-'];
 var
@@ -210,10 +210,10 @@ begin
   end;
 end;
 
-procedure TAdjList.__validateVertex(v: integer);
+procedure TAdjList.__ValidateVertex(vertex: integer);
 begin
-  if (v < 0) or (v >= _v) then
-    raise Exception.Create('vertex ' + v.ToString + 'is invalid');
+  if (vertex < 0) or (vertex >= _Vertex) then
+    raise Exception.Create('vertex ' + vertex.ToString + 'is invalid');
 end;
 
 end.

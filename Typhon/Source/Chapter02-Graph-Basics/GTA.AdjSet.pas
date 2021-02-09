@@ -17,23 +17,23 @@ type
 
   TAdjSet = class(TObject)
   private
-    _adj: TArr_TTreeSet_int;
-    _e: integer;
-    _v: integer;
-    function __getIntArray(s: UString): TArr_int;
-    procedure __validateVertex(v: integer);
+    _Adj: TArr_TTreeSet_int;
+    _Edge: integer;
+    _Vertex: integer;
+    function __GetIntArray(s: UString): TArr_int;
+    procedure __ValidateVertex(vertex: integer);
 
   public
     constructor Create(fileName: UString);
     destructor Destroy; override;
 
-    function Adj(v: integer): TArr_int;
-    function Degree(v: integer): integer;
-    function HasEdge(v, w: integer): boolean;
+    function Adj(vertex: integer): TArr_int;
+    function Degree(vertex: integer): integer;
+    function HasEdge(vertex, w: integer): boolean;
     function ToString: UString; reintroduce;
 
-    function V: integer;
-    function E: integer;
+    function Vertex: integer;
+    function Edge: integer;
   end;
 
 procedure Main;
@@ -65,72 +65,72 @@ begin
 
   try
     strList.LoadFromFile(fileName);
-    Lines := __getIntArray(strList[0]);
+    Lines := __GetIntArray(strList[0]);
 
-    _v := Lines[0];
-    if _v < 0 then
-      raise Exception.Create('V must be non-negative');
+    _Vertex := Lines[0];
+    if _Vertex < 0 then
+      raise Exception.Create('Vertex must be non-negative');
 
-    _e := Lines[1];
-    if _e < 0 then
-      raise Exception.Create('E must be non-negative');
+    _Edge := Lines[1];
+    if _Edge < 0 then
+      raise Exception.Create('Edge must be non-negative');
 
-    SetLength(_adj, _v);
-    for i := 0 to High(_adj) do
-      _adj[i] := TTreeSet_int.Create;
+    SetLength(_Adj, _Vertex);
+    for i := 0 to High(_Adj) do
+      _Adj[i] := TTreeSet_int.Create;
 
-    for i := 1 to _e do
+    for i := 1 to _Edge do
     begin
-      Lines := __getIntArray(strList[i]);
+      Lines := __GetIntArray(strList[i]);
 
       a := Lines[0];
-      __validateVertex(a);
+      __ValidateVertex(a);
       b := Lines[1];
-      __validateVertex(b);
+      __ValidateVertex(b);
 
       if a = b then raise Exception.Create('Self Loop is Detected!');
-      if _adj[a].Contains(b) then raise Exception.Create('Parallel Edges are Detected!');
+      if _Adj[a].Contains(b) then raise Exception.Create('Parallel Edges are Detected!');
 
-      _adj[a].Add(b);
-      _adj[b].Add(a);
+      _Adj[a].Add(b);
+      _Adj[b].Add(a);
     end;
   finally
     strList.Free;
   end;
 end;
 
-function TAdjSet.Adj(v: integer): TArr_int;
+function TAdjSet.Adj(vertex: integer): TArr_int;
 begin
-  __validateVertex(v);
-  Result := _adj[v].ToArray;
+  __ValidateVertex(vertex);
+  Result := _Adj[vertex].ToArray;
 end;
 
-function TAdjSet.Degree(v: integer): integer;
+function TAdjSet.Degree(vertex: integer): integer;
 begin
-  __validateVertex(v);
-  Result := Length(Adj(v));
+  __ValidateVertex(vertex);
+  Result := Length(Adj(vertex));
 end;
 
 destructor TAdjSet.Destroy;
 var
   i: integer;
 begin
-  for i := 0 to High(_adj) do
-    _adj[i].Free;
+  for i := 0 to High(_Adj) do
+    _Adj[i].Free;
 
   inherited Destroy;
 end;
 
-function TAdjSet.E: integer;
+function TAdjSet.Edge: integer;
 begin
-  Result := _e;
+  Result := _Edge;
 end;
 
-function TAdjSet.HasEdge(v, w: integer): boolean;
+function TAdjSet.HasEdge(vertex, w: integer): boolean;
 begin
-  __validateVertex(v);
-  __validateVertex(w);
-  Result := _adj[v].Contains(w);
+  __ValidateVertex(vertex);
+  __ValidateVertex(w);
+  Result := _Adj[vertex].Contains(w);
 end;
 
 function TAdjSet.ToString: UString;
@@ -140,13 +140,13 @@ var
 begin
   sb := TStringBuilder.Create;
   try
-    sb.AppendFormat('V = %d, E = %d'#13, [_v, _e]);
+    sb.AppendFormat('Vertex = %d, Edge = %d'#13, [_Vertex, _Edge]);
 
-    for i := 0 to High(_adj) do
+    for i := 0 to High(_Adj) do
     begin
       sb.Append(Format('%d : ', [i]));
 
-      for temp in _adj[i].ToArray do
+      for temp in _Adj[i].ToArray do
         sb.Append(temp).Append(' ');
 
       sb.AppendLine;
@@ -158,12 +158,12 @@ begin
   end;
 end;
 
-function TAdjSet.V: integer;
+function TAdjSet.Vertex: integer;
 begin
-  Result := _v;
+  Result := _Vertex;
 end;
 
-function TAdjSet.__getIntArray(s: UString): TArr_int;
+function TAdjSet.__GetIntArray(s: UString): TArr_int;
 const
   CHARS: TSysCharSet = ['0' .. '9', '.', '+', '-'];
 var
@@ -197,10 +197,10 @@ begin
   end;
 end;
 
-procedure TAdjSet.__validateVertex(v: integer);
+procedure TAdjSet.__ValidateVertex(vertex: integer);
 begin
-  if (v < 0) or (v >= _v) then
-    raise Exception.Create('vertex ' + v.ToString + 'is invalid');
+  if (vertex < 0) or (vertex >= _Vertex) then
+    raise Exception.Create('vertex ' + vertex.ToString + 'is invalid');
 end;
 
 end.

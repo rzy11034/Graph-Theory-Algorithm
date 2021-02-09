@@ -67,8 +67,8 @@ begin
   _src := src;
   _t := t;
 
-  SetLength(_visited, g.V);
-  SetLength(_pre, _g.V);
+  SetLength(_visited, g.Vertex);
+  SetLength(_pre, _g.Vertex);
   TArrayUtils_int.FillArray(_pre, -1);
 
   __dfs(_src, src);

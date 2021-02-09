@@ -14,22 +14,22 @@ uses
 type
   TAdjMatrix = class(TInterfacedObject, IGraph)
   private
-    _adj: TArr2D_int;
-    _e: integer;
-    _v: integer;
-    function __getIntArray(s: UString): TArr_int;
+    _Adj: TArr2D_int;
+    _Edge: integer;
+    _Vertex: integer;
+    function __GetIntArray(s: UString): TArr_int;
 
   public
     constructor Create(fileName: UString);
     destructor Destroy; override;
 
-    function Adj(v: integer): TArr_int;
-    function Degree(v: integer): integer;
-    function HasEdge(v, w: integer): boolean;
+    function Adj(Vertex: integer): TArr_int;
+    function Degree(Vertex: integer): integer;
+    function HasEdge(Vertex, w: integer): boolean;
     function ToString: UString; reintroduce;
-    procedure ValidateVertex(v: integer);
-    function V: integer;
-    function E: integer;
+    procedure ValidateVertex(Vertex: integer);
+    function Vertex: integer;
+    function Edge: integer;
   end;
 
 procedure Main;
@@ -58,21 +58,21 @@ begin
 
   try
     strList.LoadFromFile(fileName);
-    Lines := __getIntArray(strList[0]);
+    Lines := __GetIntArray(strList[0]);
 
-    _v := Lines[0];
-    if _v < 0 then
-      raise Exception.Create('V must be non-negative');
+    _Vertex := Lines[0];
+    if _Vertex < 0 then
+      raise Exception.Create('Vertex must be non-negative');
 
-    _e := Lines[1];
-    if _e < 0 then
-      raise Exception.Create('E must be non-negative');
+    _Edge := Lines[1];
+    if _Edge < 0 then
+      raise Exception.Create('Edge must be non-negative');
 
-    SetLength(_adj, _v, _v);
+    SetLength(_Adj, _Vertex, _Vertex);
 
-    for i := 1 to _e do
+    for i := 1 to _Edge do
     begin
-      Lines := __getIntArray(strList[i]);
+      Lines := __GetIntArray(strList[i]);
 
       a := Lines[0];
       ValidateVertex(a);
@@ -80,27 +80,27 @@ begin
       ValidateVertex(b);
 
       if a = b then raise Exception.Create('Self Loop is Detected!');
-      if _adj[a, b] = 1 then raise Exception.Create('Parallel Edges are Detected!');
+      if _Adj[a, b] = 1 then raise Exception.Create('Parallel Edges are Detected!');
 
-      _adj[a, b] := 1;
-      _adj[b, a] := 1;
+      _Adj[a, b] := 1;
+      _Adj[b, a] := 1;
     end;
   finally
     strList.Free;
   end;
 end;
 
-function TAdjMatrix.Adj(v: integer): TArr_int;
+function TAdjMatrix.Adj(Vertex: integer): TArr_int;
 var
   res: TArrayList_int;
   i: integer;
 begin
-  ValidateVertex(v);
+  ValidateVertex(Vertex);
   res := TArrayList_int.Create;
   try
-    for i := 0 to _v - 1 do
+    for i := 0 to _Vertex - 1 do
     begin
-      if _adj[v, i] = 1 then
+      if _Adj[Vertex, i] = 1 then
         res.AddLast(i);
     end;
 
@@ -110,10 +110,10 @@ begin
   end;
 end;
 
-function TAdjMatrix.Degree(v: integer): integer;
+function TAdjMatrix.Degree(Vertex: integer): integer;
 begin
-  ValidateVertex(v);
-  Result := Length(Adj(v));
+  ValidateVertex(Vertex);
+  Result := Length(Adj(Vertex));
 end;
 
 destructor TAdjMatrix.Destroy;
@@ -121,16 +121,16 @@ begin
   inherited Destroy;
 end;
 
-function TAdjMatrix.E: integer;
+function TAdjMatrix.Edge: integer;
 begin
-  Result := _e;
+  Result := _Edge;
 end;
 
-function TAdjMatrix.HasEdge(v, w: integer): boolean;
+function TAdjMatrix.HasEdge(Vertex, w: integer): boolean;
 begin
-  ValidateVertex(v);
+  ValidateVertex(Vertex);
   ValidateVertex(w);
-  Result := _adj[v, w] = 1;
+  Result := _Adj[Vertex, w] = 1;
 end;
 
 function TAdjMatrix.ToString: UString;
@@ -140,13 +140,13 @@ var
 begin
   sb := TStringBuilder.Create;
   try
-    sb.AppendFormat('V = %d, E = %d'#13, [_v, _e]);
+    sb.AppendFormat('Vertex = %d, Edge = %d'#13, [_Vertex, _Edge]);
 
-    for i := 0 to High(_adj) do
+    for i := 0 to High(_Adj) do
     begin
-      for j := 0 to High(_adj[i]) do
+      for j := 0 to High(_Adj[i]) do
       begin
-        sb.Append(_adj[i, j]).Append(' ');
+        sb.Append(_Adj[i, j]).Append(' ');
       end;
 
       sb.AppendLine;
@@ -158,12 +158,12 @@ begin
   end;
 end;
 
-function TAdjMatrix.V: integer;
+function TAdjMatrix.Vertex: integer;
 begin
-  Result := _v;
+  Result := _Vertex;
 end;
 
-function TAdjMatrix.__getIntArray(s: UString): TArr_int;
+function TAdjMatrix.__GetIntArray(s: UString): TArr_int;
 const
   CHARS: TSysCharSet = ['0' .. '9', '.', '+', '-'];
 var
@@ -197,10 +197,10 @@ begin
   end;
 end;
 
-procedure TAdjMatrix.ValidateVertex(v: integer);
+procedure TAdjMatrix.ValidateVertex(Vertex: integer);
 begin
-  if (v < 0) or (v >= _v) then
-    raise Exception.Create('vertex ' + v.ToString + 'is invalid');
+  if (Vertex < 0) or (Vertex >= _Vertex) then
+    raise Exception.Create('vertex ' + Vertex.ToString + 'is invalid');
 end;
 
 end.

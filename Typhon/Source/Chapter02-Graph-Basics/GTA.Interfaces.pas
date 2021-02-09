@@ -18,8 +18,8 @@ type
     function HasEdge(v, w: integer): boolean;
     function ToString: UString; reintroduce;
     procedure ValidateVertex(v: integer);
-    function V: integer;
-    function E: integer;
+    function Vertex: integer;
+    function Edge: integer;
   end;
 
 implementation

@@ -67,11 +67,11 @@ var
   v: integer;
 begin
   _G := g;
-  SetLength(_Visited, g.V);
+  SetLength(_Visited, g.Vertex);
   TArrayUtils_int.FillArray(_Visited, -1);
   _CCount := 0;
 
-  for v := 0 to g.V - 1 do
+  for v := 0 to g.Vertex - 1 do
   begin
     if _Visited[v] = -1 then
     begin
@@ -92,7 +92,7 @@ begin
   for i := 0 to _CCount - 1 do
     res[i] := TArrayList_int.Create;
 
-  for v := 0 to _G.V - 1 do
+  for v := 0 to _G.Vertex - 1 do
     res[_Visited[v]].AddLast(v);
 
   Result := res;

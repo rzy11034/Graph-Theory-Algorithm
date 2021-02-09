@@ -50,10 +50,10 @@ var
   v: integer;
 begin
   _g := g;
-  SetLength(_visited, g.V);
+  SetLength(_visited, g.Vertex);
   _preOrder := TArrayList_int.Create;
 
-  for v := 0 to g.V - 1 do
+  for v := 0 to g.Vertex - 1 do
   begin
     if not _visited[v] then
       __dfs(v);

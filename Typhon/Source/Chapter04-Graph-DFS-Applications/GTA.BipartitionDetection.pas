@@ -56,13 +56,13 @@ var
 begin
   _g := g;
   _isBipartite := true;
-  SetLength(_visited, g.V);
-  SetLength(_colors, g.V);
+  SetLength(_visited, g.Vertex);
+  SetLength(_colors, g.Vertex);
   for i := 0 to High(_colors) do
     _colors[i] := TColor.null;
 
   /////////////////////////////////////
-  for v := 0 to g.V - 1 do
+  for v := 0 to g.Vertex - 1 do
   begin
     if not _visited[v] then
       if not __dfs(v, TColor.red) then

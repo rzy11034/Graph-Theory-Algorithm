@@ -16,6 +16,7 @@
       <Unit>
         <Filename Value="Source/GTA.Main.pas"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
         <TopLine Value="8"/>
         <CursorPos X="39" Y="19"/>
@@ -34,31 +35,32 @@
         <Filename Value="Source/Chapter02-Graph-Basics/GTA.AdjList.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <CursorPos X="47" Y="18"/>
+        <TopLine Value="196"/>
+        <CursorPos X="73" Y="216"/>
         <UsageCount Value="200"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter02-Graph-Basics/GTA.AdjMatrix.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="14"/>
-        <CursorPos X="16" Y="18"/>
+        <TopLine Value="7"/>
+        <CursorPos X="41" Y="21"/>
         <UsageCount Value="200"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter02-Graph-Basics/GTA.AdjSet.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="159"/>
-        <CursorPos X="21" Y="175"/>
+        <TopLine Value="13"/>
+        <CursorPos X="18" Y="36"/>
         <UsageCount Value="200"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter02-Graph-Basics/GTA.Graph.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="117"/>
-        <CursorPos X="16" Y="148"/>
+        <TopLine Value="150"/>
+        <CursorPos X="23" Y="164"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
       </Unit>
@@ -66,94 +68,96 @@
         <Filename Value="Source/Chapter03-Graph-DFS/GTA.GraphDFS.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="7"/>
-        <CursorPos X="35" Y="82"/>
+        <TopLine Value="50"/>
+        <CursorPos X="40" Y="59"/>
         <UsageCount Value="200"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter03-Graph-DFS/GTA.AdjMatrixDFS.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="40"/>
-        <CursorPos X="27" Y="60"/>
+        <TopLine Value="44"/>
+        <CursorPos X="25" Y="62"/>
         <UsageCount Value="204"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter02-Graph-Basics/GTA.Interfaces.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <CursorPos X="14" Y="18"/>
+        <TopLine Value="10"/>
+        <CursorPos X="17" Y="22"/>
         <UsageCount Value="202"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter03-Graph-DFS/GTA.GraphDFSnr.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="37"/>
-        <CursorPos X="26" Y="54"/>
+        <TopLine Value="39"/>
+        <CursorPos X="25" Y="56"/>
         <UsageCount Value="202"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter04-Graph-DFS-Applications/GTA.CC.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <CursorPos X="37" Y="103"/>
+        <TopLine Value="81"/>
+        <CursorPos X="26" Y="95"/>
         <UsageCount Value="201"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter04-Graph-DFS-Applications/GTA.SingleSourcePath.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="64"/>
-        <CursorPos X="21" Y="87"/>
+        <TopLine Value="57"/>
+        <CursorPos X="28" Y="62"/>
         <UsageCount Value="204"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter04-Graph-DFS-Applications/GTA.Path.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="72"/>
-        <CursorPos X="21" Y="95"/>
+        <TopLine Value="56"/>
+        <CursorPos X="28" Y="71"/>
         <UsageCount Value="200"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter04-Graph-DFS-Applications/GTA.CycleDetection.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="28"/>
-        <CursorPos X="19" Y="37"/>
+        <TopLine Value="44"/>
+        <CursorPos X="25" Y="60"/>
         <UsageCount Value="200"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter04-Graph-DFS-Applications/GTA.BipartitionDetection.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="17"/>
-        <CursorPos X="24" Y="106"/>
+        <TopLine Value="45"/>
+        <CursorPos X="25" Y="65"/>
         <UsageCount Value="202"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter05-Graph-BFS/GTA.GraphBFS.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="36"/>
-        <CursorPos X="23" Y="53"/>
+        <TopLine Value="38"/>
+        <CursorPos X="25" Y="55"/>
         <UsageCount Value="201"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter05-Graph-BFS/GTA.SingleSourcePath_BFS.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="69"/>
-        <CursorPos X="21" Y="80"/>
+        <TopLine Value="39"/>
+        <CursorPos X="27" Y="54"/>
         <UsageCount Value="201"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter05-Graph-BFS/GTA.UnweightedSingleSourceShortestPath.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="81"/>
-        <CursorPos X="21" Y="92"/>
+        <TopLine Value="43"/>
+        <CursorPos X="27" Y="58"/>
         <UsageCount Value="204"/>
       </Unit>
       <Unit>
@@ -176,7 +180,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="25"/>
         <CursorPos X="36" Y="38"/>
-        <UsageCount Value="190"/>
+        <UsageCount Value="191"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter07-AI-Search-and-BFS/GTA.Leetcode_752.pas"/>
@@ -184,7 +188,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="59"/>
         <CursorPos X="24" Y="76"/>
-        <UsageCount Value="181"/>
+        <UsageCount Value="182"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter07-AI-Search-and-BFS/GTA.WaterPuzzle.pas"/>
@@ -192,7 +196,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="91"/>
         <CursorPos X="32" Y="108"/>
-        <UsageCount Value="169"/>
+        <UsageCount Value="170"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter07-AI-Search-and-BFS/GTA.FarmerCrossedRiver.pas"/>
@@ -200,7 +204,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="133"/>
         <CursorPos X="95" Y="75"/>
-        <UsageCount Value="165"/>
+        <UsageCount Value="166"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter07-AI-Search-and-BFS/GTA.SlidingPuzzle.pas"/>
@@ -208,15 +212,15 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="136"/>
         <CursorPos X="106" Y="151"/>
-        <UsageCount Value="148"/>
+        <UsageCount Value="149"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.FindBridges.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="113"/>
-        <CursorPos X="19" Y="134"/>
-        <UsageCount Value="116"/>
+        <TopLine Value="69"/>
+        <CursorPos X="26" Y="88"/>
+        <UsageCount Value="117"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.Edge.pas"/>
@@ -224,15 +228,15 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="10"/>
         <CursorPos X="33" Y="34"/>
-        <UsageCount Value="115"/>
+        <UsageCount Value="116"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.FindCutPoints.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="109"/>
-        <CursorPos X="11" Y="133"/>
-        <UsageCount Value="94"/>
+        <TopLine Value="65"/>
+        <CursorPos X="26" Y="83"/>
+        <UsageCount Value="95"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.Leetcode_1192.pas"/>
@@ -240,31 +244,31 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="5"/>
         <CursorPos X="8" Y="20"/>
-        <UsageCount Value="91"/>
+        <UsageCount Value="92"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter09-Hamilton-Loop-and-Path/GTA.HamiltonLoop.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="103"/>
-        <CursorPos X="25" Y="110"/>
-        <UsageCount Value="74"/>
+        <TopLine Value="44"/>
+        <CursorPos X="27" Y="59"/>
+        <UsageCount Value="75"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter09-Hamilton-Loop-and-Path/GTA.HamiltonLoop_Optimization.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="92"/>
-        <CursorPos X="35" Y="41"/>
-        <UsageCount Value="72"/>
+        <TopLine Value="44"/>
+        <CursorPos X="23" Y="61"/>
+        <UsageCount Value="73"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter09-Hamilton-Loop-and-Path/GTA.HamiltonPath.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="46"/>
-        <CursorPos X="45" Y="51"/>
-        <UsageCount Value="71"/>
+        <TopLine Value="48"/>
+        <CursorPos X="23" Y="66"/>
+        <UsageCount Value="72"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter09-Hamilton-Loop-and-Path/GTA.UniquePathsIII.pas"/>
@@ -272,7 +276,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="169"/>
         <CursorPos X="5" Y="196"/>
-        <UsageCount Value="68"/>
+        <UsageCount Value="69"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter09-Hamilton-Loop-and-Path/GTA.UniquePathsIII_State_Compression.pas"/>
@@ -280,7 +284,23 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="162"/>
         <CursorPos X="34" Y="167"/>
-        <UsageCount Value="27"/>
+        <UsageCount Value="28"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter09-Hamilton-Loop-and-Path/GTA.UniquePathsIII_Memory_Search.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="165"/>
+        <CursorPos Y="106"/>
+        <UsageCount Value="26"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter10-Euler-Loop-and-Euler-Path/GTA.EulerLoop.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="36"/>
+        <CursorPos X="7" Y="51"/>
+        <UsageCount Value="25"/>
       </Unit>
       <Unit>
         <Filename Value="Source/02-Graph-Basics/GTA.AdjMatrix.pas"/>
@@ -364,7 +384,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="51"/>
         <CursorPos X="67" Y="67"/>
-        <UsageCount Value="0"/>
+        <UsageCount Value="10"/>
       </Unit>
       <Unit>
         <Filename Value="/usr/local/codetyphon/fpcsrc/rtl/inc/objpash.inc"/>
@@ -441,26 +461,8 @@
         <CursorPos X="40" Y="25"/>
         <UsageCount Value="6"/>
       </Unit>
-      <Unit>
-        <Filename Value="Source/Chapter09-Hamilton-Loop-and-Path/GTA.UniquePathsIII_Memory_Search.pas"/>
-        <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="165"/>
-        <CursorPos Y="106"/>
-        <UsageCount Value="25"/>
-      </Unit>
-      <Unit>
-        <Filename Value="Source/Chapter10-Euler-Loop-and-Euler-Path/GTA.EulerLoop.pas"/>
-        <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="3"/>
-        <TopLine Value="10"/>
-        <CursorPos X="35" Y="46"/>
-        <UsageCount Value="24"/>
-        <Loaded Value="True"/>
-      </Unit>
     </Units>
-    <JumpHistory HistoryIndex="5">
+    <JumpHistory HistoryIndex="8">
       <Position>
         <Filename Value="Source/GTA.Main.pas"/>
         <Caret Line="19" Column="35" TopLine="8"/>
@@ -474,16 +476,28 @@
         <Caret Line="23" Column="3" TopLine="8"/>
       </Position>
       <Position>
-        <Filename Value="Source/Chapter10-Euler-Loop-and-Euler-Path/GTA.EulerLoop.pas"/>
-        <Caret Line="8" Column="11"/>
+        <Filename Value="Source/Chapter02-Graph-Basics/GTA.Graph.pas"/>
+        <Caret Line="148" Column="16" TopLine="14"/>
       </Position>
       <Position>
-        <Filename Value="Source/Chapter10-Euler-Loop-and-Euler-Path/GTA.EulerLoop.pas"/>
-        <Caret Line="19" Column="34" TopLine="7"/>
+        <Filename Value="Source/Chapter02-Graph-Basics/GTA.Graph.pas"/>
+        <Caret Line="38" Column="20" TopLine="26"/>
       </Position>
       <Position>
-        <Filename Value="Source/Chapter10-Euler-Loop-and-Euler-Path/GTA.EulerLoop.pas"/>
-        <Caret Line="22" Column="36" TopLine="7"/>
+        <Filename Value="Source/GTA.Main.pas"/>
+        <Caret Line="19" Column="39" TopLine="8"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter02-Graph-Basics/GTA.Graph.pas"/>
+        <Caret Line="127" Column="21" TopLine="119"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter02-Graph-Basics/GTA.Graph.pas"/>
+        <Caret Line="164" Column="23" TopLine="150"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/GTA.Main.pas"/>
+        <Caret Line="19" Column="39" TopLine="8"/>
       </Position>
     </JumpHistory>
     <RunParams>
