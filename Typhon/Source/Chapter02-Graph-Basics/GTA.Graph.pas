@@ -1,7 +1,7 @@
 ﻿unit GTA.Graph;
 
 {$mode objfpc}{$H+}
-
+{$WARN 3018 off : Constructor should be public}
 interface
 
 uses
@@ -23,7 +23,9 @@ type
     _Adj: TArr_TTreeSet_int;
     _Edge: integer;
     _Vertex: integer;
+
     function __GetIntArray(s: UString): TArr_int;
+    constructor __Create();
 
   public
     constructor Create(fileName: UString);
@@ -34,6 +36,8 @@ type
     function HasEdge(v, w: integer): boolean;
     function ToString: UString; reintroduce;
     procedure ValidateVertex(v: integer);
+    procedure RemoveEdge(v, w: integer);
+    function Clone: TGraph;
 
     function Vertex: integer;
     function Edge: integer;
@@ -102,10 +106,32 @@ begin
   end;
 end;
 
+constructor TGraph.__Create();
+begin
+  inherited Create;
+end;
+
 function TGraph.Adj(v: integer): TArr_int;
 begin
   ValidateVertex(v);
   Result := _Adj[v].ToArray;
+end;
+
+function TGraph.Clone: TGraph;
+var
+  i: integer;
+begin
+  Result := TGraph.__Create;
+
+  with Result do
+  begin
+    SetLength(_Adj, Self._Vertex);
+    for i := 0 to High(Self._Adj) do
+      _Adj[i] := Self._Adj[i].Clone;
+
+    _Edge := self._Edge;
+    _Vertex := self._Vertex;
+  end;
 end;
 
 function TGraph.Degree(v: integer): integer;
@@ -136,6 +162,15 @@ begin
   Result := _Adj[v].Contains(w);
 end;
 
+procedure TGraph.RemoveEdge(v, w: integer);
+begin
+  ValidateVertex(v);
+  ValidateVertex(w);
+
+  _Adj[v].Remove(w);
+  _Adj[w].Remove(v);
+end;
+
 function TGraph.ToString: UString;
 var
   sb: TStringBuilder;
@@ -143,7 +178,7 @@ var
 begin
   sb := TStringBuilder.Create;
   try
-    sb.AppendFormat('V = %d, E = %d'#13, [_Vertex, _Edge]);
+    sb.AppendFormat('Vertex = %d, Edge = %d', [_Vertex, _Edge]).AppendLine;
 
     for i := 0 to High(_Adj) do
     begin
@@ -159,6 +194,12 @@ begin
   finally
     sb.Free;
   end;
+end;
+
+procedure TGraph.ValidateVertex(v: integer);
+begin
+  if (v < 0) or (v >= _Vertex) then
+    raise Exception.Create('vertex ' + v.ToString + 'is invalid');
 end;
 
 function TGraph.Vertex: integer;
@@ -198,12 +239,6 @@ begin
     FreeAndNil(list);
     FreeAndNil(sb);
   end;
-end;
-
-procedure TGraph.ValidateVertex(v: integer);
-begin
-  if (v < 0) or (v >= _Vertex) then
-    raise Exception.Create('vertex ' + v.ToString + 'is invalid');
 end;
 
 end.

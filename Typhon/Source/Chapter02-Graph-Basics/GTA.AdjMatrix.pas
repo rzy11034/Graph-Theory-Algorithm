@@ -1,7 +1,7 @@
 ﻿unit GTA.AdjMatrix;
 
 {$mode objfpc}{$H+}
-
+{$WARN 3018 off : Constructor should be public}
 interface
 
 uses
@@ -17,7 +17,10 @@ type
     _Adj: TArr2D_int;
     _Edge: integer;
     _Vertex: integer;
+
     function __GetIntArray(s: UString): TArr_int;
+
+    constructor __Create;
 
   public
     constructor Create(fileName: UString);
@@ -28,6 +31,8 @@ type
     function HasEdge(Vertex, w: integer): boolean;
     function ToString: UString; reintroduce;
     procedure ValidateVertex(Vertex: integer);
+    procedure RemoveEdge(v, w: integer);
+    function Clone: TAdjMatrix;
     function Vertex: integer;
     function Edge: integer;
   end;
@@ -90,6 +95,11 @@ begin
   end;
 end;
 
+constructor TAdjMatrix.__Create;
+begin
+  inherited Create;
+end;
+
 function TAdjMatrix.Adj(Vertex: integer): TArr_int;
 var
   res: TArrayList_int;
@@ -107,6 +117,18 @@ begin
     Result := res.ToArray;
   finally
     res.Free;
+  end;
+end;
+
+function TAdjMatrix.Clone: TAdjMatrix;
+begin
+  Result := TAdjMatrix.__Create;
+
+  with Result do
+  begin
+    _Adj := Copy(Self._Adj);
+    _Edge := Self._Edge;
+    _Vertex := Self._Vertex;
   end;
 end;
 
@@ -133,6 +155,15 @@ begin
   Result := _Adj[Vertex, w] = 1;
 end;
 
+procedure TAdjMatrix.RemoveEdge(v, w: integer);
+begin
+  ValidateVertex(v);
+  ValidateVertex(w);
+
+  _Adj[v, w] := 0;
+  _Adj[w, v] := 0;
+end;
+
 function TAdjMatrix.ToString: UString;
 var
   sb: TStringBuilder;
@@ -140,7 +171,7 @@ var
 begin
   sb := TStringBuilder.Create;
   try
-    sb.AppendFormat('Vertex = %d, Edge = %d'#13, [_Vertex, _Edge]);
+    sb.AppendFormat('Vertex = %d, Edge = %d', [_Vertex, _Edge]).AppendLine;
 
     for i := 0 to High(_Adj) do
     begin

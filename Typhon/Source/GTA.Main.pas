@@ -16,7 +16,7 @@ procedure Run;
 implementation
 
 uses
-  GTA.UniquePathsIII_State_Compression;
+  GTA.AdjMatrix;
 
 procedure Test;
 begin

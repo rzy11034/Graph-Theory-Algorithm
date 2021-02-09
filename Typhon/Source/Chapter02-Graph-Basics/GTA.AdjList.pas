@@ -20,6 +20,7 @@ type
     _Adj: TArr_TLinkedList_int;
     _Edge: integer;
     _Vertex: integer;
+
     function __GetIntArray(s: UString): TArr_int;
     procedure __ValidateVertex(vertex: integer);
 
@@ -153,7 +154,7 @@ var
 begin
   sb := TStringBuilder.Create;
   try
-    sb.AppendFormat('Vertex = %d, Edge = %d'#13, [_Vertex, _Edge]);
+    sb.AppendFormat('Vertex = %d, Edge = %d', [_Vertex, _Edge]).AppendLine;
 
     for i := 0 to High(_Adj) do
     begin
