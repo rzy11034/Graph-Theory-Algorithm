@@ -119,15 +119,22 @@ end;
 
 function TGraph.Clone: TGraph;
 var
-  i: integer;
+  v, w: integer;
 begin
   Result := TGraph.__Create;
 
   with Result do
   begin
     SetLength(_Adj, Self._Vertex);
-    for i := 0 to High(Self._Adj) do
-      _Adj[i] := Self._Adj[i].Clone;
+    for v := 0 to High(Self._Adj) do
+    begin
+      _Adj[v] := TTreeSet_int.Create;
+
+      for w in Self._Adj[v].ToArray do
+      begin
+        _Adj[v].Add(w);
+      end;
+    end;
 
     _Edge := self._Edge;
     _Vertex := self._Vertex;

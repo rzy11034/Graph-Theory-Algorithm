@@ -242,6 +242,10 @@
         <Filename Value="Source/Chapter10-Euler-Loop-and-Euler-Path/GTA.EulerLoop.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter10-Euler-Loop-and-Euler-Path/GTA.EulerLoop_Hierholzer_Algorithm.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

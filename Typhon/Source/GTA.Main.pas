@@ -16,7 +16,7 @@ procedure Run;
 implementation
 
 uses
-  GTA.AdjMatrix;
+  GTA.EulerLoop_Hierholzer_Algorithm;
 
 procedure Test;
 begin
