@@ -16,17 +16,29 @@ procedure Run;
 implementation
 
 uses
-  GTA.WeightedGraph;
+  GTA.WeightedEdge;
 
 procedure Test;
+var
+  a, b: TWeightedEdge;
+  &var: integer;
 begin
+  a := TWeightedEdge.Create(0, 0, 0);
+  b := TWeightedEdge.Create(0, 0, 1);
+
+  if b.Compare(a, b) < 1 then
+    WriteLn(' a < b ');
+
+  &var := -4;
+  &var := &var >> 2;
+  WriteLn(&var);
 
 end;
 
 procedure Run;
 begin
   Test;
-  Main;
+  //Main;
 end;
 
 end.
