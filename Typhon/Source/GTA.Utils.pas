@@ -9,12 +9,16 @@ uses
   SysUtils,
   GTA.Interfaces,
   GTA.Graph,
+  GTA.WeightedGraph,
   DeepStar.UString,
   DeepStar.Utils;
 
 type
-  IGraph = GTA.interfaces.IGraph;
+  IGraph = GTA.Interfaces.IGraph;
   TGraph = GTA.Graph.TGraph;
+
+  IWeightedGraph = GTA.Interfaces.IWeightedGraph;
+  TWeightedGraph = GTA.WeightedGraph.TWeightedGraph;
 
 const
   XY_DIRS_4: TArr2D_int = ((-1, 0), (0, 1), (1, 0), (0, -1));

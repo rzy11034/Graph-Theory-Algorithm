@@ -16,7 +16,7 @@ procedure Run;
 implementation
 
 uses
-  GTA.EulerLoop_Hierholzer_Algorithm;
+  GTA.WeightedGraph;
 
 procedure Test;
 begin
