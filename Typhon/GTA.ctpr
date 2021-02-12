@@ -255,7 +255,7 @@
         <IsPartOfProject Value="True"/>
       </Unit>
       <Unit>
-        <Filename Value="Source/Chapter11-Minimum-Tree-Spanning/GTA.UF.pas"/>
+        <Filename Value="Source/Chapter11-Minimum-Tree-Spanning/GTA.UnionFind.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
       <Unit>

@@ -19,19 +19,14 @@ uses
   GTA.Kruskal;
 
 procedure Test;
-var
-  a: TKruskal;
-  g: TWeightedGraph;
 begin
-  g := TWeightedGraph.Create(FileName('Chapter11-Minimum-Tree-Spanning', 'g.txt'));
-  a := TKruskal.Create(g);
-  a.ToString;
+
 end;
 
 procedure Run;
 begin
-  Test;
-  Main;
+  //Test;
+  //Main;
 end;
 
 end.

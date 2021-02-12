@@ -41,7 +41,6 @@ type
     function VertexV: integer;
     function VertexW: integer;
     function ToString: UString;
-    function Compare(constref a, b: IWeightedEdge): integer;
   end;
 
 implementation
