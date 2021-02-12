@@ -16,29 +16,22 @@ procedure Run;
 implementation
 
 uses
-  GTA.WeightedEdge;
+  GTA.Kruskal;
 
 procedure Test;
 var
-  a, b: TWeightedEdge;
-  &var: integer;
+  a: TKruskal;
+  g: TWeightedGraph;
 begin
-  a := TWeightedEdge.Create(0, 0, 0);
-  b := TWeightedEdge.Create(0, 0, 1);
-
-  if b.Compare(a, b) < 1 then
-    WriteLn(' a < b ');
-
-  &var := -4;
-  &var := &var >> 2;
-  WriteLn(&var);
-
+  g := TWeightedGraph.Create(FileName('Chapter11-Minimum-Tree-Spanning', 'g.txt'));
+  a := TKruskal.Create(g);
+  a.ToString;
 end;
 
 procedure Run;
 begin
   Test;
-  //Main;
+  Main;
 end;
 
 end.

@@ -16,7 +16,7 @@ type
     function Adj(v: integer): TArr_int;
     function Degree(v: integer): integer;
     function HasEdge(v, w: integer): boolean;
-    function ToString: UString; reintroduce;
+    function ToString: UString;
     procedure ValidateVertex(v: integer);
     procedure RemoveEdge(v, w: integer);
     function Vertex: integer;
@@ -28,12 +28,20 @@ type
     function Adj(v: integer): TArr_int;
     function Degree(v: integer): integer;
     function HasEdge(v, w: integer): boolean;
-    function ToString: UString; reintroduce;
+    function ToString: UString;
     procedure ValidateVertex(v: integer);
     procedure RemoveEdge(v, w: integer);
     function Vertex: integer;
     function Edge: integer;
     function GetWeight(v, w: integer): integer;
+  end;
+
+  IWeightedEdge = interface
+    ['{0D9DD11C-497A-4451-AEE6-1BDAE0485CDD}']
+    function VertexV: integer;
+    function VertexW: integer;
+    function ToString: UString;
+    function Compare(constref a, b: IWeightedEdge): integer;
   end;
 
 implementation

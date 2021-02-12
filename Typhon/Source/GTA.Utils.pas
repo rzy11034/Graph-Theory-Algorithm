@@ -10,6 +10,7 @@ uses
   GTA.Interfaces,
   GTA.Graph,
   GTA.WeightedGraph,
+  GTA.WeightedEdge,
   DeepStar.UString,
   DeepStar.Utils;
 
@@ -19,6 +20,9 @@ type
 
   IWeightedGraph = GTA.Interfaces.IWeightedGraph;
   TWeightedGraph = GTA.WeightedGraph.TWeightedGraph;
+
+  IWeightedEdge = GTA.Interfaces.IWeightedEdge;
+  TWeightedEdge = GTA.WeightedEdge.TWeightedEdge;
 
 const
   XY_DIRS_4: TArr2D_int = ((-1, 0), (0, 1), (1, 0), (0, -1));

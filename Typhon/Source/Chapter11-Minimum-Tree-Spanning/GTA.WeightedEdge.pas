@@ -7,10 +7,11 @@ interface
 uses
   Classes,
   SysUtils,
+  GTA.Interfaces,
   DeepStar.UString;
 
 type
-  TWeightedEdge = class(TObject)
+  TWeightedEdge = class(TInterfacedObject, IWeightedEdge)
   private
     _VertexV, _VertexW, _Weight: integer;
 
@@ -18,10 +19,9 @@ type
     constructor Create(v, w, weight: integer);
     destructor Destroy; override;
 
+    function VertexV: integer;
+    function VertexW: integer;
     function ToString: UString; reintroduce;
-
-    property VertexV: integer read _VertexV;
-    property VertexW: integer read _VertexW;
 
     class function Compare(constref a, b: TWeightedEdge): integer;
   end;
@@ -50,6 +50,16 @@ end;
 function TWeightedEdge.ToString: UString;
 begin
   Result := Format('(%d-%d: %d)', [_VertexV, _VertexW, _Weight]);
+end;
+
+function TWeightedEdge.VertexV: integer;
+begin
+  Result := _VertexV;
+end;
+
+function TWeightedEdge.VertexW: integer;
+begin
+  Result := _VertexW;
 end;
 
 end.
