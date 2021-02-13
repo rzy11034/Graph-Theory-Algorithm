@@ -21,6 +21,7 @@ type
 
     function VertexV: integer;
     function VertexW: integer;
+    function Weight: integer;
     function ToString: UString; reintroduce;
 
     class function Compare(constref a, b: TWeightedEdge): integer;
@@ -60,6 +61,11 @@ end;
 function TWeightedEdge.VertexW: integer;
 begin
   Result := _VertexW;
+end;
+
+function TWeightedEdge.Weight: integer;
+begin
+  Result := _Weight;
 end;
 
 end.

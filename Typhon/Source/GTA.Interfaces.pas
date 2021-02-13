@@ -41,6 +41,7 @@ type
     function VertexV: integer;
     function VertexW: integer;
     function ToString: UString;
+    function Weight: integer;
   end;
 
 implementation

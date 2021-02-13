@@ -7,9 +7,9 @@ interface
 uses
   Classes,
   SysUtils,
-  DeepStar.Utils,
   DeepStar.DSA.Linear.ArrayList,
   GTA.WeightedCC,
+  GTA.UnionFind,
   GTA.Utils;
 
 type
@@ -36,13 +36,17 @@ implementation
 procedure Main;
 var
   g: TWeightedGraph;
-  k: TKruskal;
+  i: integer;
 begin
   g := TWeightedGraph.Create(FileName('Chapter11-Minimum-Tree-Spanning', 'g.txt'));
 
   with TKruskal.Create(g) do
   begin
+    for i := 0 to High(Return) do
+      Write(Return[i].ToString, ' ');
+    WriteLn;
 
+    Free;
   end;
 end;
 
@@ -53,6 +57,9 @@ var
   cc: TWeightedCC;
   v, w: integer;
   edges: TList_TWeightedEdge;
+  cmp: TList_TWeightedEdge.ICmp;
+  uf: TUnionFind;
+  we: TWeightedEdge;
 begin
   _Graph := (g as TWeightedGraph);
   _Mst := TList_TWeightedEdge.Create;
@@ -65,7 +72,8 @@ begin
     cc.Free;
   end;
 
-  edges := TList_TWeightedEdge.Create(@TWeightedEdge(nil).Compare);
+  cmp := TList_TWeightedEdge.TCmp.Construct(@TWeightedEdge(nil).Compare);
+  edges := TList_TWeightedEdge.Create(cmp);
   try
     for v := 0 to g.Vertex - 1 do
       for w in g.Adj(v) do
@@ -73,13 +81,37 @@ begin
           edges.AddLast(TWeightedEdge.Create(v, w, g.GetWeight(v, w)));
 
     edges.Sort;
+
+    uf := TUnionFind.Create(_Graph.Vertex);
+    try
+      for we in edges.ToArray do
+      begin
+        v := we.VertexV;
+        w := we.VertexW;
+        if not uf.IsConnected(v, w) then
+        begin
+          _Mst.AddLast(TWeightedEdge.Create(we.VertexV, we.VertexW, we.Weight));
+          uf.Union(v, w);
+        end;
+      end;
+    finally
+      uf.Free;
+    end;
   finally
+    for we in edges.ToArray do
+      we.Free;
     edges.Free;
   end;
 end;
 
 destructor TKruskal.Destroy;
+var
+  e: TWeightedEdge;
 begin
+  for e in _Mst.ToArray do
+    e.Free;
+
+  _Mst.Free;
   inherited Destroy;
 end;
 
