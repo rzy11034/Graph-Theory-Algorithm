@@ -266,6 +266,10 @@
         <Filename Value="Source/Chapter11-Minimum-Tree-Spanning/GTA.WeightedCC.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter11-Minimum-Tree-Spanning/GTA.Prim.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

@@ -16,7 +16,7 @@ procedure Run;
 implementation
 
 uses
-  GTA.Kruskal ;
+  GTA.Prim;
 
 procedure Test;
 begin
