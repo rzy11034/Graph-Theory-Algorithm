@@ -23,7 +23,7 @@
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
-            <OtherUnitFiles Value="Source;Source/Chapter02-Graph-Basics;Source/Chapter03-Graph-DFS;Source/Chapter04-Graph-DFS-Applications;Source/Chapter05-Graph-BFS;Source/Chapter06-Graph-Modelling-and-Floodfill;Source/Chapter07-AI-Search-and-BFS;Source/Chapter08-Bridges-and-Cut-Points;Source/Chapter09-Hamilton-Loop-and-Path;Source/Chapter10-Euler-Loop-and-Euler-Path;Source/Chapter11-Minimum-Tree-Spanning"/>
+            <OtherUnitFiles Value="Source;Source/Chapter02-Graph-Basics;Source/Chapter03-Graph-DFS;Source/Chapter04-Graph-DFS-Applications;Source/Chapter05-Graph-BFS;Source/Chapter06-Graph-Modelling-and-Floodfill;Source/Chapter07-AI-Search-and-BFS;Source/Chapter08-Bridges-and-Cut-Points;Source/Chapter09-Hamilton-Loop-and-Path;Source/Chapter10-Euler-Loop-and-Euler-Path;Source/Chapter11-Minimum-Tree-Spanning;Source/Chapter12-Shortest-Path"/>
             <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
           <Parsing>
@@ -62,7 +62,7 @@
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
-            <OtherUnitFiles Value="Source;Source/Chapter02-Graph-Basics;Source/Chapter03-Graph-DFS;Source/Chapter04-Graph-DFS-Applications;Source/Chapter05-Graph-BFS;Source/Chapter06-Graph-Modelling-and-Floodfill;Source/Chapter07-AI-Search-and-BFS;Source/Chapter08-Bridges-and-Cut-Points;Source/Chapter09-Hamilton-Loop-and-Path;Source/Chapter10-Euler-Loop-and-Euler-Path;Source/Chapter11-Minimum-Tree-Spanning"/>
+            <OtherUnitFiles Value="Source;Source/Chapter02-Graph-Basics;Source/Chapter03-Graph-DFS;Source/Chapter04-Graph-DFS-Applications;Source/Chapter05-Graph-BFS;Source/Chapter06-Graph-Modelling-and-Floodfill;Source/Chapter07-AI-Search-and-BFS;Source/Chapter08-Bridges-and-Cut-Points;Source/Chapter09-Hamilton-Loop-and-Path;Source/Chapter10-Euler-Loop-and-Euler-Path;Source/Chapter11-Minimum-Tree-Spanning;Source/Chapter12-Shortest-Path"/>
             <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
           </SearchPaths>
           <CodeGeneration>
@@ -270,6 +270,14 @@
         <Filename Value="Source/Chapter11-Minimum-Tree-Spanning/GTA.Prim.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter11-Minimum-Tree-Spanning/GTA.Prim_Algorithm_Optimized.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -279,7 +287,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="Source;Source/Chapter02-Graph-Basics;Source/Chapter03-Graph-DFS;Source/Chapter04-Graph-DFS-Applications;Source/Chapter05-Graph-BFS;Source/Chapter06-Graph-Modelling-and-Floodfill;Source/Chapter07-AI-Search-and-BFS;Source/Chapter08-Bridges-and-Cut-Points;Source/Chapter09-Hamilton-Loop-and-Path;Source/Chapter10-Euler-Loop-and-Euler-Path;Source/Chapter11-Minimum-Tree-Spanning"/>
+      <OtherUnitFiles Value="Source;Source/Chapter02-Graph-Basics;Source/Chapter03-Graph-DFS;Source/Chapter04-Graph-DFS-Applications;Source/Chapter05-Graph-BFS;Source/Chapter06-Graph-Modelling-and-Floodfill;Source/Chapter07-AI-Search-and-BFS;Source/Chapter08-Bridges-and-Cut-Points;Source/Chapter09-Hamilton-Loop-and-Path;Source/Chapter10-Euler-Loop-and-Euler-Path;Source/Chapter11-Minimum-Tree-Spanning;Source/Chapter12-Shortest-Path"/>
       <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
   </CompilerOptions>

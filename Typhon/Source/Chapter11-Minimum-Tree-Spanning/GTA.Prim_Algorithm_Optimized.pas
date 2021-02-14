@@ -1,4 +1,4 @@
-﻿unit GTA.Prim;
+﻿unit GTA.Prim_Algorithm_Optimized;
 
 {$mode objfpc}{$H+}
 
@@ -11,6 +11,7 @@ uses
   GTA.WeightedEdge,
   GTA.WeightedCC,
   DeepStar.DSA.Linear.ArrayList,
+  DeepStar.DSA.Tree.PriorityQueue,
   DeepStar.Utils;
 
 type
@@ -18,6 +19,7 @@ type
   public type
     TList_TWeightedEdge = specialize TArrayList<TWeightedEdge>;
     TArr_TWeightedEdge = array of TWeightedEdge;
+    TQueue_TWeightedEdge = specialize TPriorityQueue<TWeightedEdge>;
 
   private
     _Graph: TWeightedGraph;
@@ -55,7 +57,9 @@ var
   cc: TWeightedCC;
   visited: TArr_bool;
   minEdge: TWeightedEdge;
-  i, v, w: integer;
+  v, w: integer;
+  queue: TQueue_TWeightedEdge;
+  cmp: TQueue_TWeightedEdge.ICmp;
 begin
   _Graph := g as TWeightedGraph;
   _Mst := TList_TWeightedEdge.Create;
@@ -72,21 +76,35 @@ begin
   SetLength(visited, g.Vertex);
   visited[0] := true;
 
-  for i := 1 to g.Vertex - 1 do
-  begin
-    minEdge := TWeightedEdge.Create(-1, -1, MaxInt);
-    for v := 0 to g.Vertex - 1 do
-      if visited[v] then
-        for w in g.Adj(v) do
-          if (not visited[w]) and (g.GetWeight(v, w) < minEdge.Weight) then
-          begin
-            minEdge.Free;
-            minEdge := TWeightedEdge.Create(v, w, g.GetWeight(v, w));
-          end;
+  cmp := TQueue_TWeightedEdge.TCmp.Construct(@TWeightedEdge(nil).Compare);
+  queue := TQueue_TWeightedEdge.Create(cmp, THeapkind.Min);
+  try
+    for w in _Graph.Adj(0) do
+      queue.EnQueue(TWeightedEdge.Create(0, w, _Graph.GetWeight(0, w)));
 
-    _Mst.AddLast(minEdge);
-    visited[minEdge.VertexV] := true;
-    visited[minEdge.VertexW] := true;
+    while not queue.IsEmpty do
+    begin
+      minEdge := queue.DeQueue;
+
+      if visited[minEdge.VertexV] and visited[minEdge.VertexW] then
+      begin
+        minEdge.Free;
+        Continue;
+      end
+      else
+      begin
+        _Mst.AddLast(minEdge);
+        v := IfThen(visited[minEdge.VertexV], minEdge.VertexW, minEdge.VertexV);
+        visited[v] := true;
+        for w in _Graph.Adj(v) do
+        begin
+          if not visited[w] then
+            queue.EnQueue(TWeightedEdge.Create(v, w, _Graph.GetWeight(v, w)));
+        end;
+      end;
+    end;
+  finally
+    queue.Free;
   end;
 end;
 

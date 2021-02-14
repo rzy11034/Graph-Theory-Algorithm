@@ -16,7 +16,7 @@ procedure Run;
 implementation
 
 uses
-  GTA.Prim;
+  GTA.Kruskal;
 
 procedure Test;
 begin
@@ -25,7 +25,7 @@ end;
 
 procedure Run;
 begin
-  //Test;
+  Test;
   Main;
 end;
 

@@ -88,9 +88,14 @@ begin
       begin
         v := we.VertexV;
         w := we.VertexW;
-        if not uf.IsConnected(v, w) then
+        if uf.IsConnected(v, w) then
         begin
-          _Mst.AddLast(TWeightedEdge.Create(we.VertexV, we.VertexW, we.Weight));
+          we.Free;
+          Continue;
+        end
+        else
+        begin
+          _Mst.AddLast(we);
           uf.Union(v, w);
         end;
       end;
@@ -98,8 +103,6 @@ begin
       uf.Free;
     end;
   finally
-    for we in edges.ToArray do
-      we.Free;
     edges.Free;
   end;
 end;
