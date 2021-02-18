@@ -18,7 +18,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="2"/>
         <TopLine Value="18"/>
-        <CursorPos X="16" Y="21"/>
+        <CursorPos X="15" Y="19"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
       </Unit>
@@ -218,7 +218,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="114"/>
         <CursorPos X="86" Y="131"/>
-        <UsageCount Value="175"/>
+        <UsageCount Value="177"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.Edge.pas"/>
@@ -226,7 +226,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="10"/>
         <CursorPos X="33" Y="34"/>
-        <UsageCount Value="174"/>
+        <UsageCount Value="176"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.FindCutPoints.pas"/>
@@ -234,7 +234,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="65"/>
         <CursorPos X="26" Y="83"/>
-        <UsageCount Value="153"/>
+        <UsageCount Value="155"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.Leetcode_1192.pas"/>
@@ -242,7 +242,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="5"/>
         <CursorPos X="8" Y="20"/>
-        <UsageCount Value="150"/>
+        <UsageCount Value="152"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter09-Hamilton-Loop-and-Path/GTA.HamiltonLoop.pas"/>
@@ -250,7 +250,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="44"/>
         <CursorPos X="27" Y="59"/>
-        <UsageCount Value="133"/>
+        <UsageCount Value="135"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter09-Hamilton-Loop-and-Path/GTA.HamiltonLoop_Optimization.pas"/>
@@ -258,7 +258,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="44"/>
         <CursorPos X="23" Y="61"/>
-        <UsageCount Value="131"/>
+        <UsageCount Value="133"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter09-Hamilton-Loop-and-Path/GTA.HamiltonPath.pas"/>
@@ -266,7 +266,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="48"/>
         <CursorPos X="23" Y="66"/>
-        <UsageCount Value="130"/>
+        <UsageCount Value="132"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter09-Hamilton-Loop-and-Path/GTA.UniquePathsIII.pas"/>
@@ -274,7 +274,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="169"/>
         <CursorPos X="5" Y="196"/>
-        <UsageCount Value="127"/>
+        <UsageCount Value="129"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter09-Hamilton-Loop-and-Path/GTA.UniquePathsIII_State_Compression.pas"/>
@@ -282,7 +282,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="162"/>
         <CursorPos X="34" Y="167"/>
-        <UsageCount Value="86"/>
+        <UsageCount Value="88"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter09-Hamilton-Loop-and-Path/GTA.UniquePathsIII_Memory_Search.pas"/>
@@ -290,7 +290,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="165"/>
         <CursorPos Y="106"/>
-        <UsageCount Value="84"/>
+        <UsageCount Value="86"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter10-Euler-Loop-and-Euler-Path/GTA.EulerLoop.pas"/>
@@ -298,7 +298,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="36"/>
         <CursorPos X="7" Y="51"/>
-        <UsageCount Value="83"/>
+        <UsageCount Value="85"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter10-Euler-Loop-and-Euler-Path/GTA.EulerLoop_Hierholzer_Algorithm.pas"/>
@@ -306,14 +306,14 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="95"/>
         <CursorPos X="90" Y="105"/>
-        <UsageCount Value="75"/>
+        <UsageCount Value="77"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter11-Minimum-Tree-Spanning/GTA.WeightedGraph.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="1"/>
         <CursorPos X="44" Y="16"/>
-        <UsageCount Value="64"/>
+        <UsageCount Value="66"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -322,7 +322,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="27"/>
         <CursorPos X="23" Y="38"/>
-        <UsageCount Value="59"/>
+        <UsageCount Value="61"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter11-Minimum-Tree-Spanning/GTA.UnionFind.pas"/>
@@ -330,7 +330,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="37"/>
         <CursorPos X="15" Y="66"/>
-        <UsageCount Value="54"/>
+        <UsageCount Value="56"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter11-Minimum-Tree-Spanning/GTA.Kruskal.pas"/>
@@ -338,7 +338,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="76"/>
         <CursorPos X="15" Y="97"/>
-        <UsageCount Value="51"/>
+        <UsageCount Value="53"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter11-Minimum-Tree-Spanning/GTA.WeightedCC.pas"/>
@@ -346,7 +346,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="2"/>
         <CursorPos X="23" Y="19"/>
-        <UsageCount Value="49"/>
+        <UsageCount Value="51"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter11-Minimum-Tree-Spanning/GTA.Prim.pas"/>
@@ -354,7 +354,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="71"/>
         <CursorPos X="37" Y="88"/>
-        <UsageCount Value="32"/>
+        <UsageCount Value="34"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter11-Minimum-Tree-Spanning/GTA.Prim_Algorithm_Optimized.pas"/>
@@ -362,16 +362,16 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="81"/>
         <CursorPos X="13" Y="103"/>
-        <UsageCount Value="28"/>
+        <UsageCount Value="30"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra.pas"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="18"/>
-        <CursorPos X="5" Y="40"/>
-        <UsageCount Value="25"/>
+        <TopLine Value="24"/>
+        <CursorPos X="39" Y="40"/>
+        <UsageCount Value="27"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -747,7 +747,7 @@
         <UsageCount Value="10"/>
       </Unit>
       <Unit>
-        <Filename Value="C:/codetyphon/fpcsrc/rtl/objpas/objpas.pp"/>
+        <Filename Value="../../../../../../../codetyphon/fpcsrc/rtl/objpas/objpas.pp"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="19"/>
@@ -755,7 +755,7 @@
         <UsageCount Value="10"/>
       </Unit>
       <Unit>
-        <Filename Value="C:/codetyphon/fpcsrc/rtl/inc/systemh.inc"/>
+        <Filename Value="../../../../../../../codetyphon/fpcsrc/rtl/inc/systemh.inc"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="99"/>
@@ -763,7 +763,7 @@
         <UsageCount Value="10"/>
       </Unit>
       <Unit>
-        <Filename Value="C:/codetyphon/fpcsrc/rtl/objpas/sysutils/syshelph.inc"/>
+        <Filename Value="../../../../../../../codetyphon/fpcsrc/rtl/objpas/sysutils/syshelph.inc"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="498"/>
@@ -771,86 +771,126 @@
         <UsageCount Value="10"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="19">
+    <JumpHistory HistoryIndex="29">
       <Position>
-        <Filename Value="Source/GTA.Main.pas"/>
-        <Caret Line="28" Column="10" TopLine="13"/>
-      </Position>
-      <Position>
-        <Filename Value="Source/GTA.Main.pas"/>
-        <Caret Line="23" Column="11" TopLine="15"/>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra.pas"/>
+        <Caret Line="79" TopLine="64"/>
       </Position>
       <Position>
         <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra.pas"/>
-        <Caret Line="20" Column="55"/>
+        <Caret Line="74" TopLine="64"/>
       </Position>
       <Position>
         <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra.pas"/>
-        <Caret Line="33" Column="41" TopLine="14"/>
+        <Caret Line="76" TopLine="64"/>
       </Position>
       <Position>
         <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra.pas"/>
-        <Caret Line="33" Column="44" TopLine="17"/>
+        <Caret Line="78" TopLine="64"/>
       </Position>
       <Position>
-        <Filename Value="Source/GTA.Main.pas"/>
-        <Caret Line="25" TopLine="15"/>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra.pas"/>
+        <Caret Line="79" TopLine="64"/>
       </Position>
       <Position>
-        <Filename Value="Source/GTA.Main.pas"/>
-        <Caret Line="27" Column="7" TopLine="12"/>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra.pas"/>
+        <Caret Line="74" TopLine="64"/>
       </Position>
       <Position>
-        <Filename Value="Source/GTA.Main.pas"/>
-        <Caret Line="26" TopLine="19"/>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra.pas"/>
+        <Caret Line="62" TopLine="53"/>
       </Position>
       <Position>
-        <Filename Value="Source/GTA.Main.pas"/>
-        <Caret Line="27" TopLine="19"/>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra.pas"/>
+        <Caret Line="64" TopLine="53"/>
       </Position>
       <Position>
-        <Filename Value="Source/GTA.Main.pas"/>
-        <Caret Line="28" TopLine="19"/>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra.pas"/>
+        <Caret Line="65" TopLine="53"/>
       </Position>
       <Position>
-        <Filename Value="Source/GTA.Main.pas"/>
-        <Caret Line="27" TopLine="19"/>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra.pas"/>
+        <Caret Line="64" TopLine="53"/>
       </Position>
       <Position>
-        <Filename Value="Source/GTA.Main.pas"/>
-        <Caret Line="28" TopLine="19"/>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra.pas"/>
+        <Caret Line="65" TopLine="53"/>
       </Position>
       <Position>
-        <Filename Value="Source/GTA.Main.pas"/>
-        <Caret Line="27" TopLine="19"/>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra.pas"/>
+        <Caret Line="67" TopLine="53"/>
       </Position>
       <Position>
-        <Filename Value="Source/GTA.Main.pas"/>
-        <Caret Line="26" Column="10" TopLine="16"/>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra.pas"/>
+        <Caret Line="68" TopLine="53"/>
       </Position>
       <Position>
-        <Filename Value="Source/GTA.Main.pas"/>
-        <Caret Line="28" TopLine="16"/>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra.pas"/>
+        <Caret Line="64" TopLine="53"/>
       </Position>
       <Position>
-        <Filename Value="Source/GTA.Main.pas"/>
-        <Caret Line="29" TopLine="17"/>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra.pas"/>
+        <Caret Line="65" TopLine="53"/>
       </Position>
       <Position>
-        <Filename Value="Source/GTA.Main.pas"/>
-        <Caret Line="30" Column="27" TopLine="18"/>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra.pas"/>
+        <Caret Line="67" TopLine="53"/>
       </Position>
       <Position>
-        <Filename Value="Source/GTA.Main.pas"/>
-        <Caret Line="28" TopLine="18"/>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra.pas"/>
+        <Caret Line="68" TopLine="53"/>
       </Position>
       <Position>
-        <Filename Value="Source/GTA.Main.pas"/>
-        <Caret Line="29" TopLine="18"/>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra.pas"/>
+        <Caret Line="64" TopLine="53"/>
       </Position>
       <Position>
-        <Filename Value="Source/GTA.Main.pas"/>
-        <Caret Line="30" TopLine="18"/>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra.pas"/>
+        <Caret Line="65" TopLine="53"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra.pas"/>
+        <Caret Line="64" TopLine="53"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra.pas"/>
+        <Caret Line="65" TopLine="53"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra.pas"/>
+        <Caret Line="64" TopLine="53"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra.pas"/>
+        <Caret Line="71" TopLine="62"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra.pas"/>
+        <Caret Line="40" TopLine="24"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra.pas"/>
+        <Caret Line="42" TopLine="26"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra.pas"/>
+        <Caret Line="44" TopLine="28"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra.pas"/>
+        <Caret Line="34" Column="7" TopLine="31"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra.pas"/>
+        <Caret Line="40" TopLine="31"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra.pas"/>
+        <Caret Line="41" TopLine="31"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra.pas"/>
+        <Caret Line="93" TopLine="84"/>
       </Position>
     </JumpHistory>
     <RunParams>
@@ -862,15 +902,6 @@
     <Watches>
       <Item>
         <Expression Value="self"/>
-      </Item>
-      <Item>
-        <Expression Value="_Graph"/>
-      </Item>
-      <Item>
-        <Expression Value="_Mst"/>
-      </Item>
-      <Item>
-        <Expression Value="minEdge"/>
       </Item>
     </Watches>
   </Debugging>

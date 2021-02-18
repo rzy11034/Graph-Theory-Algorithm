@@ -16,7 +16,7 @@ procedure Run;
 implementation
 
 uses
-  GTA.Kruskal;
+  GTA.Dijkstra;
 
 procedure Test;
 begin
