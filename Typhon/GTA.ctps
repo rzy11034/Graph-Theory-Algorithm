@@ -17,8 +17,8 @@
         <Filename Value="Source/GTA.Main.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="21"/>
-        <CursorPos X="6" Y="24"/>
+        <TopLine Value="6"/>
+        <CursorPos X="28" Y="19"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
       </Unit>
@@ -217,7 +217,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="114"/>
         <CursorPos X="86" Y="131"/>
-        <UsageCount Value="192"/>
+        <UsageCount Value="198"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.Edge.pas"/>
@@ -225,7 +225,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="10"/>
         <CursorPos X="33" Y="34"/>
-        <UsageCount Value="191"/>
+        <UsageCount Value="197"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.FindCutPoints.pas"/>
@@ -233,7 +233,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="65"/>
         <CursorPos X="26" Y="83"/>
-        <UsageCount Value="170"/>
+        <UsageCount Value="176"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.Leetcode_1192.pas"/>
@@ -241,7 +241,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="5"/>
         <CursorPos X="8" Y="20"/>
-        <UsageCount Value="167"/>
+        <UsageCount Value="173"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter09-Hamilton-Loop-and-Path/GTA.HamiltonLoop.pas"/>
@@ -249,7 +249,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="44"/>
         <CursorPos X="27" Y="59"/>
-        <UsageCount Value="150"/>
+        <UsageCount Value="156"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter09-Hamilton-Loop-and-Path/GTA.HamiltonLoop_Optimization.pas"/>
@@ -257,7 +257,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="44"/>
         <CursorPos X="23" Y="61"/>
-        <UsageCount Value="148"/>
+        <UsageCount Value="154"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter09-Hamilton-Loop-and-Path/GTA.HamiltonPath.pas"/>
@@ -265,7 +265,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="48"/>
         <CursorPos X="23" Y="66"/>
-        <UsageCount Value="147"/>
+        <UsageCount Value="153"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter09-Hamilton-Loop-and-Path/GTA.UniquePathsIII.pas"/>
@@ -273,7 +273,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="169"/>
         <CursorPos X="5" Y="196"/>
-        <UsageCount Value="144"/>
+        <UsageCount Value="150"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter09-Hamilton-Loop-and-Path/GTA.UniquePathsIII_State_Compression.pas"/>
@@ -281,7 +281,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="162"/>
         <CursorPos X="34" Y="167"/>
-        <UsageCount Value="103"/>
+        <UsageCount Value="109"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter09-Hamilton-Loop-and-Path/GTA.UniquePathsIII_Memory_Search.pas"/>
@@ -289,7 +289,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="165"/>
         <CursorPos Y="106"/>
-        <UsageCount Value="101"/>
+        <UsageCount Value="107"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter10-Euler-Loop-and-Euler-Path/GTA.EulerLoop.pas"/>
@@ -297,7 +297,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="36"/>
         <CursorPos X="7" Y="51"/>
-        <UsageCount Value="100"/>
+        <UsageCount Value="106"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter10-Euler-Loop-and-Euler-Path/GTA.EulerLoop_Hierholzer_Algorithm.pas"/>
@@ -305,15 +305,15 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="95"/>
         <CursorPos X="90" Y="105"/>
-        <UsageCount Value="92"/>
+        <UsageCount Value="98"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter11-Minimum-Tree-Spanning/GTA.WeightedGraph.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="25"/>
+        <TopLine Value="72"/>
         <CursorPos X="9" Y="28"/>
-        <UsageCount Value="81"/>
+        <UsageCount Value="87"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -322,7 +322,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="13"/>
         <CursorPos X="23" Y="38"/>
-        <UsageCount Value="76"/>
+        <UsageCount Value="82"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter11-Minimum-Tree-Spanning/GTA.UnionFind.pas"/>
@@ -330,7 +330,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="37"/>
         <CursorPos X="15" Y="66"/>
-        <UsageCount Value="71"/>
+        <UsageCount Value="77"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter11-Minimum-Tree-Spanning/GTA.Kruskal.pas"/>
@@ -338,7 +338,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="13"/>
         <CursorPos X="15" Y="97"/>
-        <UsageCount Value="68"/>
+        <UsageCount Value="74"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter11-Minimum-Tree-Spanning/GTA.WeightedCC.pas"/>
@@ -346,7 +346,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="2"/>
         <CursorPos X="23" Y="19"/>
-        <UsageCount Value="66"/>
+        <UsageCount Value="72"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter11-Minimum-Tree-Spanning/GTA.Prim.pas"/>
@@ -354,7 +354,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="71"/>
         <CursorPos X="37" Y="88"/>
-        <UsageCount Value="49"/>
+        <UsageCount Value="55"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter11-Minimum-Tree-Spanning/GTA.Prim_Algorithm_Optimized.pas"/>
@@ -362,15 +362,15 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="81"/>
         <CursorPos X="13" Y="103"/>
-        <UsageCount Value="45"/>
+        <UsageCount Value="51"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="4"/>
-        <TopLine Value="61"/>
-        <CursorPos X="53" Y="77"/>
-        <UsageCount Value="42"/>
+        <TopLine Value="48"/>
+        <CursorPos Y="54"/>
+        <UsageCount Value="48"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -379,36 +379,47 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="25"/>
         <CursorPos X="91" Y="81"/>
-        <UsageCount Value="35"/>
+        <UsageCount Value="41"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra_More_about_Dijkstra.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="80"/>
-        <CursorPos X="7" Y="89"/>
-        <UsageCount Value="24"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="74"/>
+        <CursorPos X="3" Y="80"/>
+        <UsageCount Value="30"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Leetcode_743_Dijkstra.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="156"/>
+        <CursorPos Y="171"/>
+        <UsageCount Value="28"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source/02-Graph-Basics/GTA.AdjMatrix.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="37"/>
         <CursorPos X="30" Y="67"/>
-        <UsageCount Value="139"/>
+        <UsageCount Value="138"/>
       </Unit>
       <Unit>
         <Filename Value="Source/02-Graph-Basics/GTA.AdjList.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="131"/>
         <CursorPos X="44" Y="153"/>
-        <UsageCount Value="39"/>
+        <UsageCount Value="38"/>
       </Unit>
       <Unit>
         <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/DSA/Linear/DeepStar.DSA.Linear.LinkedList.pas"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="11" Y="15"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="/usr/local/codetyphon/fpcsrc/rtl/objpas/sysutils/sysutilh.inc"/>
@@ -416,7 +427,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="341"/>
         <CursorPos X="3" Y="280"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
         <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/Utils/DeepStar.Utils.pas"/>
@@ -424,14 +435,14 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="100"/>
         <CursorPos X="3" Y="116"/>
-        <UsageCount Value="66"/>
+        <UsageCount Value="65"/>
       </Unit>
       <Unit>
         <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/Utils/DeepStar.UString.pas"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="26" Y="4"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/DSA/DeepStar.DSA.Interfaces.pas"/>
@@ -439,7 +450,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="7"/>
         <CursorPos X="44" Y="22"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/DSA/Linear/DeepStar.DSA.Linear.ArrayList.pas"/>
@@ -447,14 +458,14 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="102"/>
         <CursorPos X="3" Y="118"/>
-        <UsageCount Value="18"/>
+        <UsageCount Value="17"/>
       </Unit>
       <Unit>
         <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/DSA/Linear/DeepStar.DSA.Linear.Stack.pas"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="11" Y="14"/>
-        <UsageCount Value="4"/>
+        <UsageCount Value="3"/>
       </Unit>
       <Unit>
         <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/DSA/Linear/DeepStar.DSA.Linear.Queue.pas"/>
@@ -462,7 +473,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="4"/>
         <CursorPos X="11" Y="14"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/DSA/Hash/DeepStar.DSA.Hash.HashMap.pas"/>
@@ -470,7 +481,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="10"/>
         <CursorPos Y="24"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="/usr/local/codetyphon/fpcsrc/rtl/inc/objpash.inc"/>
@@ -478,7 +489,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="200"/>
         <CursorPos X="21" Y="217"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
         <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/DSA/Linear/DeepStar.DSA.Linear.DoubleLinkedList.pas"/>
@@ -486,7 +497,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="4"/>
         <CursorPos X="5" Y="465"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="/usr/local/codetyphon/fpcsrc/packages/rtl-generics/src/generics.collections.pas"/>
@@ -495,7 +506,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="64"/>
         <CursorPos X="21" Y="80"/>
-        <UsageCount Value="2"/>
+        <UsageCount Value="1"/>
       </Unit>
       <Unit>
         <Filename Value="/usr/local/codetyphon/fpcsrc/rtl/objpas/character.pas"/>
@@ -504,7 +515,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="69"/>
         <CursorPos X="28" Y="78"/>
-        <UsageCount Value="4"/>
+        <UsageCount Value="3"/>
       </Unit>
       <Unit>
         <Filename Value="/usr/local/codetyphon/fpcsrc/packages/rtl-objpas/src/inc/rtti.pp"/>
@@ -513,7 +524,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="1878"/>
         <CursorPos X="3" Y="1895"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
       </Unit>
       <Unit>
         <Filename Value="/usr/local/codetyphon/fpcsrc/rtl/objpas/typinfo.pp"/>
@@ -522,24 +533,22 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="31"/>
         <CursorPos X="8" Y="48"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
       </Unit>
       <Unit>
         <Filename Value="/usr/local/codetyphon/fpcsrc/rtl/inc/rttih.inc"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="16" Y="22"/>
-        <UsageCount Value="4"/>
+        <UsageCount Value="3"/>
       </Unit>
       <Unit>
         <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/DSA/Tree/DeepStar.DSA.Tree.TreeMap.pas"/>
         <FRMtype Value="0"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="123"/>
-        <CursorPos X="3" Y="127"/>
-        <UsageCount Value="10"/>
-        <Loaded Value="True"/>
+        <CursorPos X="32" Y="137"/>
+        <UsageCount Value="9"/>
       </Unit>
       <Unit>
         <Filename Value="/codetyphon/fpcsrc/rtl/objpas/sysutils/sysutilh.inc"/>
@@ -547,15 +556,15 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="10"/>
         <CursorPos X="40" Y="25"/>
-        <UsageCount Value="1"/>
+        <UsageCount Value="10"/>
       </Unit>
       <Unit>
         <Filename Value="/codetyphon/fpcsrc/rtl/inc/objpash.inc"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="243"/>
-        <CursorPos X="20" Y="258"/>
-        <UsageCount Value="5"/>
+        <TopLine Value="203"/>
+        <CursorPos X="21" Y="217"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/DSA/Tree/DeepStar.DSA.Tree.TreeSet.pas"/>
@@ -563,80 +572,72 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="38"/>
         <CursorPos X="24" Y="130"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
-        <Filename Value="../../../../../../../codetyphon/fpcsrc/rtl/objpas/classes/classesh.inc"/>
+        <Filename Value="/codetyphon/fpcsrc/rtl/objpas/classes/classesh.inc"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="854"/>
         <CursorPos X="22" Y="579"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
-        <Filename Value="../../../../../../../codetyphon/fpcsrc/rtl/inc/objpash.inc"/>
-        <FRMtype Value="0"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="203"/>
-        <CursorPos X="21" Y="217"/>
-        <UsageCount Value="8"/>
-      </Unit>
-      <Unit>
-        <Filename Value="../../../../../../../codetyphon/fpcsrc/rtl/objpas/classes/persist.inc"/>
+        <Filename Value="/codetyphon/fpcsrc/rtl/objpas/classes/persist.inc"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="56"/>
         <CursorPos X="24" Y="54"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
       </Unit>
       <Unit>
-        <Filename Value="../../../../../../../codetyphon/fpcsrc/rtl/inc/objpas.inc"/>
+        <Filename Value="/codetyphon/fpcsrc/rtl/inc/objpas.inc"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="1065"/>
         <CursorPos X="10" Y="1068"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
-        <Filename Value="../../../../../../../codetyphon/fpcsrc/rtl/objpas/objpas.pp"/>
+        <Filename Value="/codetyphon/fpcsrc/rtl/objpas/objpas.pp"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="19"/>
         <CursorPos X="8" Y="33"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
-        <Filename Value="../../../../../../../codetyphon/fpcsrc/rtl/inc/systemh.inc"/>
+        <Filename Value="/codetyphon/fpcsrc/rtl/inc/systemh.inc"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="99"/>
         <CursorPos X="19" Y="115"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
-        <Filename Value="../../../../../../../codetyphon/fpcsrc/packages/rtl-generics/src/generics.collections.pas"/>
+        <Filename Value="/codetyphon/fpcsrc/packages/rtl-generics/src/generics.collections.pas"/>
         <FRMtype Value="0"/>
         <UnitName Value="Generics.Collections"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="451"/>
         <CursorPos X="3" Y="468"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
-        <Filename Value="../../../../../../../codetyphon/fpcsrc/packages/rtl-generics/src/generics.memoryexpanders.pas"/>
+        <Filename Value="/codetyphon/fpcsrc/packages/rtl-generics/src/generics.memoryexpanders.pas"/>
         <FRMtype Value="0"/>
         <UnitName Value="Generics.MemoryExpanders"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="13"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
       </Unit>
       <Unit>
-        <Filename Value="../../../../../../../codetyphon/fpcsrc/packages/rtl-generics/src/generics.defaults.pas"/>
+        <Filename Value="/codetyphon/fpcsrc/packages/rtl-generics/src/generics.defaults.pas"/>
         <FRMtype Value="0"/>
         <UnitName Value="Generics.Defaults"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="3" Y="77"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/DSA/Tree/DeepStar.DSA.Tree.AVLTree.pas"/>
@@ -644,7 +645,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="30"/>
         <CursorPos X="43" Y="43"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="/usr/local/codetyphon/fpcsrc/packages/rtl-generics/src/generics.defaults.pas"/>
@@ -653,7 +654,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="37"/>
         <CursorPos X="54" Y="54"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
         <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/DSA/Tree/DeepStar.DSA.Tree.BinaryTree.pas"/>
@@ -661,37 +662,37 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="69"/>
         <CursorPos Y="81"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
-        <Filename Value="../../../../../../../codetyphon/fpcsrc/rtl/objpas/classes/classes.inc"/>
+        <Filename Value="/codetyphon/fpcsrc/rtl/objpas/classes/classes.inc"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="1116"/>
         <CursorPos X="3" Y="1130"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
-        <Filename Value="../../../../../../../codetyphon/fpcsrc/rtl/objpas/classes/sllist.inc"/>
+        <Filename Value="/codetyphon/fpcsrc/rtl/objpas/classes/sllist.inc"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="2"/>
         <CursorPos X="3" Y="16"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
       </Unit>
       <Unit>
-        <Filename Value="../../../../../../../codetyphon/fpcsrc/packages/rtl-generics/src/inc/generics.dictionariesh.inc"/>
+        <Filename Value="/codetyphon/fpcsrc/packages/rtl-generics/src/inc/generics.dictionariesh.inc"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="585"/>
         <CursorPos X="3" Y="596"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/DSA/Tree/DeepStar.DSA.Tree.Heap.pas"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/DSA/Tree/DeepStar.DSA.Tree.PriorityQueue.pas"/>
@@ -699,7 +700,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="7"/>
         <CursorPos X="5" Y="18"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/DSA/Hash/DeepStar.DSA.Hash.HashSet.pas"/>
@@ -707,7 +708,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="10"/>
         <CursorPos X="44" Y="22"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/DSA/Tree/DeepStar.DSA.Tree.RBTree.pas"/>
@@ -715,14 +716,14 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="49"/>
         <CursorPos X="36" Y="48"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/DSA/Tree/DeepStar.DSA.Tree.BalanceBinarySearchTree.pas"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="4"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/DSA/Tree/DeepStar.DSA.Tree.BinarySearchTree.pas"/>
@@ -730,108 +731,174 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="7"/>
         <CursorPos X="16" Y="36"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/Utils/DeepStar.Math.pas"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="5"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
         <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/DSA/Strings/DeepStar.DSA.Strings.KMP.pas"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="79"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
-        <Filename Value="../../../../../../../codetyphon/fpcsrc/rtl/inc/mathh.inc"/>
+        <Filename Value="/codetyphon/fpcsrc/rtl/inc/mathh.inc"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="91"/>
         <CursorPos X="14" Y="105"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
-        <Filename Value="../../../../../../../codetyphon/fpcsrc/rtl/win/sysdl.inc"/>
+        <Filename Value="/codetyphon/fpcsrc/rtl/win/sysdl.inc"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="47"/>
         <CursorPos X="10" Y="50"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
-        <Filename Value="../../../../../../../codetyphon/fpcsrc/rtl/objpas/sysutils/syshelph.inc"/>
+        <Filename Value="/codetyphon/fpcsrc/rtl/objpas/sysutils/syshelph.inc"/>
         <FRMtype Value="0"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="498"/>
         <CursorPos X="7" Y="512"/>
-        <UsageCount Value="8"/>
+        <UsageCount Value="7"/>
       </Unit>
       <Unit>
-        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Leetcode_743_Dijkstra.pas"/>
-        <IsPartOfProject Value="True"/>
-        <EditorIndex Value="5"/>
-        <TopLine Value="59"/>
-        <CursorPos X="27" Y="73"/>
-        <UsageCount Value="22"/>
-        <Loaded Value="True"/>
+        <Filename Value="../../../玩转算法/play-with-graph-theory-algorithm/12-Shortest-Path/04-Dijkstra-Algorithm-Optimized/src/Solution.java"/>
+        <FRMtype Value="0"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Java"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="12">
+    <JumpHistory HistoryIndex="29">
       <Position>
-        <Filename Value="Source/GTA.Main.pas"/>
-        <Caret Line="19" Column="35" TopLine="6"/>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Leetcode_743_Dijkstra.pas"/>
+        <Caret Line="131" TopLine="128"/>
       </Position>
       <Position>
         <Filename Value="Source/Chapter12-Shortest-Path/GTA.Leetcode_743_Dijkstra.pas"/>
-        <Caret Line="39" Column="27" TopLine="25"/>
+        <Caret Line="192" TopLine="184"/>
       </Position>
       <Position>
         <Filename Value="Source/Chapter12-Shortest-Path/GTA.Leetcode_743_Dijkstra.pas"/>
-        <Caret Line="44" Column="23" TopLine="30"/>
-      </Position>
-      <Position>
-        <Filename Value="Source/Chapter11-Minimum-Tree-Spanning/GTA.WeightedGraph.pas"/>
-        <Caret Line="30" Column="20" TopLine="11"/>
-      </Position>
-      <Position>
-        <Filename Value="Source/Chapter11-Minimum-Tree-Spanning/GTA.WeightedGraph.pas"/>
-        <Caret Line="39" Column="18" TopLine="20"/>
+        <Caret Line="193" TopLine="184"/>
       </Position>
       <Position>
         <Filename Value="Source/Chapter12-Shortest-Path/GTA.Leetcode_743_Dijkstra.pas"/>
-        <Caret Line="45" Column="21" TopLine="38"/>
+        <Caret Line="194" TopLine="184"/>
       </Position>
       <Position>
         <Filename Value="Source/Chapter12-Shortest-Path/GTA.Leetcode_743_Dijkstra.pas"/>
-        <Caret Line="74" Column="8" TopLine="53"/>
+        <Caret Line="195" TopLine="184"/>
       </Position>
       <Position>
         <Filename Value="Source/Chapter12-Shortest-Path/GTA.Leetcode_743_Dijkstra.pas"/>
-        <Caret Line="70" Column="43" TopLine="53"/>
+        <Caret Line="197" TopLine="184"/>
       </Position>
       <Position>
         <Filename Value="Source/Chapter12-Shortest-Path/GTA.Leetcode_743_Dijkstra.pas"/>
-        <Caret Line="47" Column="49" TopLine="31"/>
-      </Position>
-      <Position>
-        <Filename Value="Source/GTA.Main.pas"/>
-        <Caret Line="29" TopLine="6"/>
+        <Caret Line="199" TopLine="184"/>
       </Position>
       <Position>
         <Filename Value="Source/Chapter12-Shortest-Path/GTA.Leetcode_743_Dijkstra.pas"/>
-        <Caret Line="73" Column="7" TopLine="57"/>
+        <Caret Line="200" TopLine="185"/>
       </Position>
       <Position>
-        <Filename Value="Source/GTA.Main.pas"/>
-        <Caret Line="29" TopLine="23"/>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Leetcode_743_Dijkstra.pas"/>
+        <Caret Line="202" TopLine="187"/>
       </Position>
       <Position>
-        <Filename Value="Source/GTA.Main.pas"/>
-        <Caret Line="30" TopLine="23"/>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Leetcode_743_Dijkstra.pas"/>
+        <Caret Line="204" TopLine="190"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Leetcode_743_Dijkstra.pas"/>
+        <Caret Line="206" TopLine="192"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Leetcode_743_Dijkstra.pas"/>
+        <Caret Line="207" TopLine="193"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Leetcode_743_Dijkstra.pas"/>
+        <Caret Line="202" TopLine="193"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Leetcode_743_Dijkstra.pas"/>
+        <Caret Line="197" TopLine="193"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Leetcode_743_Dijkstra.pas"/>
+        <Caret Line="199" TopLine="193"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Leetcode_743_Dijkstra.pas"/>
+        <Caret Line="200" TopLine="193"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Leetcode_743_Dijkstra.pas"/>
+        <Caret Line="202" TopLine="193"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Leetcode_743_Dijkstra.pas"/>
+        <Caret Line="204" TopLine="193"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Leetcode_743_Dijkstra.pas"/>
+        <Caret Line="202" TopLine="193"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Leetcode_743_Dijkstra.pas"/>
+        <Caret Line="197" TopLine="193"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Leetcode_743_Dijkstra.pas"/>
+        <Caret Line="212" TopLine="204"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Leetcode_743_Dijkstra.pas"/>
+        <Caret Line="214" TopLine="204"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Leetcode_743_Dijkstra.pas"/>
+        <Caret Line="171" TopLine="162"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Leetcode_743_Dijkstra.pas"/>
+        <Caret Line="172" TopLine="162"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Leetcode_743_Dijkstra.pas"/>
+        <Caret Line="174" TopLine="162"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Leetcode_743_Dijkstra.pas"/>
+        <Caret Line="175" TopLine="162"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Leetcode_743_Dijkstra.pas"/>
+        <Caret Line="176" TopLine="169"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Leetcode_743_Dijkstra.pas"/>
+        <Caret Line="177" TopLine="169"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Leetcode_743_Dijkstra.pas"/>
+        <Caret Line="176" TopLine="169"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Leetcode_743_Dijkstra.pas"/>
+        <Caret Line="179" TopLine="169"/>
       </Position>
     </JumpHistory>
     <RunParams>
@@ -840,15 +907,6 @@
     </RunParams>
   </ProjectSession>
   <Debugging>
-    <BreakPoints>
-      <Item>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="Source/GTA.Main.pas"/>
-        <Line Value="29"/>
-      </Item>
-    </BreakPoints>
     <Watches>
       <Item>
         <Expression Value="self"/>
@@ -857,7 +915,10 @@
         <Expression Value="_Dis"/>
       </Item>
       <Item>
-        <Expression Value="_Pre"/>
+        <Expression Value="g"/>
+      </Item>
+      <Item>
+        <Expression Value="_Adj"/>
       </Item>
     </Watches>
   </Debugging>
