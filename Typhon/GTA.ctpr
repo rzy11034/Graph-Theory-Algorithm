@@ -278,6 +278,18 @@
         <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra_Algorithm_Optimized.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra_More_about_Dijkstra.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Leetcode_743_Dijkstra.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

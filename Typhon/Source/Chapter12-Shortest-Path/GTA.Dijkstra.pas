@@ -31,11 +31,11 @@ implementation
 
 procedure Main;
 var
-  g: TWeightedGraph;
+  g: IWeightedGraph;
   v: integer;
 begin
   g := TWeightedGraph.Create(FileName('Chapter12-Shortest-Path', 'g.txt'));
-  with TDijkstra.Create(g as IWeightedGraph, 0) do
+  with TDijkstra.Create(g, 0) do
   begin
     for v := 0 to g.Vertex - 1 do
       Write(DistTo(v), ' ');
@@ -49,7 +49,7 @@ end;
 
 constructor TDijkstra.Create(g: IWeightedGraph; s: integer);
 var
-  v, curV, curDis, tempWeight, W: integer;
+  v, curV, curDis, w, tempDis: integer;
 begin
   _Graph := g as TWeightedGraph;
   SetLength(_Dis, _Graph.Vertex);
@@ -57,13 +57,13 @@ begin
   SetLength(_Visited, _Graph.Vertex);
 
   _Dis[s] := 0;
-
   while true do
   begin
     curV := -1;
+    curDis := integer.MaxValue;
 
     for v := 0 to _Graph.Vertex - 1 do
-      if (not _Visited[v]) and (_Dis[v] < integer.MaxValue) then
+      if (not _Visited[v]) and (_Dis[v] < curDis) then
       begin
         curDis := _Dis[v];
         curV := v;
@@ -72,12 +72,12 @@ begin
     if curV = -1 then Break;
 
     _Visited[curV] := true;
-    for W in _Graph.Adj(curV) do
+    for w in _Graph.Adj(curV) do
     begin
-      tempWeight := curDis + _Graph.GetWeight(curV, w);
+      tempDis := curDis + _Graph.GetWeight(curV, w);
 
-      if (not _Visited[w]) and (_Dis[w] > tempWeight) then
-        _Dis[w] := tempWeight;
+      if (not _Visited[w]) and (_Dis[w] > tempDis) then
+        _Dis[w] := tempDis;
     end;
   end;
 end;

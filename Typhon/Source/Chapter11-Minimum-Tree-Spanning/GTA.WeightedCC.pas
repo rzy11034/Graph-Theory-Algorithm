@@ -1,4 +1,4 @@
-unit GTA.WeightedCC;
+﻿unit GTA.WeightedCC;
 
 {$mode objfpc}{$H+}
 

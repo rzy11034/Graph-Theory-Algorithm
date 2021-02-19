@@ -13,7 +13,8 @@ uses
   GTA.SlidingPuzzle, GTA.FindBridges, GTA.Edge, GTA.FindCutPoints, GTA.Leetcode_1192, GTA.HamiltonLoop,
   GTA.HamiltonLoop_Optimization, GTA.HamiltonPath, GTA.UniquePathsIII_State_Compression,
   GTA.UniquePathsIII_Memory_Search, GTA.EulerLoop, GTA.WeightedGraph, GTA.WeightedEdge, GTA.UnionFind, GTA.Kruskal, 
-GTA.WeightedCC, GTA.Prim, GTA.Prim_Algorithm_Optimized, GTA.Dijkstra;
+GTA.WeightedCC, GTA.Prim, GTA.Prim_Algorithm_Optimized, GTA.Dijkstra, GTA.Dijkstra_Algorithm_Optimized, 
+GTA.Dijkstra_More_about_Dijkstra, GTA.Leetcode_743_Dijkstra;
 
 begin
   try
