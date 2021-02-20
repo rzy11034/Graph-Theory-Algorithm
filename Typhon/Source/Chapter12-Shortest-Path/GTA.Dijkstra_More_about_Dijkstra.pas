@@ -86,7 +86,7 @@ end;
 
 constructor TDijkstra.Create(g: IWeightedGraph; s: integer);
 var
-  v, w: integer;
+  v, w, tempDis: integer;
   queue: TQueue_TPair;
 begin
   _Graph := g as TWeightedGraph;
@@ -109,9 +109,11 @@ begin
       _Visited[v] := true;
       for w in _Graph.Adj(v) do
       begin
-        if (not _Visited[w]) then
+        tempDis := _Dis[v] + g.GetWeight(v, w);
+
+        if (not _Visited[w]) and (_Dis[w] > tempDis) then
         begin
-          _Dis[w] := _Dis[v] + _Graph.GetWeight(v, w);
+          _Dis[w] := tempDis;
           _Pre[w] := v;
           queue.EnQueue(TPair.Create(w, _Dis[w]));
         end;

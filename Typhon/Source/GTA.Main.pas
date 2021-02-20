@@ -16,7 +16,7 @@ procedure Run;
 implementation
 
 uses
-  GTA.Leetcode_743_Dijkstra;
+  GTA.BellmanFord;
 
 procedure Test;
 begin

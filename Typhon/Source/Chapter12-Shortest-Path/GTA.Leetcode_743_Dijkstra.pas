@@ -83,20 +83,20 @@ begin
   //示例 1：
   //输入：times = [[2,1,1],[2,3,1],[3,4,1]], n = 4, k = 2
   //输出：2
-  //with TSolution.Create do
-  //begin
-  //  WriteLn(NetworkDelayTime([[2, 1, 1], [2, 3, 1], [3, 4, 1]], 4, 2));
-  //  Free;
-  //end;
+  with TSolution.Create do
+  begin
+    WriteLn(NetworkDelayTime([[2, 1, 1], [2, 3, 1], [3, 4, 1]], 4, 2));
+    Free;
+  end;
 
   //示例 2：
   //输入：times = [[1,2,1]], n = 2, k = 1
   //输出：1
-  //with TSolution.Create do
-  //begin
-  //  WriteLn(NetworkDelayTime([[1, 2, 1]], 2, 1));
-  //  Free;
-  //end;
+  with TSolution.Create do
+  begin
+    WriteLn(NetworkDelayTime([[1, 2, 1]], 2, 1));
+    Free;
+  end;
 
   //示例 3：
   //输入：times = [[1,2,1]], n = 2, k = 2
@@ -138,7 +138,7 @@ end;
 procedure TSolution.TWeightGraph.AddEdge(v, w, weight: integer);
 begin
   _Adj[v].Add(w, weight);
-  _Adj[w].Add(v, weight);
+  //_Adj[w].Add(v, weight);
 end;
 
 function TSolution.TWeightGraph.Adj(v: integer): TArr_int;
@@ -166,15 +166,16 @@ end;
 function TSolution.NetworkDelayTime(times: TArr2D_int; n, k: integer): integer;
 var
   g: TWeightGraph;
-  res, i: integer;
+  res: integer;
+  time: TArr_int;
 begin
   TArrayUtils_int.SetLengthAndFill(_Dis, n, integer.MaxValue);
   TArrayUtils_bool.SetLengthAndFill(_Visited, n, false);
 
   g := TWeightGraph.Create(n);
   try
-    for i := 0 to High(times) do
-      g.AddEdge(times[i, 0] - 1, times[i, 1] - 1, times[i, 2]);
+    for time in times do
+      g.AddEdge(time[0]-1, time[1] - 1, time[2]);
 
     __Dijkstra(g, k - 1);
     res := Math.MaxIntValue(_Dis);
@@ -187,7 +188,7 @@ end;
 procedure TSolution.__Dijkstra(g: TWeightGraph; k: integer);
 var
   queue: TQueue_TPair;
-  v, w: integer;
+  v, w, tempDis: integer;
 begin
   _Dis[k] := 0;
   queue := TQueue_TPair.Create(TQueue_TPair.TCmp.Construct(@TPair.Comparer));
@@ -201,9 +202,11 @@ begin
 
       for w in g.Adj(v) do
       begin
-        if not _Visited[w] then
+        tempDis := _Dis[v] + g.GetWeight(v, w);
+
+        if (not _Visited[w]) and (_Dis[w] > tempDis) then
         begin
-          _Dis[w] := _Dis[v] + g.GetWeight(v, w);
+          _Dis[w] := tempDis;
           queue.EnQueue(TPair.Create(w, _Dis[w]));
         end;
       end;
