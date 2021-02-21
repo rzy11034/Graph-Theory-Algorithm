@@ -112,7 +112,7 @@ begin
     end;
 
     if _HasNegativeCycle then
-        Break;
+      Break;
   end;
 end;
 

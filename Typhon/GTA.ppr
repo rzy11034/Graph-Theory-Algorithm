@@ -15,7 +15,8 @@ uses
   GTA.UniquePathsIII_Memory_Search, GTA.UniquePathsIII, GTA.EulerLoop, GTA.EulerLoop_Hierholzer_Algorithm,
   GTA.WeightedGraph, GTA.WeightedEdge, GTA.UnionFind, GTA.Kruskal, GTA.WeightedCC, GTA.Prim,
   GTA.Prim_Algorithm_Optimized, GTA.Dijkstra, GTA.Dijkstra_Algorithm_Optimized, GTA.Dijkstra_More_about_Dijkstra,
-  GTA.Leetcode_743_Dijkstra, GTA.BellmanFord, GTA.BellmanFord_More_about_BellmanFord;
+  GTA.Leetcode_743_Dijkstra, GTA.BellmanFord, GTA.BellmanFord_More_about_BellmanFord, GTA.Leetcode_743_BellmanFord,
+  GTA.Floyed, GTA.Leetcode_743_Floyed;
 
 begin
   try

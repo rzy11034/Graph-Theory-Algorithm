@@ -1,4 +1,4 @@
-﻿unit GTA.Leetcode_743_Dijkstra;
+﻿unit GTA.Leetcode_743_Floyed;
 
 {$mode objfpc}{$H+}
 {$ModeSwitch advancedrecords}
@@ -9,7 +9,6 @@ uses
   Classes,
   SysUtils,
   Math,
-  DeepStar.DSA.Tree.PriorityQueue,
   DeepStar.Utils;
 
 type
@@ -54,20 +53,10 @@ type
       property Vertex: integer read _Vertex;
     end;
 
-    TPair = record
-      Vertex: integer;
-      Weight: integer;
-      class function Create(newVertex, newWeight: integer): TPair; static;
-      class function Comparer(constref a, b: TPair): integer; static;
-    end;
-
-    TQueue_TPair = specialize TPriorityQueue<TPair>;
-
   private
-    _Dis: TArr_int;
-    _Visited: TArr_bool;
+    _Dis: TArr2D_int;
 
-    procedure __Dijkstra(g: TWeightGraph; k: integer);
+    procedure __Floyed(g: TWeightGraph);
 
   public
     function NetworkDelayTime(times: TArr2D_int; n, k: integer): integer;
@@ -108,22 +97,6 @@ begin
   end;
 end;
 
-{ TSolution.TPair }
-
-class function TSolution.TPair.Comparer(constref a, b: TPair): integer;
-begin
-  Result := a.Weight - b.Weight;
-end;
-
-class function TSolution.TPair.Create(newVertex, newWeight: integer): TPair;
-var
-  res: TPair;
-begin
-  res.Vertex := newVertex;
-  res.Weight := newWeight;
-  Result := res;
-end;
-
 { TSolution.TWeightGraph }
 
 constructor TSolution.TWeightGraph.Create(n: integer);
@@ -139,7 +112,6 @@ end;
 procedure TSolution.TWeightGraph.AddEdge(v, w, weight: integer);
 begin
   _Adj[v].Add(w, weight);
-  //_Adj[w].Add(v, weight);
 end;
 
 function TSolution.TWeightGraph.Adj(v: integer): TArr_int;
@@ -167,54 +139,49 @@ end;
 function TSolution.NetworkDelayTime(times: TArr2D_int; n, k: integer): integer;
 var
   g: TWeightGraph;
-  res: integer;
+  res, i: integer;
   time: TArr_int;
 begin
-  TArrayUtils_int.SetLengthAndFill(_Dis, n, integer.MaxValue);
-  TArrayUtils_bool.SetLengthAndFill(_Visited, n, false);
+  TArrayUtils_int.SetLengthAndFill(_Dis, n, n, integer.MaxValue);
 
   g := TWeightGraph.Create(n);
   try
     for time in times do
-      g.AddEdge(time[0]-1, time[1] - 1, time[2]);
+      g.AddEdge(time[0] - 1, time[1] - 1, time[2]);
 
-    __Dijkstra(g, k - 1);
-    res := Math.MaxIntValue(_Dis);
+    __Floyed(g);
+
+    res := 0;
+    for i := 0 to g.Vertex - 1 do
+      res := Max(res, _Dis[k - 1, i]);
+
     Result := IfThen(res = integer.MaxValue, -1, res);
   finally
     g.Free;
   end;
 end;
 
-procedure TSolution.__Dijkstra(g: TWeightGraph; k: integer);
+procedure TSolution.__Floyed(g: TWeightGraph);
 var
-  queue: TQueue_TPair;
-  v, w, tempDis: integer;
+  t, v, w, tempDis: integer;
 begin
-  _Dis[k] := 0;
-  queue := TQueue_TPair.Create(TQueue_TPair.TCmp.Construct(@TPair.Comparer));
-  try
-    queue.EnQueue(TPair.Create(k, 0));
+  for v := 0 to g.Vertex - 1 do
+    _Dis[v, v] := 0;
 
-    while not queue.IsEmpty do
-    begin
-      v := TPair(queue.DeQueue).Vertex;
-      _Visited[v] := true;
+  for v := 0 to g.Vertex - 1 do
+    for w in g.Adj(v) do
+      _Dis[v, w] := g.GetWeight(v, w);
 
-      for w in g.Adj(v) do
-      begin
-        tempDis := _Dis[v] + g.GetWeight(v, w);
-
-        if (not _Visited[w]) and (_Dis[w] > tempDis) then
+  for t := 0 to g.Vertex - 1 do
+    for v := 0 to g.Vertex - 1 do
+      for w := 0 to g.Vertex - 1 do
+        if (_Dis[v, t] <> integer.MaxValue) and (_Dis[t, w] <> integer.MaxValue) then
         begin
-          _Dis[w] := tempDis;
-          queue.EnQueue(TPair.Create(w, _Dis[w]));
+          tempDis := _Dis[v, t] + _Dis[t, w];
+
+          if tempDis < _Dis[v, w] then
+            _Dis[v, w] := tempDis;
         end;
-      end;
-    end;
-  finally
-    queue.Free;
-  end;
 end;
 
 end.

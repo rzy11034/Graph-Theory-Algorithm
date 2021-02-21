@@ -298,6 +298,18 @@
         <Filename Value="Source/Chapter12-Shortest-Path/GTA.BellmanFord_More_about_BellmanFord.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Leetcode_743_BellmanFord.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Floyed.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter12-Shortest-Path/GTA.Leetcode_743_Floyed.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
