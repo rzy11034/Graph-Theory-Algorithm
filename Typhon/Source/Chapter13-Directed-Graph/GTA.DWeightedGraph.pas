@@ -1,7 +1,8 @@
-﻿unit GTA.WeightedGraph;
+﻿unit GTA.DWeightedGraph;
 
 {$mode objfpc}{$H+}
 {$WARN 3018 off : Constructor should be public}
+
 interface
 
 uses
@@ -12,7 +13,7 @@ uses
   DeepStar.UString;
 
 type
-  /// 暂时只支持无向带权图
+  // 带权图(支持有向，无向)
   TWeightedGraph = class(TInterfacedObject, IWeightedGraph)
   public type
     TArr_TreeMap_int_int = array of TTreeMap_int_int;
@@ -21,12 +22,13 @@ type
     _Adj: TArr_TreeMap_int_int;
     _Edge: integer;
     _Vertex: integer;
+    _Directed: boolean;
 
     function __GetIntArray(s: UString): TArr_int;
     constructor __Create();
 
   public
-    constructor Create(fileName: UString);
+    constructor Create(fileName: UString; directed: boolean = false);
     destructor Destroy; override;
 
     function Adj(v: integer): TArr_int;
@@ -51,24 +53,30 @@ uses
 
 procedure Main;
 begin
-  with TWeightedGraph.Create(FileName('Chapter11-Minimum-Tree-Spanning', 'g.txt')) do
+  with TWeightedGraph.Create(FileName('Chapter13-Directed-Graph', 'wg.txt')) do
   begin
     WriteLn(ToString);
-    //WriteLn(Degree(0));
+    Free;
+  end;
+
+  with TWeightedGraph.Create(FileName('Chapter13-Directed-Graph', 'wg.txt'), true) do
+  begin
+    WriteLn(ToString);
     Free;
   end;
 end;
 
 { TWeightedGraph }
 
-constructor TWeightedGraph.Create(fileName: UString);
+constructor TWeightedGraph.Create(fileName: UString; directed: boolean);
 var
   Lines: TArr_int;
   strList: TStringList;
   a, b, weight, i: integer;
 begin
-  strList := TStringList.Create;
+  _Directed := directed;
 
+  strList := TStringList.Create;
   try
     strList.LoadFromFile(fileName);
     Lines := __GetIntArray(strList[0]);
@@ -99,7 +107,8 @@ begin
       if _Adj[a].ContainsKey(b) then raise Exception.Create('Parallel Edges are Detected!');
 
       _Adj[a].Add(b, weight);
-      _Adj[b].Add(a, weight);
+      if not _Directed then
+        _Adj[b].Add(a, weight);
     end;
   finally
     strList.Free;
@@ -139,6 +148,7 @@ begin
 
     _Edge := self._Edge;
     _Vertex := self._Vertex;
+    _Directed := Self._Directed;
   end;
 end;
 
@@ -187,7 +197,8 @@ begin
     Edge -= 1;
 
   _Adj[v].Remove(w);
-  _Adj[w].Remove(v);
+  if not _Directed then
+    _Adj[w].Remove(v);
 end;
 
 function TWeightedGraph.ToString: UString;
@@ -197,7 +208,8 @@ var
 begin
   sb := TStringBuilder.Create;
   try
-    sb.AppendFormat('Vertex = %d, Edge = %d', [_Vertex, _Edge]).AppendLine;
+    sb.AppendFormat('Vertex = %d, Edge = %d, Directed = %s',
+      [_Vertex, _Edge, BoolToStr(_Directed, 'True', 'False')]).AppendLine;
 
     for i := 0 to High(_Adj) do
     begin
@@ -234,11 +246,12 @@ const
   CHARS: TSysCharSet = ['0' .. '9', '.', '+', '-'];
 var
   sb: TStringBuilder;
-  list: TArrayList_int;
+  list: IList_int;
   i: integer;
 begin
-  sb := TStringBuilder.Create;
   list := TArrayList_int.Create;
+
+  sb := TStringBuilder.Create;
   try
     for i := 0 to s.Length - 1 do
     begin
@@ -258,7 +271,6 @@ begin
 
     Result := list.ToArray;
   finally
-    FreeAndNil(list);
     FreeAndNil(sb);
   end;
 end;

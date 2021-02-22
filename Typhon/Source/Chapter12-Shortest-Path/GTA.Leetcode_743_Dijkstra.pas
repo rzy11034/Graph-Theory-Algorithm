@@ -130,7 +130,6 @@ constructor TSolution.TWeightGraph.Create(n: integer);
 var
   i: integer;
 begin
-  _Vertex := n;
   SetLength(_Adj, n);
   for i := 0 to High(_Adj) do
     _Adj[i] := TTreeMap_int_int.Create;

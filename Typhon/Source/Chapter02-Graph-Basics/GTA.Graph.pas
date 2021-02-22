@@ -174,6 +174,9 @@ begin
   ValidateVertex(v);
   ValidateVertex(w);
 
+  if _Adj[v].Contains(w) then
+    Edge -= 1;
+
   _Adj[v].Remove(w);
   _Adj[w].Remove(v);
 end;

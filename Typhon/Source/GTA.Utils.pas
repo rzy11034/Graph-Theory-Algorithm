@@ -8,18 +8,18 @@ uses
   Classes,
   SysUtils,
   GTA.Interfaces,
-  GTA.Graph,
-  GTA.WeightedGraph,
+  GTA.DGraph,
+  GTA.DWeightedGraph,
   GTA.WeightedEdge,
   DeepStar.UString,
   DeepStar.Utils;
 
 type
   IGraph = GTA.Interfaces.IGraph;
-  TGraph = GTA.Graph.TGraph;
+  TGraph = GTA.DGraph.TGraph;
 
   IWeightedGraph = GTA.Interfaces.IWeightedGraph;
-  TWeightedGraph = GTA.WeightedGraph.TWeightedGraph;
+  TWeightedGraph = GTA.DWeightedGraph.TWeightedGraph;
 
   IWeightedEdge = GTA.Interfaces.IWeightedEdge;
   TWeightedEdge = GTA.WeightedEdge.TWeightedEdge;

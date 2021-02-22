@@ -1,32 +1,36 @@
-﻿unit GTA.WeightedGraph;
+﻿unit GTA.DGraph;
 
 {$mode objfpc}{$H+}
 {$WARN 3018 off : Constructor should be public}
+
 interface
 
 uses
   Classes,
   SysUtils,
   GTA.Interfaces,
+  DeepStar.DSA.Tree.TreeSet,
   DeepStar.Utils,
   DeepStar.UString;
 
 type
-  /// 暂时只支持无向带权图
-  TWeightedGraph = class(TInterfacedObject, IWeightedGraph)
+  // 无权图(支持有向，无向)
+  TGraph = class(TInterfacedObject, IGraph)
   public type
-    TArr_TreeMap_int_int = array of TTreeMap_int_int;
+    TTreeSet_int = specialize TTreeSet<integer>;
+    TArr_TTreeSet_int = array of TTreeSet_int;
 
   private
-    _Adj: TArr_TreeMap_int_int;
+    _Adj: TArr_TTreeSet_int;
     _Edge: integer;
     _Vertex: integer;
+    _Directed: boolean;
 
     function __GetIntArray(s: UString): TArr_int;
     constructor __Create();
 
   public
-    constructor Create(fileName: UString);
+    constructor Create(fileName: UString; directed: boolean = false);
     destructor Destroy; override;
 
     function Adj(v: integer): TArr_int;
@@ -35,8 +39,7 @@ type
     function ToString: UString; reintroduce;
     procedure ValidateVertex(v: integer);
     procedure RemoveEdge(v, w: integer);
-    function Clone: TWeightedGraph;
-    function GetWeight(v, w: integer): integer;
+    function Clone: TGraph;
 
     function Vertex: integer;
     function Edge: integer;
@@ -51,24 +54,30 @@ uses
 
 procedure Main;
 begin
-  with TWeightedGraph.Create(FileName('Chapter11-Minimum-Tree-Spanning', 'g.txt')) do
+  with TGraph.Create(FileName('Chapter13-Directed-Graph', 'ug.txt')) do
   begin
     WriteLn(ToString);
-    //WriteLn(Degree(0));
+    Free;
+  end;
+
+  with TGraph.Create(FileName('Chapter13-Directed-Graph', 'ug.txt'), true) do
+  begin
+    WriteLn(ToString);
     Free;
   end;
 end;
 
-{ TWeightedGraph }
+{ TGraph }
 
-constructor TWeightedGraph.Create(fileName: UString);
+constructor TGraph.Create(fileName: UString; directed: boolean);
 var
   Lines: TArr_int;
   strList: TStringList;
-  a, b, weight, i: integer;
+  a, b, i: integer;
 begin
-  strList := TStringList.Create;
+  _Directed := directed;
 
+  strList := TStringList.Create;
   try
     strList.LoadFromFile(fileName);
     Lines := __GetIntArray(strList[0]);
@@ -83,7 +92,7 @@ begin
 
     SetLength(_Adj, _Vertex);
     for i := 0 to High(_Adj) do
-      _Adj[i] := TTreeMap_int_int.Create;
+      _Adj[i] := TTreeSet_int.Create;
 
     for i := 1 to _Edge do
     begin
@@ -93,62 +102,62 @@ begin
       ValidateVertex(a);
       b := Lines[1];
       ValidateVertex(b);
-      weight := Lines[2];
 
       if a = b then raise Exception.Create('Self Loop is Detected!');
-      if _Adj[a].ContainsKey(b) then raise Exception.Create('Parallel Edges are Detected!');
+      if _Adj[a].Contains(b) then raise Exception.Create('Parallel Edges are Detected!');
 
-      _Adj[a].Add(b, weight);
-      _Adj[b].Add(a, weight);
+      _Adj[a].Add(b);
+      if not directed then
+        _Adj[b].Add(a);
     end;
   finally
     strList.Free;
   end;
 end;
 
-constructor TWeightedGraph.__Create();
+constructor TGraph.__Create();
 begin
   inherited Create;
 end;
 
-function TWeightedGraph.Adj(v: integer): TArr_int;
+function TGraph.Adj(v: integer): TArr_int;
 begin
   ValidateVertex(v);
-  Result := _Adj[v].Keys;
+  Result := _Adj[v].ToArray;
 end;
 
-function TWeightedGraph.Clone: TWeightedGraph;
+function TGraph.Clone: TGraph;
 var
-  v, w, weight: integer;
+  v, w: integer;
 begin
-  Result := TWeightedGraph.__Create;
+  Result := TGraph.__Create;
 
   with Result do
   begin
     SetLength(_Adj, Self._Vertex);
     for v := 0 to High(Self._Adj) do
     begin
-      _Adj[v] := TTreeMap_int_int.Create;
+      _Adj[v] := TTreeSet_int.Create;
 
-      for w in Self._Adj[v].Keys do
+      for w in Self._Adj[v].ToArray do
       begin
-        weight := Self.GetWeight(v, w);
-        _Adj[v].Add(w, weight);
+        _Adj[v].Add(w);
       end;
     end;
 
     _Edge := self._Edge;
     _Vertex := self._Vertex;
+    _Directed := Self._Directed;
   end;
 end;
 
-function TWeightedGraph.Degree(v: integer): integer;
+function TGraph.Degree(v: integer): integer;
 begin
   ValidateVertex(v);
   Result := Length(Adj(v));
 end;
 
-destructor TWeightedGraph.Destroy;
+destructor TGraph.Destroy;
 var
   i: integer;
 begin
@@ -158,56 +167,47 @@ begin
   inherited Destroy;
 end;
 
-function TWeightedGraph.Edge: integer;
+function TGraph.Edge: integer;
 begin
   Result := _Edge;
 end;
 
-function TWeightedGraph.GetWeight(v, w: integer): integer;
-begin
-  if HasEdge(v, w) then
-    Result := _Adj[v][w]
-  else
-    raise Exception.Create(Format('Edge ''%d-%d'' is invalid', [v, w]));
-end;
-
-function TWeightedGraph.HasEdge(v, w: integer): boolean;
+function TGraph.HasEdge(v, w: integer): boolean;
 begin
   ValidateVertex(v);
   ValidateVertex(w);
-  Result := _Adj[v].ContainsKey(w);
+  Result := _Adj[v].Contains(w);
 end;
 
-procedure TWeightedGraph.RemoveEdge(v, w: integer);
+procedure TGraph.RemoveEdge(v, w: integer);
 begin
   ValidateVertex(v);
   ValidateVertex(w);
 
-  if _Adj[v].ContainsKey(w) then
+  if _Adj[v].Contains(w) then
     Edge -= 1;
 
   _Adj[v].Remove(w);
-  _Adj[w].Remove(v);
+  if not _Directed then
+    _Adj[w].Remove(v);
 end;
 
-function TWeightedGraph.ToString: UString;
+function TGraph.ToString: UString;
 var
   sb: TStringBuilder;
-  i, temp, weight: integer;
+  i, temp: integer;
 begin
   sb := TStringBuilder.Create;
   try
-    sb.AppendFormat('Vertex = %d, Edge = %d', [_Vertex, _Edge]).AppendLine;
+    sb.AppendFormat('Vertex = %d, Edge = %d, Directed = %s',
+      [_Vertex, _Edge, BoolToStr(_Directed, 'True', 'False')]).AppendLine;
 
     for i := 0 to High(_Adj) do
     begin
       sb.Append(Format('%d : ', [i]));
 
-      for temp in _Adj[i].Keys do
-      begin
-        weight := Self.GetWeight(i, temp);
-        sb.Append('(').Append(temp).Append(':').Append(weight).Append(') ');
-      end;
+      for temp in _Adj[i].ToArray do
+        sb.Append(temp).Append(' ');
 
       sb.AppendLine;
     end;
@@ -218,23 +218,23 @@ begin
   end;
 end;
 
-procedure TWeightedGraph.ValidateVertex(v: integer);
+procedure TGraph.ValidateVertex(v: integer);
 begin
   if (v < 0) or (v >= _Vertex) then
     raise Exception.Create('vertex ' + v.ToString + 'is invalid');
 end;
 
-function TWeightedGraph.Vertex: integer;
+function TGraph.Vertex: integer;
 begin
   Result := _Vertex;
 end;
 
-function TWeightedGraph.__GetIntArray(s: UString): TArr_int;
+function TGraph.__GetIntArray(s: UString): TArr_int;
 const
   CHARS: TSysCharSet = ['0' .. '9', '.', '+', '-'];
 var
   sb: TStringBuilder;
-  list: TArrayList_int;
+  list: IList_int;
   i: integer;
 begin
   sb := TStringBuilder.Create;
@@ -258,7 +258,6 @@ begin
 
     Result := list.ToArray;
   finally
-    FreeAndNil(list);
     FreeAndNil(sb);
   end;
 end;

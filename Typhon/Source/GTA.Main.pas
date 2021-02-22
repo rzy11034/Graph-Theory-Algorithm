@@ -16,7 +16,7 @@ procedure Run;
 implementation
 
 uses
-  GTA.Leetcode_743_Floyed;
+  GTA.DWeightedGraph;
 
 procedure Test;
 begin
