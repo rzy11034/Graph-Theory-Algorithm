@@ -62,7 +62,6 @@ begin
     if not _visited[v] then
       __Dfs(v);
   end;
-
 end;
 
 destructor TGraphDFS.Destroy;
