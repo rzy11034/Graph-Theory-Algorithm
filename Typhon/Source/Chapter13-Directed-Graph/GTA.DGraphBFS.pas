@@ -34,7 +34,7 @@ procedure Main;
 var
   g: TGraph;
 begin
-  g := TGraph.Create(FileName('Chapter13-Directed-Graph', 'ug.txt'));
+  g := TGraph.Create(FileName('Chapter13-Directed-Graph', 'ug.txt'), true);
   with TGraphBFS.Create(g) do
   begin
     TArrayUtils_int.Print(Order);

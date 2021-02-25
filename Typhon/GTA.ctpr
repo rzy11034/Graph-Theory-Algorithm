@@ -314,6 +314,14 @@
         <Filename Value="Source/Chapter13-Directed-Graph/GTA.DGraphBFS.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter13-Directed-Graph/GTA.DWeightedGraphDFS.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter13-Directed-Graph/GTA.DWeightedGraphBFS.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

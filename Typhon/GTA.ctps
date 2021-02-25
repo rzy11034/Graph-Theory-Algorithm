@@ -17,7 +17,7 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="2"/>
         <TopLine Value="15"/>
-        <CursorPos X="16" Y="19"/>
+        <CursorPos X="24" Y="19"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
       </Unit>
@@ -65,11 +65,10 @@
       <Unit>
         <Filename Value="Source/Chapter03-Graph-DFS/GTA.GraphDFS.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="6"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="28"/>
         <CursorPos X="45" Y="44"/>
         <UsageCount Value="200"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter03-Graph-DFS/GTA.AdjMatrixDFS.pas"/>
@@ -138,11 +137,10 @@
       <Unit>
         <Filename Value="Source/Chapter05-Graph-BFS/GTA.GraphBFS.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="5"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="64"/>
         <CursorPos X="39" Y="29"/>
         <UsageCount Value="201"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter05-Graph-BFS/GTA.SingleSourcePath_BFS.pas"/>
@@ -237,7 +235,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="65"/>
         <CursorPos X="26" Y="83"/>
-        <UsageCount Value="188"/>
+        <UsageCount Value="193"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter08-Bridges-and-Cut-Points/GTA.Leetcode_1192.pas"/>
@@ -245,7 +243,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="5"/>
         <CursorPos X="8" Y="20"/>
-        <UsageCount Value="185"/>
+        <UsageCount Value="190"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter09-Hamilton-Loop-and-Path/GTA.HamiltonLoop.pas"/>
@@ -253,7 +251,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="88"/>
         <CursorPos X="27" Y="59"/>
-        <UsageCount Value="168"/>
+        <UsageCount Value="173"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter09-Hamilton-Loop-and-Path/GTA.HamiltonLoop_Optimization.pas"/>
@@ -261,7 +259,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="44"/>
         <CursorPos X="23" Y="61"/>
-        <UsageCount Value="166"/>
+        <UsageCount Value="171"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter09-Hamilton-Loop-and-Path/GTA.HamiltonPath.pas"/>
@@ -269,7 +267,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="48"/>
         <CursorPos X="23" Y="66"/>
-        <UsageCount Value="165"/>
+        <UsageCount Value="170"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter09-Hamilton-Loop-and-Path/GTA.UniquePathsIII.pas"/>
@@ -277,7 +275,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="169"/>
         <CursorPos X="5" Y="196"/>
-        <UsageCount Value="162"/>
+        <UsageCount Value="167"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter09-Hamilton-Loop-and-Path/GTA.UniquePathsIII_State_Compression.pas"/>
@@ -285,7 +283,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="162"/>
         <CursorPos X="34" Y="167"/>
-        <UsageCount Value="121"/>
+        <UsageCount Value="126"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter09-Hamilton-Loop-and-Path/GTA.UniquePathsIII_Memory_Search.pas"/>
@@ -293,7 +291,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="165"/>
         <CursorPos Y="106"/>
-        <UsageCount Value="119"/>
+        <UsageCount Value="124"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter10-Euler-Loop-and-Euler-Path/GTA.EulerLoop.pas"/>
@@ -301,7 +299,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="36"/>
         <CursorPos X="7" Y="51"/>
-        <UsageCount Value="118"/>
+        <UsageCount Value="123"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter10-Euler-Loop-and-Euler-Path/GTA.EulerLoop_Hierholzer_Algorithm.pas"/>
@@ -309,7 +307,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="95"/>
         <CursorPos X="90" Y="105"/>
-        <UsageCount Value="110"/>
+        <UsageCount Value="115"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter11-Minimum-Tree-Spanning/GTA.WeightedGraph.pas"/>
@@ -317,7 +315,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="167"/>
         <CursorPos X="17" Y="187"/>
-        <UsageCount Value="99"/>
+        <UsageCount Value="104"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter11-Minimum-Tree-Spanning/GTA.WeightedEdge.pas"/>
@@ -325,7 +323,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="13"/>
         <CursorPos X="23" Y="38"/>
-        <UsageCount Value="94"/>
+        <UsageCount Value="99"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter11-Minimum-Tree-Spanning/GTA.UnionFind.pas"/>
@@ -333,7 +331,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="37"/>
         <CursorPos X="15" Y="66"/>
-        <UsageCount Value="89"/>
+        <UsageCount Value="94"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter11-Minimum-Tree-Spanning/GTA.Kruskal.pas"/>
@@ -341,7 +339,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="13"/>
         <CursorPos X="15" Y="97"/>
-        <UsageCount Value="86"/>
+        <UsageCount Value="91"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter11-Minimum-Tree-Spanning/GTA.WeightedCC.pas"/>
@@ -349,7 +347,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="2"/>
         <CursorPos X="23" Y="19"/>
-        <UsageCount Value="84"/>
+        <UsageCount Value="89"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter11-Minimum-Tree-Spanning/GTA.Prim.pas"/>
@@ -357,7 +355,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="71"/>
         <CursorPos X="37" Y="88"/>
-        <UsageCount Value="67"/>
+        <UsageCount Value="72"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter11-Minimum-Tree-Spanning/GTA.Prim_Algorithm_Optimized.pas"/>
@@ -365,7 +363,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="99"/>
         <CursorPos X="30" Y="108"/>
-        <UsageCount Value="63"/>
+        <UsageCount Value="68"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra.pas"/>
@@ -373,7 +371,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="81"/>
         <CursorPos X="90" Y="41"/>
-        <UsageCount Value="60"/>
+        <UsageCount Value="65"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra_Algorithm_Optimized.pas"/>
@@ -381,7 +379,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="89"/>
         <CursorPos X="39" Y="105"/>
-        <UsageCount Value="53"/>
+        <UsageCount Value="58"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter12-Shortest-Path/GTA.Dijkstra_More_about_Dijkstra.pas"/>
@@ -389,7 +387,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="102"/>
         <CursorPos X="62" Y="114"/>
-        <UsageCount Value="42"/>
+        <UsageCount Value="47"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter12-Shortest-Path/GTA.Leetcode_743_Dijkstra.pas"/>
@@ -397,7 +395,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="42"/>
         <CursorPos Y="42"/>
-        <UsageCount Value="40"/>
+        <UsageCount Value="45"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter12-Shortest-Path/GTA.BellmanFord.pas"/>
@@ -405,14 +403,14 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="36"/>
         <CursorPos X="13" Y="110"/>
-        <UsageCount Value="30"/>
+        <UsageCount Value="35"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter12-Shortest-Path/GTA.BellmanFord_More_about_BellmanFord.pas"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="18" Y="7"/>
-        <UsageCount Value="27"/>
+        <UsageCount Value="32"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter13-Directed-Graph/GTA.DGraph.pas"/>
@@ -420,15 +418,53 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="47"/>
         <CursorPos X="56" Y="57"/>
-        <UsageCount Value="27"/>
+        <UsageCount Value="32"/>
       </Unit>
       <Unit>
         <Filename Value="Source/Chapter13-Directed-Graph/GTA.DWeightedGraph.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="55"/>
-        <CursorPos X="31" Y="50"/>
-        <UsageCount Value="27"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="98"/>
+        <CursorPos Y="104"/>
+        <UsageCount Value="32"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter13-Directed-Graph/GTA.DGraphDFS.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="53"/>
+        <CursorPos X="16" Y="62"/>
+        <UsageCount Value="29"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter13-Directed-Graph/GTA.DGraphBFS.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="28"/>
+        <CursorPos X="74" Y="37"/>
+        <UsageCount Value="28"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter13-Directed-Graph/GTA.DWeightedGraphDFS.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="32"/>
+        <CursorPos X="82" Y="39"/>
+        <UsageCount Value="25"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter13-Directed-Graph/GTA.DWeightedGraphBFS.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="10"/>
+        <CursorPos X="33" Y="35"/>
+        <UsageCount Value="25"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="Source/02-Graph-Basics/GTA.AdjMatrix.pas"/>
@@ -873,27 +909,8 @@
         <CursorPos X="2" Y="2036"/>
         <UsageCount Value="10"/>
       </Unit>
-      <Unit>
-        <Filename Value="Source/Chapter13-Directed-Graph/GTA.DGraphDFS.pas"/>
-        <IsPartOfProject Value="True"/>
-        <EditorIndex Value="3"/>
-        <TopLine Value="4"/>
-        <CursorPos X="100" Y="36"/>
-        <UsageCount Value="24"/>
-        <Loaded Value="True"/>
-      </Unit>
-      <Unit>
-        <Filename Value="Source/Chapter13-Directed-Graph/GTA.DGraphBFS.pas"/>
-        <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="4"/>
-        <TopLine Value="35"/>
-        <CursorPos X="52" Y="52"/>
-        <UsageCount Value="23"/>
-        <Loaded Value="True"/>
-      </Unit>
     </Units>
-    <JumpHistory HistoryIndex="9">
+    <JumpHistory HistoryIndex="17">
       <Position>
         <Filename Value="Source/GTA.Utils.pas"/>
         <Caret Line="22" Column="25" TopLine="7"/>
@@ -933,6 +950,38 @@
       <Position>
         <Filename Value="Source/Chapter13-Directed-Graph/GTA.DGraphBFS.pas"/>
         <Caret Line="53" Column="9" TopLine="28"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter13-Directed-Graph/GTA.DWeightedGraphBFS.pas"/>
+        <Caret Line="20" Column="33" TopLine="13"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter13-Directed-Graph/GTA.DWeightedGraphDFS.pas"/>
+        <Caret Line="21" Column="24" TopLine="13"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter13-Directed-Graph/GTA.DWeightedGraphDFS.pas"/>
+        <Caret Line="64" Column="8" TopLine="43"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/GTA.Main.pas"/>
+        <Caret Line="19" Column="24" TopLine="15"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter13-Directed-Graph/GTA.DWeightedGraphDFS.pas"/>
+        <Caret Line="43" Column="39" TopLine="31"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter13-Directed-Graph/GTA.DWeightedGraphDFS.pas"/>
+        <Caret Line="65" TopLine="58"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter13-Directed-Graph/GTA.DWeightedGraphDFS.pas"/>
+        <Caret Line="85" Column="23" TopLine="67"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter13-Directed-Graph/GTA.DWeightedGraphDFS.pas"/>
+        <Caret Line="59" Column="8" TopLine="44"/>
       </Position>
     </JumpHistory>
     <RunParams>
