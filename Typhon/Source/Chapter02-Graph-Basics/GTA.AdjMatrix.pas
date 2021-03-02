@@ -35,6 +35,7 @@ type
     function Clone: TAdjMatrix;
     function Vertex: integer;
     function Edge: integer;
+    function IsDirected: boolean;
   end;
 
 procedure Main;
@@ -153,6 +154,11 @@ begin
   ValidateVertex(Vertex);
   ValidateVertex(w);
   Result := _Adj[Vertex, w] = 1;
+end;
+
+function TAdjMatrix.IsDirected: boolean;
+begin
+  Result := false;
 end;
 
 procedure TAdjMatrix.RemoveEdge(v, w: integer);

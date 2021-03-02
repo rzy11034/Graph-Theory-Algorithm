@@ -37,6 +37,7 @@ type
     procedure RemoveEdge(v, w: integer);
     function Clone: TWeightedGraph;
     function GetWeight(v, w: integer): integer;
+    function IsDirected: boolean;
 
     function Vertex: integer;
     function Edge: integer;
@@ -176,6 +177,11 @@ begin
   ValidateVertex(v);
   ValidateVertex(w);
   Result := _Adj[v].ContainsKey(w);
+end;
+
+function TWeightedGraph.IsDirected: boolean;
+begin
+  Result := false;
 end;
 
 procedure TWeightedGraph.RemoveEdge(v, w: integer);

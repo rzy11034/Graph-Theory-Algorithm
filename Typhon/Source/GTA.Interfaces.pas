@@ -19,6 +19,7 @@ type
     function ToString: UString;
     procedure ValidateVertex(v: integer);
     procedure RemoveEdge(v, w: integer);
+    function IsDirected: boolean;
     function Vertex: integer;
     function Edge: integer;
   end;
@@ -34,6 +35,7 @@ type
     function Vertex: integer;
     function Edge: integer;
     function GetWeight(v, w: integer): integer;
+    function IsDirected: boolean;
   end;
 
   IWeightedEdge = interface

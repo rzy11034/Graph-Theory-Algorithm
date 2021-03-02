@@ -38,6 +38,7 @@ type
     procedure ValidateVertex(v: integer);
     procedure RemoveEdge(v, w: integer);
     function Clone: TGraph;
+    function IsDirected: boolean;
 
     function Vertex: integer;
     function Edge: integer;
@@ -167,6 +168,11 @@ begin
   ValidateVertex(v);
   ValidateVertex(w);
   Result := _Adj[v].Contains(w);
+end;
+
+function TGraph.IsDirected: boolean;
+begin
+  Result := false;
 end;
 
 procedure TGraph.RemoveEdge(v, w: integer);

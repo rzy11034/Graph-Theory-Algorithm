@@ -25,12 +25,14 @@ type
     _Edge: integer;
     _Vertex: integer;
     _Directed: boolean;
+    _inDegree, _outDegree: TArr_int;
 
     function __GetIntArray(s: UString): TArr_int;
     constructor __Create();
 
   public
     constructor Create(fileName: UString; directed: boolean = false);
+    constructor Create(vertex: integer; directed: boolean);
     destructor Destroy; override;
 
     function Adj(v: integer): TArr_int;
@@ -38,8 +40,12 @@ type
     function HasEdge(v, w: integer): boolean;
     function ToString: UString; reintroduce;
     procedure ValidateVertex(v: integer);
+    procedure AddEdge(v, w: integer);
     procedure RemoveEdge(v, w: integer);
     function Clone: TGraph;
+    function IsDirected: boolean;
+    function InDegree(v: integer): integer;
+    function OutDegree(v: integer): integer;
 
     function Vertex: integer;
     function Edge: integer;
@@ -53,6 +59,8 @@ uses
   GTA.Utils;
 
 procedure Main;
+var
+  v: integer;
 begin
   with TGraph.Create(FileName('Chapter13-Directed-Graph', 'ug.txt')) do
   begin
@@ -63,11 +71,31 @@ begin
   with TGraph.Create(FileName('Chapter13-Directed-Graph', 'ug.txt'), true) do
   begin
     WriteLn(ToString);
+
+    for v := 0 to Vertex - 1 do
+      WriteLn(Format('%d--> %d  %d', [v, InDegree(v), OutDegree(v)]));
+
     Free;
   end;
 end;
 
 { TGraph }
+
+constructor TGraph.Create(vertex: integer; directed: boolean);
+var
+  v: integer;
+begin
+  _Vertex := vertex;
+  _Edge := 0;
+  _Directed := directed;
+
+  SetLength(_Adj, _Vertex);
+  for v := 0 to High(_Adj) do
+    _Adj[v] := TTreeSet_int.Create;
+
+  SetLength(_inDegree, _Vertex);
+  SetLength(_outDegree, _Vertex);
+end;
 
 constructor TGraph.Create(fileName: UString; directed: boolean);
 var
@@ -94,6 +122,8 @@ begin
     for i := 0 to High(_Adj) do
       _Adj[i] := TTreeSet_int.Create;
 
+    SetLength(_inDegree, _Vertex);
+    SetLength(_outDegree, _Vertex);
     for i := 1 to _Edge do
     begin
       Lines := __GetIntArray(strList[i]);
@@ -108,7 +138,12 @@ begin
 
       _Adj[a].Add(b);
       if not directed then
-        _Adj[b].Add(a);
+        _Adj[b].Add(a)
+      else
+      begin
+        _outDegree[a] += 1;
+        _inDegree[b] += 1;
+      end;
     end;
   finally
     strList.Free;
@@ -118,6 +153,20 @@ end;
 constructor TGraph.__Create();
 begin
   inherited Create;
+end;
+
+procedure TGraph.AddEdge(v, w: integer);
+begin
+  _Adj[v].Add(w);
+  _Edge += 1;
+
+  if not _Directed then
+    _Adj[w].Add(v)
+  else
+  begin
+    _outDegree[v] += 1;
+    _inDegree[w] += 1;
+  end;
 end;
 
 function TGraph.Adj(v: integer): TArr_int;
@@ -148,11 +197,15 @@ begin
     _Edge := self._Edge;
     _Vertex := self._Vertex;
     _Directed := Self._Directed;
+    _inDegree := TArrayUtils_int.CopyArray(Self._inDegree);
+    _outDegree := TArrayUtils_int.CopyArray(Self._outDegree);
   end;
 end;
 
 function TGraph.Degree(v: integer): integer;
 begin
+  if IsDirected then
+    raise Exception.Create('degree only works in undirected graph.');
   ValidateVertex(v);
   Result := Length(Adj(v));
 end;
@@ -179,6 +232,29 @@ begin
   Result := _Adj[v].Contains(w);
 end;
 
+function TGraph.InDegree(v: integer): integer;
+begin
+  if not IsDirected then
+    raise Exception.Create('Indegree only works in directed graph.');
+
+  ValidateVertex(v);
+  Result := _inDegree[v];
+end;
+
+function TGraph.IsDirected: boolean;
+begin
+  Result := _Directed;
+end;
+
+function TGraph.OutDegree(v: integer): integer;
+begin
+  if not IsDirected then
+    raise Exception.Create('Outdegree only works in directed graph.');
+
+  ValidateVertex(v);
+  Result := _outDegree[v];
+end;
+
 procedure TGraph.RemoveEdge(v, w: integer);
 begin
   ValidateVertex(v);
@@ -188,8 +264,13 @@ begin
     Edge -= 1;
 
   _Adj[v].Remove(w);
-  if not _Directed then
-    _Adj[w].Remove(v);
+  if not IsDirected then
+    _Adj[w].Remove(v)
+  else
+  begin
+    _outDegree[v] -= 1;
+    _inDegree[w] -= 1;
+  end;
 end;
 
 function TGraph.ToString: UString;

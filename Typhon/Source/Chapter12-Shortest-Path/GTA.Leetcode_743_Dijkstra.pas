@@ -175,7 +175,7 @@ begin
   g := TWeightGraph.Create(n);
   try
     for time in times do
-      g.AddEdge(time[0]-1, time[1] - 1, time[2]);
+      g.AddEdge(time[0] - 1, time[1] - 1, time[2]);
 
     __Dijkstra(g, k - 1);
     res := Math.MaxIntValue(_Dis);

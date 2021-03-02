@@ -16,7 +16,9 @@ uses
   GTA.WeightedGraph, GTA.WeightedEdge, GTA.UnionFind, GTA.Kruskal, GTA.WeightedCC, GTA.Prim,
   GTA.Prim_Algorithm_Optimized, GTA.Dijkstra, GTA.Dijkstra_Algorithm_Optimized, GTA.Dijkstra_More_about_Dijkstra,
   GTA.Leetcode_743_Dijkstra, GTA.BellmanFord, GTA.BellmanFord_More_about_BellmanFord, GTA.DGraph, GTA.DWeightedGraph,
-  GTA.DGraphDFS, GTA.DGraphBFS, GTA.DWeightedGraphDFS, GTA.DWeightedGraphBFS;
+  GTA.DGraphDFS, GTA.DGraphBFS, GTA.DWeightedGraphDFS, GTA.DWeightedGraphBFS, GTA.DWeightedGraph_BellmanFord,
+GTA.DWeightedGraph_Floyed, GTA.DirectedCycleDetection, GTA.DirectedEulerLoop, GTA.TopoSort, GTA.Leetcode_210,
+GTA.TopoSort2;
 
 begin
   try

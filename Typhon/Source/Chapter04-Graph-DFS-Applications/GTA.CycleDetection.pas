@@ -24,7 +24,7 @@ type
     constructor Create(g: IGraph);
     destructor Destroy; override;
 
-    property HasCycle: boolean read _HasCycle write _HasCycle;
+    property HasCycle: boolean read _HasCycle;
   end;
 
 procedure Main;
@@ -53,6 +53,9 @@ constructor TCycleDetection.Create(g: IGraph);
 var
   v: integer;
 begin
+  if g.IsDirected then
+    raise Exception.Create('CycleDetection only works in undirected graph.');
+
   _g := g;
   _hasCycle := false;
   SetLength(_visited, g.Vertex);

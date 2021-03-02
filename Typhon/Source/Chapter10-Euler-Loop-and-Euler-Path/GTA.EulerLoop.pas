@@ -13,7 +13,7 @@ uses
 type
   TEulerLoop = class(TObject)
   private
-    _Graph: IGraph;
+    _Graph: TGraph;
 
   public
     constructor Create(g: IGraph);
@@ -28,7 +28,10 @@ implementation
 
 constructor TEulerLoop.Create(g: IGraph);
 begin
-  _Graph := g;
+  if g.IsDirected then
+    raise Exception.Create('EulerLoop only works in undirected graph');
+
+  _Graph := g as TGraph;
 end;
 
 destructor TEulerLoop.Destroy;
@@ -39,7 +42,7 @@ end;
 function TEulerLoop.HasEulerLoop: boolean;
 var
   cc: TCC;
-  v: Integer;
+  v: integer;
 begin
   cc := TCC.Create(_Graph);
   if cc.Count > 1 then

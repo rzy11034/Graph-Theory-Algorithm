@@ -1,4 +1,4 @@
-﻿unit GTA.EulerLoop_Hierholzer_Algorithm;
+﻿unit GTA.DirectedEulerLoop;
 
 {$mode objfpc}{$H+}
 
@@ -8,13 +8,12 @@ uses
   Classes,
   SysUtils,
   DeepStar.Utils,
-  GTA.Utils,
-  GTA.CC;
+  GTA.Utils;
 
 type
   TEulerLoop = class(TObject)
   private
-    _Graph: IGraph;
+    _Graph: TGraph;
 
   public
     constructor Create(g: IGraph);
@@ -29,16 +28,18 @@ procedure Main;
 implementation
 
 procedure Main;
+var
+  g: IGraph;
 begin
-  with TEulerLoop.Create(TGraph.Create
-      (FileName('Chapter10-Euler-Loop-and-Euler-Path', 'g.txt'))) do
+  g := TGraph.Create(FileName('Chapter13-Directed-Graph', 'ug.txt'), true);
+  with TEulerLoop.Create(g) do
   begin
     TArrayUtils_int.Print(Return);
     Free;
   end;
 
-  with TEulerLoop.Create(TGraph.Create
-      (FileName('Chapter10-Euler-Loop-and-Euler-Path', 'g2.txt'))) do
+  g := TGraph.Create(FileName('Chapter13-Directed-Graph', 'DirectedEulerLoop.txt'), true);
+  with TEulerLoop.Create(g) do
   begin
     TArrayUtils_int.Print(Return);
     Free;
@@ -49,10 +50,10 @@ end;
 
 constructor TEulerLoop.Create(g: IGraph);
 begin
-  if g.IsDirected then
+  if not g.IsDirected then
     raise Exception.Create('EulerLoop only works in undirected graph');
 
-  _Graph := (g as TGraph).Clone;
+  _Graph := g as TGraph;
 end;
 
 destructor TEulerLoop.Destroy;
@@ -62,20 +63,20 @@ end;
 
 function TEulerLoop.HasEulerLoop: boolean;
 var
-  cc: TCC;
+  //cc: TCC;
   v: integer;
 begin
-  cc := TCC.Create(_Graph);
-  try
-    if cc.Count > 1 then
-      Exit(false);
-  finally
-    cc.Free;
-  end;
+  //cc := TCC.Create(_Graph);
+  //try
+  //  if cc.Count > 1 then
+  //    Exit(false);
+  //finally
+  //  cc.Free;
+  //end;
 
   for v := 0 to _Graph.Vertex - 1 do
   begin
-    if Odd(_Graph.Degree(v)) then
+    if _Graph.InDegree(v) <> _Graph.OutDegree(v) then
       Exit(false);
   end;
 
@@ -84,6 +85,7 @@ end;
 
 function TEulerLoop.Return: TArr_int;
 var
+  g: IGraph;
   list: IList_int;
   stack: IStack_int;
   cur, w: integer;
@@ -91,23 +93,24 @@ begin
   Result := [];
   if not HasEulerLoop then Exit;
 
-  list := TArrayList_int.Create;
+  g := _Graph.Clone;
+  list := TLinkedList_int.Create;
   stack := TStack_int.Create;
   stack.Push(-1);
 
   cur := 0;
   while not stack.IsEmpty do
   begin
-    if _Graph.Degree(cur) <> 0 then
+    if (g as TGraph).OutDegree(cur) <> 0 then
     begin
       stack.Push(cur);
-      w := _Graph.Adj(cur)[0];
-      _Graph.RemoveEdge(cur, w);
+      w := g.Adj(cur)[0];
+      g.RemoveEdge(cur, w);
       cur := w;
     end
     else
     begin
-      list.AddLast(cur);
+      list.AddFirst(cur);
       cur := stack.Pop;
     end;
   end;

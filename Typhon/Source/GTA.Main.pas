@@ -16,7 +16,7 @@ procedure Run;
 implementation
 
 uses
-  GTA.DWeightedGraphDFS;
+  GTA.TopoSort2;
 
 procedure Test;
 begin

@@ -1,4 +1,4 @@
-unit GTA.DWeightedGraphDFS;
+﻿unit GTA.DWeightedGraphDFS;
 
 {$mode objfpc}{$H+}
 
