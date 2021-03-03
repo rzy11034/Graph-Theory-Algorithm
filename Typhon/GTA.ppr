@@ -18,7 +18,7 @@ uses
   GTA.Leetcode_743_Dijkstra, GTA.BellmanFord, GTA.BellmanFord_More_about_BellmanFord, GTA.DGraph, GTA.DWeightedGraph,
   GTA.DGraphDFS, GTA.DGraphBFS, GTA.DWeightedGraphDFS, GTA.DWeightedGraphBFS, GTA.DWeightedGraph_BellmanFord,
 GTA.DWeightedGraph_Floyed, GTA.DirectedCycleDetection, GTA.DirectedEulerLoop, GTA.TopoSort, GTA.Leetcode_210,
-GTA.TopoSort2;
+GTA.TopoSort2, GTA.SCC;
 
 begin
   try

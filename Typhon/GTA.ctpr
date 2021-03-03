@@ -362,6 +362,10 @@
         <Filename Value="Source/Chapter13-Directed-Graph/GTA.TopoSort2.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter13-Directed-Graph/GTA.SCC.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

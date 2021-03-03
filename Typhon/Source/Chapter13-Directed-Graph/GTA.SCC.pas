@@ -1,4 +1,4 @@
-﻿unit GTA.CC;
+﻿unit GTA.SCC;
 
 {$mode objfpc}{$H+}
 
@@ -11,14 +11,14 @@ uses
   DeepStar.Utils;
 
 type
-  TCC = class(TObject)
+  TSCC = class(TObject)
   public type
     TArr_TList_int = array of TArrayList_int;
 
   private
-    _G: IGraph;
+    _Graph: IGraph;
     _Visited: TArr_int;
-    _CCount: integer;
+    _SCCount: integer;
 
     procedure __Dfs(v, ccid: integer);
 
@@ -38,18 +38,18 @@ implementation
 procedure Main;
 var
   g: IGraph;
-  cc: TCC;
-  comp: TCC.TArr_TList_int;
+  scc: TSCC;
+  comp: TSCC.TArr_TList_int;
   ccid: integer;
 begin
   g := TGraph.Create(FileName('Chapter03-Graph-DFS', 'g.txt'));
-  cc := TCC.Create(g);
+  scc := TSCC.Create(g);
 
-  WriteLn(cc.Count);
-  WriteLn(cc.IsConnected(0, 6));
-  WriteLn(cc.IsConnected(0, 5));
+  WriteLn(scc.Count);
+  WriteLn(scc.IsConnected(0, 6));
+  WriteLn(scc.IsConnected(0, 5));
 
-  comp := cc.Components;
+  comp := scc.Components;
   for ccid := 0 to High(comp) do
   begin
     Write(ccid, ': ');
@@ -57,76 +57,74 @@ begin
     comp[ccid].Free;
   end;
 
-  cc.Free;
+  scc.Free;
 end;
 
-{ TCC }
+{ TSCC }
 
-constructor TCC.Create(g: IGraph);
+constructor TSCC.Create(g: IGraph);
 var
   v: integer;
 begin
-  if g.IsDirected then
-    raise Exception.Create('CC only works in undirected graph');
+  if not g.IsDirected then
+    raise Exception.Create('SCC only works in directed graph');
 
-  _G := g;
-  SetLength(_Visited, g.Vertex);
-  TArrayUtils_int.FillArray(_Visited, -1);
-  _CCount := 0;
+  _Graph := g;
+  TArrayUtils_int.SetLengthAndFill(_Visited, g.Vertex, -1);
+  _SCCount := 0;
 
   for v := 0 to g.Vertex - 1 do
   begin
     if _Visited[v] = -1 then
     begin
-      __Dfs(v, _CCount);
-      _CCount += 1;
+      __Dfs(v, _SCCount);
+      _SCCount += 1;
     end;
   end;
 
 end;
 
-function TCC.Components: TArr_TList_int;
+function TSCC.Components: TArr_TList_int;
 var
   res: TArr_TList_int;
   i, v: integer;
 begin
-  SetLength(res, _CCount);
+  SetLength(res, _SCCount);
 
-  for i := 0 to _CCount - 1 do
+  for i := 0 to _SCCount - 1 do
     res[i] := TArrayList_int.Create;
 
-  for v := 0 to _G.Vertex - 1 do
+  for v := 0 to _Graph.Vertex - 1 do
     res[_Visited[v]].AddLast(v);
 
   Result := res;
 end;
 
-function TCC.Count: integer;
+function TSCC.Count: integer;
 begin
-  //TArrayUtils_int.Print(_Visited);
-  Result := _CCount;
+  Result := _SCCount;
 end;
 
-destructor TCC.Destroy;
+destructor TSCC.Destroy;
 begin
   inherited Destroy;
 end;
 
-function TCC.IsConnected(v, w: integer): boolean;
+function TSCC.IsConnected(v, w: integer): boolean;
 begin
-  _G.ValidateVertex(v);
-  _G.ValidateVertex(w);
+  _Graph.ValidateVertex(v);
+  _Graph.ValidateVertex(w);
 
   Result := _Visited[v] = _Visited[w];
 end;
 
-procedure TCC.__Dfs(v, ccid: integer);
+procedure TSCC.__Dfs(v, ccid: integer);
 var
   temp: integer;
 begin
   _Visited[v] := ccid;
 
-  for temp in _G.Adj(v) do
+  for temp in _Graph.Adj(v) do
   begin
     if _Visited[temp] = -1 then
       __Dfs(temp, ccid);

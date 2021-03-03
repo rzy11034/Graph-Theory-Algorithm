@@ -46,6 +46,7 @@ type
     function IsDirected: boolean;
     function InDegree(v: integer): integer;
     function OutDegree(v: integer): integer;
+    function ReverseGraph: TGraph;
 
     function Vertex: integer;
     function Edge: integer;
@@ -270,6 +271,28 @@ begin
   begin
     _outDegree[v] -= 1;
     _inDegree[w] -= 1;
+  end;
+end;
+
+function TGraph.ReverseGraph: TGraph;
+var
+  i: integer;
+begin
+  Result := TGraph.__Create;
+
+  with Result do
+  begin
+    _Vertex := Self._Vertex;
+    _Edge := Self._Edge;
+    _Directed := Self._Directed;
+
+    SetLength(_Adj, _Vertex);
+    SetLength(_inDegree, _Vertex);
+    SetLength(_outDegree, _Vertex);
+
+    for i := 0 to High(_Adj) do
+      _Adj[i] := TTreeSet_int.Create;
+
   end;
 end;
 
