@@ -276,7 +276,7 @@ end;
 
 function TGraph.ReverseGraph: TGraph;
 var
-  i: integer;
+  i, v, w: integer;
 begin
   Result := TGraph.__Create;
 
@@ -293,6 +293,21 @@ begin
     for i := 0 to High(_Adj) do
       _Adj[i] := TTreeSet_int.Create;
 
+    for v := 0 to Self.Vertex - 1 do
+    begin
+      for w in Self.Adj(v) do
+      begin
+        _Adj[w].Add(v);
+
+        if not _Directed then
+          _Adj[v].Add(w)
+        else
+        begin
+          _outDegree[w] += 1;
+          _inDegree[v] += 1;
+        end;
+      end;
+    end;
   end;
 end;
 

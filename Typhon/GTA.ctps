@@ -418,8 +418,8 @@
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="5"/>
-        <TopLine Value="271"/>
-        <CursorPos X="33" Y="287"/>
+        <TopLine Value="363"/>
+        <CursorPos X="23" Y="380"/>
         <UsageCount Value="71"/>
         <Loaded Value="True"/>
       </Unit>
@@ -544,6 +544,15 @@
         <UsageCount Value="28"/>
       </Unit>
       <Unit>
+        <Filename Value="Source/Chapter13-Directed-Graph/GTA.SCC.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="70"/>
+        <CursorPos X="88" Y="91"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
         <Filename Value="Source/02-Graph-Basics/GTA.AdjMatrix.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="37"/>
@@ -583,11 +592,10 @@
       <Unit>
         <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/Utils/DeepStar.UString.pas"/>
         <FRMtype Value="0"/>
-        <EditorIndex Value="6"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="13"/>
-        <CursorPos X="21" Y="33"/>
+        <CursorPos X="36" Y="19"/>
         <UsageCount Value="11"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="../../DeepStar-Lib/Typhon/Package/Source/DSA/DeepStar.DSA.Interfaces.pas"/>
@@ -1035,17 +1043,8 @@
         <CursorPos X="3" Y="169"/>
         <UsageCount Value="10"/>
       </Unit>
-      <Unit>
-        <Filename Value="Source/Chapter13-Directed-Graph/GTA.SCC.pas"/>
-        <IsPartOfProject Value="True"/>
-        <EditorIndex Value="4"/>
-        <TopLine Value="70"/>
-        <CursorPos X="88" Y="91"/>
-        <UsageCount Value="21"/>
-        <Loaded Value="True"/>
-      </Unit>
     </Units>
-    <JumpHistory HistoryIndex="10">
+    <JumpHistory HistoryIndex="12">
       <Position>
         <Filename Value="Source/Chapter04-Graph-DFS-Applications/GTA.CC.pas"/>
         <Caret Line="74" Column="62" TopLine="49"/>
@@ -1089,6 +1088,14 @@
       <Position>
         <Filename Value="Source/Chapter13-Directed-Graph/GTA.DGraph.pas"/>
         <Caret Line="286" Column="10" TopLine="259"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter13-Directed-Graph/GTA.DGraph.pas"/>
+        <Caret Line="296" Column="10" TopLine="281"/>
+      </Position>
+      <Position>
+        <Filename Value="Source/Chapter13-Directed-Graph/GTA.DGraph.pas"/>
+        <Caret Line="307" Column="41" TopLine="291"/>
       </Position>
     </JumpHistory>
     <RunParams>
