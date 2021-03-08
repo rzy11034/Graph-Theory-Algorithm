@@ -16,7 +16,7 @@ procedure Run;
 implementation
 
 uses
-  GTA.TopoSort2;
+  GTA.SCC;
 
 procedure Test;
 begin
