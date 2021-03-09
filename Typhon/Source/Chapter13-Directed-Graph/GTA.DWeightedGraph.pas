@@ -29,8 +29,10 @@ type
 
   public
     constructor Create(fileName: UString; directed: boolean = false);
+    constructor Create(vertex: integer; directed: boolean);
     destructor Destroy; override;
 
+    procedure AddEdge(v, w, weighted: integer);
     function Adj(v: integer): TArr_int;
     function Degree(v: integer): integer;
     function HasEdge(v, w: integer): boolean;
@@ -68,6 +70,18 @@ begin
 end;
 
 { TWeightedGraph }
+
+constructor TWeightedGraph.Create(vertex: integer; directed: boolean);
+var
+  i: integer;
+begin
+  _Vertex := vertex;
+  _Directed := directed;
+  SetLength(_Adj, _Vertex);
+
+  for i := 0 to High(_Adj) do
+    _Adj[i] := TTreeMap_int_int.Create;
+end;
 
 constructor TWeightedGraph.Create(fileName: UString; directed: boolean);
 var
@@ -119,6 +133,17 @@ end;
 constructor TWeightedGraph.__Create();
 begin
   inherited Create;
+end;
+
+procedure TWeightedGraph.AddEdge(v, w, weighted: integer);
+begin
+  ValidateVertex(v);
+  ValidateVertex(w);
+
+  if v = w then raise Exception.Create('Self Loop is Detected!');
+  if _Adj[v].ContainsKey(w) then raise Exception.Create('Parallel Edges are Detected!');
+
+  _Adj[v].Add(w, weighted);
 end;
 
 function TWeightedGraph.Adj(v: integer): TArr_int;
