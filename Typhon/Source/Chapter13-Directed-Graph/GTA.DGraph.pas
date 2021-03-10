@@ -25,14 +25,15 @@ type
     _Edge: integer;
     _Vertex: integer;
     _Directed: boolean;
-    _inDegree, _outDegree: TArr_int;
+    _inDegree: TArr_int;
+    _outDegree: TArr_int;
 
     function __GetIntArray(s: UString): TArr_int;
     constructor __Create();
 
   public
     constructor Create(fileName: UString; directed: boolean = false);
-    constructor Create(vertex: integer; directed: boolean);
+    constructor Create(vertex: integer; directed: boolean = false);
     destructor Destroy; override;
 
     function Adj(v: integer): TArr_int;
@@ -130,7 +131,7 @@ begin
       Lines := __GetIntArray(strList[i]);
 
       a := Lines[0];
-      ValidateVertex(a);
+
       b := Lines[1];
       ValidateVertex(b);
 
@@ -158,11 +159,17 @@ end;
 
 procedure TGraph.AddEdge(v, w: integer);
 begin
+  ValidateVertex(v);
+  ValidateVertex(w);
+
   _Adj[v].Add(w);
   _Edge += 1;
 
   if not _Directed then
-    _Adj[w].Add(v)
+  begin
+    _Adj[w].Add(v);
+    _Edge += 1;
+  end
   else
   begin
     _outDegree[v] += 1;
@@ -261,12 +268,16 @@ begin
   ValidateVertex(v);
   ValidateVertex(w);
 
-  if _Adj[v].Contains(w) then
-    Edge -= 1;
+  if not _Adj[v].Contains(w) then Exit;
 
   _Adj[v].Remove(w);
+  _Edge -= 1;
+
   if not IsDirected then
-    _Adj[w].Remove(v)
+  begin
+    _Adj[w].Remove(v);
+    _Edge -= 1;
+  end
   else
   begin
     _outDegree[v] -= 1;

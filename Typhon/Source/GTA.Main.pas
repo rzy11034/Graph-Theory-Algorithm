@@ -16,7 +16,7 @@ procedure Run;
 implementation
 
 uses
-  GTA.SCC;
+  GTA.DWeightedGraph;
 
 procedure Test;
 begin

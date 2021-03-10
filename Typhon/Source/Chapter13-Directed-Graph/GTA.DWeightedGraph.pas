@@ -23,13 +23,15 @@ type
     _Edge: integer;
     _Vertex: integer;
     _Directed: boolean;
+    _inDegree: TArr_int;
+    _outDegree: TArr_int;
 
     function __GetIntArray(s: UString): TArr_int;
     constructor __Create();
 
   public
     constructor Create(fileName: UString; directed: boolean = false);
-    constructor Create(vertex: integer; directed: boolean);
+    constructor Create(vertex: integer; directed: boolean = false);
     destructor Destroy; override;
 
     procedure AddEdge(v, w, weighted: integer);
@@ -42,6 +44,7 @@ type
     function Clone: TWeightedGraph;
     function GetWeight(v, w: integer): integer;
     function IsDirected: boolean;
+    procedure SetWeight(v, w, weighted: integer);
 
     function Vertex: integer;
     function Edge: integer;
@@ -55,15 +58,27 @@ uses
   GTA.Utils;
 
 procedure Main;
+var
+  g: TWeightedGraph;
 begin
-  with TWeightedGraph.Create(FileName('Chapter13-Directed-Graph', 'wg.txt')) do
+  g := TWeightedGraph.Create(FileName('Chapter13-Directed-Graph', 'wg.txt'));
+  with g do
   begin
+    WriteLn(ToString);
+
+    RemoveEdge(0, 1);
     WriteLn(ToString);
     Free;
   end;
 
-  with TWeightedGraph.Create(FileName('Chapter13-Directed-Graph', 'wg.txt'), true) do
+  DrawLineBlockEnd;
+
+  g := TWeightedGraph.Create(FileName('Chapter13-Directed-Graph', 'wg.txt'), true);
+  with g do
   begin
+    WriteLn(ToString);
+
+    RemoveEdge(0, 1);
     WriteLn(ToString);
     Free;
   end;
@@ -81,15 +96,19 @@ begin
 
   for i := 0 to High(_Adj) do
     _Adj[i] := TTreeMap_int_int.Create;
+
+  SetLength(_inDegree, _Vertex);
+  SetLength(_outDegree, _Vertex);
 end;
 
 constructor TWeightedGraph.Create(fileName: UString; directed: boolean);
 var
   Lines: TArr_int;
   strList: TStringList;
-  a, b, weight, i: integer;
+  a, b, weighted, i, e: integer;
 begin
   _Directed := directed;
+  _Edge := 0;
 
   strList := TStringList.Create;
   try
@@ -100,30 +119,29 @@ begin
     if _Vertex < 0 then
       raise Exception.Create('V Must Be non-Negative');
 
-    _Edge := Lines[1];
-    if _Edge < 0 then
+    SetLength(_inDegree, _Vertex);
+    SetLength(_outDegree, _Vertex);
+
+    e := Lines[1];
+    if e < 0 then
       raise Exception.Create('E must be non-negative');
 
     SetLength(_Adj, _Vertex);
     for i := 0 to High(_Adj) do
       _Adj[i] := TTreeMap_int_int.Create;
 
-    for i := 1 to _Edge do
+    for i := 1 to e do
     begin
       Lines := __GetIntArray(strList[i]);
 
       a := Lines[0];
-      ValidateVertex(a);
       b := Lines[1];
-      ValidateVertex(b);
-      weight := Lines[2];
+      weighted := Lines[2];
 
       if a = b then raise Exception.Create('Self Loop is Detected!');
       if _Adj[a].ContainsKey(b) then raise Exception.Create('Parallel Edges are Detected!');
 
-      _Adj[a].Add(b, weight);
-      if not _Directed then
-        _Adj[b].Add(a, weight);
+      AddEdge(a, b, weighted);
     end;
   finally
     strList.Free;
@@ -144,6 +162,18 @@ begin
   if _Adj[v].ContainsKey(w) then raise Exception.Create('Parallel Edges are Detected!');
 
   _Adj[v].Add(w, weighted);
+  _Edge += 1;
+
+  if not _Directed then
+  begin
+    _Adj[w].Add(v, weighted);
+    _Edge += 1;
+  end
+  else
+  begin
+    _outDegree[v] += 1;
+    _inDegree[w] += 1;
+  end;
 end;
 
 function TWeightedGraph.Adj(v: integer): TArr_int;
@@ -224,12 +254,31 @@ begin
   ValidateVertex(v);
   ValidateVertex(w);
 
-  if _Adj[v].ContainsKey(w) then
-    Edge -= 1;
+  if not _Adj[v].ContainsKey(w) then Exit;
 
   _Adj[v].Remove(w);
-  if not _Directed then
+  _Edge -= 1;
+
+  if not IsDirected then
+  begin
     _Adj[w].Remove(v);
+    _Edge -= 1;
+  end
+  else
+  begin
+    _outDegree[v] -= 1;
+    _inDegree[w] -= 1;
+  end;
+end;
+
+procedure TWeightedGraph.SetWeight(v, w, weighted: integer);
+begin
+  if not HasEdge(v, w) then
+    raise Exception.Create(Format('No edge %d-%d', [v, w]));
+
+  _Adj[v][w] := weighted;
+  if not IsDirected then
+    _Adj[w][v] := weighted;
 end;
 
 function TWeightedGraph.ToString: UString;
