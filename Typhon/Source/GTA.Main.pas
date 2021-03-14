@@ -16,7 +16,7 @@ procedure Run;
 implementation
 
 uses
-  GTA.DWeightedGraph;
+  GTA.MaxFlow;
 
 procedure Test;
 begin

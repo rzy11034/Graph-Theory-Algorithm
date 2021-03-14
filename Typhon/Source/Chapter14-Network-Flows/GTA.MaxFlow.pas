@@ -21,17 +21,55 @@ type
     _MaxFlow: integer;
 
     function _GetAugmentingPath: TArrayList_int;
-    function __GetFlow: integer;
 
   public
     constructor Create(network: IWeightedGraph; s, t: integer);
     destructor Destroy; override;
 
-    property MaxFlow: integer read _MaxFlow;
-    property Flow: integer read __GetFlow;
+    function Return: integer;
+    function Flow(v, w: integer): integer;
   end;
 
+procedure Main;
+
 implementation
+
+procedure Main;
+var
+  network: TWeightedGraph;
+  v, w: integer;
+begin
+  network := TWeightedGraph.Create(FileName('Chapter14-Network-Flows', 'network.txt'), true);
+  with TMaxFlow.Create(network, 0, 3) do
+  begin
+    WriteLn(Return.ToString);
+    for v := 0 to network.Vertex - 1 do
+    begin
+      for w in network.Adj(v) do
+      begin
+        WriteLn(Format('%d-%d: %d / %d', [v, w, Flow(v, w), network.GetWeight(v, w)]));
+      end;
+    end;
+    Free;
+  end;
+
+  DrawLineBlockEnd;
+  ////////////////////////////////
+
+  network := TWeightedGraph.Create(FileName('Chapter14-Network-Flows', 'network2.txt'), true);
+  with TMaxFlow.Create(network, 0, 5) do
+  begin
+    WriteLn(Return.ToString);
+    for v := 0 to network.Vertex - 1 do
+    begin
+      for w in network.Adj(v) do
+      begin
+        WriteLn(Format('%d-%d: %d / %d', [v, w, Flow(v, w), network.GetWeight(v, w)]));
+      end;
+    end;
+    Free;
+  end;
+end;
 
 { TMaxFlow }
 
@@ -41,7 +79,7 @@ var
   v, w, f, i: integer;
   augPath: TArrayList_int;
 begin
-  g := _WGraph as TWeightedGraph;
+  g := network as TWeightedGraph;
 
   if not g.IsDirected then
     raise Exception.Create('MaxFlow only works in directed graph.');
@@ -105,6 +143,22 @@ begin
   inherited Destroy;
 end;
 
+function TMaxFlow.Flow(v, w: integer): integer;
+var
+  g: TWeightedGraph;
+begin
+  g := _WGraph as TWeightedGraph;
+  if not g.HasEdge(v, w) then
+    raise Exception.Create(Format('No edge %d-%d', [v, w]));
+
+  Result := _RGraph.GetWeight(w, v);
+end;
+
+function TMaxFlow.Return: integer;
+begin
+  Result := _MaxFlow;
+end;
+
 function TMaxFlow._GetAugmentingPath: TArrayList_int;
 var
   queue: IQueue_int;
@@ -142,11 +196,6 @@ begin
   Result.AddLast(_Source);
 
   Result.Reverse;
-end;
-
-function TMaxFlow.__GetFlow: integer;
-begin
-
 end;
 
 end.
