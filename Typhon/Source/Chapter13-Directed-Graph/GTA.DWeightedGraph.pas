@@ -105,7 +105,7 @@ constructor TWeightedGraph.Create(fileName: UString; directed: boolean);
 var
   Lines: TArr_int;
   strList: TStringList;
-  a, b, weighted, i, e: integer;
+  a, b, weighted, i: integer;
 begin
   _Directed := directed;
   _Edge := 0;
@@ -115,31 +115,30 @@ begin
     strList.LoadFromFile(fileName);
     Lines := __GetIntArray(strList[0]);
 
-    _Vertex := Lines[0];
-    if _Vertex < 0 then
-      raise Exception.Create('V Must Be non-Negative');
+    if Lines[0] < 0 then
+      raise Exception.Create('V Must Be non-Negative')
+    else
+      _Vertex := Lines[0];
 
-    SetLength(_inDegree, _Vertex);
-    SetLength(_outDegree, _Vertex);
-
-    e := Lines[1];
-    if e < 0 then
-      raise Exception.Create('E must be non-negative');
+    if Lines[1] < 0 then
+      raise Exception.Create('E must be non-negative')
+    else
+      _Edge := 0;
 
     SetLength(_Adj, _Vertex);
     for i := 0 to High(_Adj) do
       _Adj[i] := TTreeMap_int_int.Create;
 
-    for i := 1 to e do
+    SetLength(_inDegree, _Vertex);
+    SetLength(_outDegree, _Vertex);
+
+    for i := 1 to strList.Count - 1 do
     begin
       Lines := __GetIntArray(strList[i]);
 
       a := Lines[0];
       b := Lines[1];
       weighted := Lines[2];
-
-      if a = b then raise Exception.Create('Self Loop is Detected!');
-      if _Adj[a].ContainsKey(b) then raise Exception.Create('Parallel Edges are Detected!');
 
       AddEdge(a, b, weighted);
     end;

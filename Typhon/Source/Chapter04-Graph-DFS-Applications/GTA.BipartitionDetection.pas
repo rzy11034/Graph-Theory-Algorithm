@@ -12,20 +12,24 @@ uses
 
 type
   TBipartitionDetection = class(TObject)
-  private type
+  public type
     TColor = (red, green, null);
+    TArr_Color = array of TColor;
 
   private
-    _g: IGraph;
+    _Graph: IGraph;
     _visited: TArr_bool;
-    _colors: array of TColor;
-    _isBipartite: boolean;
+    _Colors: TArr_Color;
+    _IsBipartite: boolean;
 
-    function __dfs(v: integer; color: TColor): boolean;
+    function __DFS(v: integer; color: TColor): boolean;
 
   public
     constructor Create(g: IGraph);
     destructor Destroy; override;
+
+    property IsBipartite: boolean read _IsBipartite;
+    property Colors: TArr_Color read _Colors;
   end;
 
 procedure Main;
@@ -46,6 +50,11 @@ begin
   bd := TBipartitionDetection.Create(g);
   WriteLn(bd._isBipartite);
   bd.Free;
+
+  g := TGraph.Create(FileName('Chapter15-Matching-Problem', 'g.txt'));
+  bd := TBipartitionDetection.Create(g);
+  WriteLn(bd._isBipartite);
+  bd.Free;
 end;
 
 { TBipartitionDetection }
@@ -54,7 +63,7 @@ constructor TBipartitionDetection.Create(g: IGraph);
 var
   v, i: integer;
 begin
-  _g := g;
+  _Graph := g;
   _isBipartite := true;
   SetLength(_visited, g.Vertex);
   SetLength(_colors, g.Vertex);
@@ -78,7 +87,7 @@ begin
   inherited Destroy;
 end;
 
-function TBipartitionDetection.__dfs(v: integer; color: TColor): boolean;
+function TBipartitionDetection.__DFS(v: integer; color: TColor): boolean;
 var
   w: integer;
   res: boolean;
@@ -86,21 +95,17 @@ begin
   _visited[v] := true;
   _colors[v] := color;
 
-  for w in _g.Adj(v) do
+  for w in _Graph.Adj(v) do
   begin
     if not _visited[w] then
     begin
       case color of
-        TColor.green:
-          res := __dfs(w, TColor.red);
-
-        TColor.red:
-          res := __dfs(w, TColor.green);
-
-        TColor.null: ;
+        TColor.green: res := __DFS(w, TColor.red);
+        TColor.red: res := __DFS(w, TColor.green);
+        else;
       end;
 
-      if res then
+      if not res then
         Exit(false);
     end
     else if _colors[w] = _colors[v] then
@@ -111,4 +116,3 @@ begin
 end;
 
 end.
-

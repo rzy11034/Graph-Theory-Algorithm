@@ -69,6 +69,23 @@ begin
     end;
     Free;
   end;
+
+  DrawLineBlockEnd;
+  ////////////////////////////////
+
+  network := TWeightedGraph.Create(FileName('Chapter14-Network-Flows', 'baseball.txt'), true);
+  with TMaxFlow.Create(network, 0, 10) do
+  begin
+    WriteLn(Return.ToString);
+    for v := 0 to network.Vertex - 1 do
+    begin
+      for w in network.Adj(v) do
+      begin
+        WriteLn(Format('%d-%d: %d / %d', [v, w, Flow(v, w), network.GetWeight(v, w)]));
+      end;
+    end;
+    Free;
+  end;
 end;
 
 { TMaxFlow }
@@ -107,7 +124,7 @@ begin
 
   while true do
   begin
-    augPath := _GetAugmentingPath as TArrayList_int;
+    augPath := _GetAugmentingPath;
     try
       if augPath.IsEmpty then Break;
 

@@ -112,13 +112,15 @@ begin
     strList.LoadFromFile(fileName);
     Lines := __GetIntArray(strList[0]);
 
-    _Vertex := Lines[0];
-    if _Vertex < 0 then
-      raise Exception.Create('V Must Be non-Negative');
+    if Lines[0] < 0 then
+      raise Exception.Create('V Must Be non-Negative')
+    else
+      _Vertex := Lines[0];
 
-    _Edge := Lines[1];
-    if _Edge < 0 then
-      raise Exception.Create('E must be non-negative');
+    if Lines[1] < 0 then
+      raise Exception.Create('E must be non-negative')
+    else
+      _Edge := 0;
 
     SetLength(_Adj, _Vertex);
     for i := 0 to High(_Adj) do
@@ -126,26 +128,13 @@ begin
 
     SetLength(_inDegree, _Vertex);
     SetLength(_outDegree, _Vertex);
-    for i := 1 to _Edge do
+
+    for i := 1 to strList.Count - 1 do
     begin
       Lines := __GetIntArray(strList[i]);
-
       a := Lines[0];
-
       b := Lines[1];
-      ValidateVertex(b);
-
-      if a = b then raise Exception.Create('Self Loop is Detected!');
-      if _Adj[a].Contains(b) then raise Exception.Create('Parallel Edges are Detected!');
-
-      _Adj[a].Add(b);
-      if not directed then
-        _Adj[b].Add(a)
-      else
-      begin
-        _outDegree[a] += 1;
-        _inDegree[b] += 1;
-      end;
+      AddEdge(a, b);
     end;
   finally
     strList.Free;
@@ -161,6 +150,9 @@ procedure TGraph.AddEdge(v, w: integer);
 begin
   ValidateVertex(v);
   ValidateVertex(w);
+
+  if v = w then raise Exception.Create('Self Loop is Detected!');
+  if _Adj[v].Contains(w) then raise Exception.Create('Parallel Edges are Detected!');
 
   _Adj[v].Add(w);
   _Edge += 1;

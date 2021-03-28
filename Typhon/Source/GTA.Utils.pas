@@ -28,11 +28,11 @@ const
   XY_DIRS_4: TArr2D_int = ((-1, 0), (0, 1), (1, 0), (0, -1));
   XY_DIRS_8: TArr2D_int = ((-1, 0), (-1, 1), (0, 1), (1, 1), (1, 0), (1, -1), (0, -1), (-1, -1));
 
-function FileName(chapter, file_: UString): UString;
+function FileName(chapter, newFile: UString): UString;
 
 implementation
 
-function FileName(chapter, file_: UString): UString;
+function FileName(chapter, newFile: UString): UString;
 const
   {$IFDEF MSWINDOWS}
   PR_PATH = '..\..\Source\';
@@ -45,7 +45,7 @@ begin
   sb := TStringBuilder.Create;
   try
     sb.Append(PR_PATH);
-    sb.Append(chapter).Append(PathDelim).Append(file_);
+    sb.Append(chapter).Append(PathDelim).Append(newFile);
     Result := sb.ToString;
   finally
     sb.Free;
