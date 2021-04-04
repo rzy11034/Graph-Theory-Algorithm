@@ -378,6 +378,18 @@
         <Filename Value="Source/Chapter15-Matching-Problem/GTA.Leetcode_LCP04.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter15-Matching-Problem/GTA.Hungarian.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter15-Matching-Problem/GTA.Leetcode_LCP04_Hungarian.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="Source/Chapter15-Matching-Problem/GTA.Hungarian_DFS.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

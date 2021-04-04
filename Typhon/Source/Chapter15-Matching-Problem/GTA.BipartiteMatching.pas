@@ -9,7 +9,8 @@ uses
   SysUtils,
   GTA.Utils,
   GTA.BipartitionDetection,
-  GTA.MaxFlow;
+  GTA.MaxFlow,
+  DeepStar.Utils;
 
 type
   TBipartiteMatching = class(TObject)
@@ -38,6 +39,16 @@ var
   g: TGraph;
 begin
   g := TGraph.Create(FileName('Chapter15-Matching-Problem', 'g.txt'));
+  with TBipartiteMatching.Create(g) do
+  begin
+    WriteLn(MaxMatching);
+    WriteLn(IsPerfectMatching);
+    Free;
+  end;
+
+  DrawLineBlockEnd;
+
+  g := TGraph.Create(FileName('Chapter15-Matching-Problem', 'g2.txt'));
   with TBipartiteMatching.Create(g) do
   begin
     WriteLn(MaxMatching);
