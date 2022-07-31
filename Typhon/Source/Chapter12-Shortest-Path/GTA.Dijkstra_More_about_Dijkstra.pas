@@ -102,7 +102,7 @@ begin
 
     while not queue.IsEmpty do
     begin
-      v := queue.DeQueue.Vertex;
+      v := TPair(queue.DeQueue).Vertex;
 
       if _Visited[v] then Continue;
 

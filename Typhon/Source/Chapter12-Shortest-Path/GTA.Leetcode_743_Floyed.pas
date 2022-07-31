@@ -155,7 +155,7 @@ begin
     for i := 0 to g.Vertex - 1 do
       res := Max(res, _Dis[k - 1, i]);
 
-    Result := IfThen(res = integer.MaxValue, -1, res);
+    Result := specialize IfThen<integer>(res = integer.MaxValue, -1, res);
   finally
     g.Free;
   end;

@@ -79,7 +79,6 @@ begin
       _CCount += 1;
     end;
   end;
-
 end;
 
 function TWeightedCC.Components: TArr_TList_int;

@@ -194,8 +194,8 @@ begin
       end;
     end;
 
-    _Edge := self._Edge;
-    _Vertex := self._Vertex;
+    _Edge := Self._Edge;
+    _Vertex := Self._Vertex;
     _Directed := Self._Directed;
     _inDegree := TArrayUtils_int.CopyArray(Self._inDegree);
     _outDegree := TArrayUtils_int.CopyArray(Self._outDegree);

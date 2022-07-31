@@ -55,7 +55,6 @@ begin
     WriteLn(MaxAreaOfIsland(a));
     Free;
   end;
-
 end;
 
 { TSolution }

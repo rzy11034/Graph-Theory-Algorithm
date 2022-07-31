@@ -94,7 +94,7 @@ begin
       else
       begin
         _Mst.AddLast(minEdge);
-        v := IfThen(visited[minEdge.VertexV], minEdge.VertexW, minEdge.VertexV);
+        v := specialize IfThen<integer>(visited[minEdge.VertexV], minEdge.VertexW, minEdge.VertexV);
         visited[v] := true;
         for w in _Graph.Adj(v) do
         begin

@@ -1,6 +1,7 @@
 ﻿unit GTA.FarmerCrossedRiver;
 
 {$mode objfpc}{$H+}
+{$ModeSwitch unicodestrings}
 
 interface
 
@@ -74,7 +75,7 @@ begin
     cur := queue.DeQueue;
     arr_Cur := cur.ToCharArray;
 
-    arr_Cur[0] := IfThen(arr_Cur[0] = '0', '1', '0');
+    arr_Cur[0] := specialize IfThen<char>(arr_Cur[0] = '0', '1', '0');
 
     temp := UString.Create(arr_Cur);
     list.AddLast(temp);

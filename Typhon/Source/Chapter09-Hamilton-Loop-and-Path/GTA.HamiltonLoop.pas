@@ -104,7 +104,7 @@ end;
 
 function THamiltonLoop.__Dfs(v: integer; parent: integer): boolean;
 var
-  w: Integer;
+  w: integer;
 begin
   _Visited[v] := true;
   _Pre[v] := parent;

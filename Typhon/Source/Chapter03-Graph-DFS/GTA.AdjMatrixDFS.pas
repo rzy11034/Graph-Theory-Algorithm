@@ -64,7 +64,6 @@ begin
     if not _visited[v] then
       __dfs(v);
   end;
-
 end;
 
 destructor TAdjMatrixDFS.Destroy;

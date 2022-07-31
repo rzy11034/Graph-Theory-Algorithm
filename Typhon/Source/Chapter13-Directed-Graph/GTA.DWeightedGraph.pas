@@ -201,8 +201,8 @@ begin
       end;
     end;
 
-    _Edge := self._Edge;
-    _Vertex := self._Vertex;
+    _Edge := Self._Edge;
+    _Vertex := Self._Vertex;
     _Directed := Self._Directed;
   end;
 end;

@@ -82,7 +82,6 @@ begin
       _CCount += 1;
     end;
   end;
-
 end;
 
 function TCC.Components: TArr_TList_int;

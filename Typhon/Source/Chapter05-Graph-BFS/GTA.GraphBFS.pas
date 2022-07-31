@@ -39,7 +39,6 @@ begin
   graphBFS := TGraphBFS.Create(g);
   TArrayUtils_int.Print(graphBFS.Order);
   graphBFS.Free;
-
 end;
 
 { TGraphBFS }

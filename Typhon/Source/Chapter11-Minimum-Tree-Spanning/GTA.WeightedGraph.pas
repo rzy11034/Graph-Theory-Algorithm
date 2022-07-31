@@ -138,8 +138,8 @@ begin
       end;
     end;
 
-    _Edge := self._Edge;
-    _Vertex := self._Vertex;
+    _Edge := Self._Edge;
+    _Vertex := Self._Vertex;
   end;
 end;
 

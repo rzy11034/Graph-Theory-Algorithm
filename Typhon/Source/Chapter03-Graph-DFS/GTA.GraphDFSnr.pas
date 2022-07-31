@@ -73,25 +73,25 @@ end;
 
 procedure TGraphDFS.__dfs(v: integer);
 var
-  cur,temp: integer;
+  cur, temp: integer;
   stack: TStack_int;
 begin
   stack := TStack_int.Create;
   try
-     stack.Push(v);
+    stack.Push(v);
 
-     while not stack.IsEmpty do
-     begin
-       cur := stack.Pop;
-       _visited[cur] := true;
-       _preOrder.AddLast(cur);
+    while not stack.IsEmpty do
+    begin
+      cur := stack.Pop;
+      _visited[cur] := true;
+      _preOrder.AddLast(cur);
 
-       for temp in _g.Adj(cur) do
-       begin
-         if not _visited[temp] then
-           stack.Push(temp);
-       end;
-     end;
+      for temp in _g.Adj(cur) do
+      begin
+        if not _visited[temp] then
+          stack.Push(temp);
+      end;
+    end;
   finally
     stack.Free;
   end;

@@ -151,7 +151,7 @@ begin
 
     __BellmanFord(g, k - 1);
     res := Math.MaxIntValue(_Dis);
-    Result := IfThen(res = integer.MaxValue, -1, res);
+    Result := specialize IfThen<integer>(res = integer.MaxValue, -1, res);
   finally
     g.Free;
   end;
